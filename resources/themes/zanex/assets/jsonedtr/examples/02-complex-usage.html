@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSONedtr - jQuery JSON Editor Example</title>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+<script src="../src/JSONedtr.js"></script>
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../src/JSONedtr.css">
+<style>
+body { background-color: #fafafa; }
+</style>
+<script>
+
+function getDataOnChange( data ){
+	console.log('DATA WAS CHANGED', data.getData());
+}
+
+
+var options = {
+		chart: {
+			height: 320,
+			type: "line",
+			stacked: false,
+			toolbar: {
+				show: true,
+				tools: {
+					download: true,
+					selection: false,
+					zoom: false,
+					zoomin: true,
+					zoomout: true,
+					pan: false,
+					reset: true | '<img src="/static/icons/reset.png" width="20">'
+				  },
+			},
+			dropShadow: {
+				enabled: true,
+				opacity: 0.1,
+			},
+		},
+		colors: ["myVarVal", "#f99433", 'rgba(119, 119, 142, 0.05)'],
+		dataLabels: {
+			enabled: false
+		},
+		stroke: {
+			curve: "smooth",
+			width: [3, 3, 0],
+			dashArray: [0, 4],
+			lineCap: "round"
+		},
+		grid: {
+			padding: {
+				left: 0,
+				right: 0
+			},
+			strokeDashArray: 3
+		},
+		markers: {
+			size: 0,
+			hover: {
+				size: 0
+			}
+		},
+		series: [{
+			name: "Total Orders",
+			type: 'line',
+			data: [0, 45, 30, 75, 15, 94, 40, 115, 30, 105, 65, 110]
+			
+		},{
+			name: "Total Sales",
+			type: 'line',
+			data: [0, 60, 20, 130, 75, 130, 75, 140, 64, 130, 85, 120]
+		}, {
+			name: "",
+			type: 'area',
+			data: [0, 105, 70, 175, 85, 154, 90, 185, 120, 145, 185, 130]
+		}],
+		xaxis: {
+			type: "month",
+			categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+			axisBorder: {
+				show: false,
+				color: 'rgba(119, 119, 142, 0.08)',
+			},
+			labels: {
+				style: {
+					color: '#8492a6',
+					fontSize: '12px',
+				},
+			},
+		},
+		yaxis: {
+			labels: {
+				style: {
+					color: '#8492a6',
+					fontSize: '12px',
+				},
+			},
+			axisBorder: {
+				show: false,
+				color: 'rgba(119, 119, 142, 0.08)',
+			},
+		},
+		fill: {
+			gradient: {
+			  inverseColors: false,
+			  shade: 'light',
+			  type: "vertical",
+			  opacityFrom: 0.85,
+			  opacityTo: 0.55,
+			  stops: [0, 100, 100, 100]
+			}
+		  },
+		tooltip: {
+			show:false
+		},
+		legend: {
+			position: "top",
+			show:true
+		}
+	}
+
+$(document).ready(function(){
+
+	//////////////////////////////////////////
+	//      FIRST INSTANCE
+	//////////////////////////////////////////
+
+		var data1  = options;
+	var one = new JSONedtr( data1, '#output-1' );
+
+	$( one.outputElement ).after('<button class="btn-1">(1) Get data</button> See console (F12) for output');
+
+	$( ' .btn-1' ).click(function(){
+
+		console.log('FIRST BUTTON CLICKED');
+
+
+		var result1 = one.getData();
+		console.log('Output of getData(): ', result1);
+
+		var result2 = one.getDataString();
+		console.log('Output of getDataString(): ', result2);
+	})
+
+
+	//////////////////////////////////////////
+	//      SECOND INSTANCE
+	//////////////////////////////////////////
+
+	var data2  = {tools: { download: true, selection: false, zoom: false, "zoomin": true, "zoomout": true, "pan": false, "reset": true }};
+
+	// runFunctionOnUpdate contains name of string to be called on change
+	// if instantChange is set to true (which it is by default) change function will be called while typing,
+	// if it is set to false function will be called on change event (when field will loose focus)
+	// for functions which require heavy computing or for large data is recommended to change this to false
+	var two = new JSONedtr( data2, '#output-2', {runFunctionOnUpdate:'getDataOnChange', instantChange: true} );
+
+
+	$( two.outputElement ).after('<button class="btn-2">(2) Push data to 3</button> Data from <b>Two</b> to <b>Three</b><br>');
+
+	$( two.outputElement ).after('<button class="btn-3">(3) Pull data from 3</button> Data from <b>Three</b> to <b>Two</b><br>');
+
+	$( ' .btn-2' ).click(function(){
+		JSONedtr( two.getDataString(), three.outputElement );
+	})
+
+	$( ' .btn-3' ).click(function(){
+		JSONedtr( three.getDataString(), two.outputElement );
+	})
+
+
+	//////////////////////////////////////////
+	//      THIRD INSTANCE
+	//////////////////////////////////////////
+
+	var data3  = {tools: { download: true, selection: false, zoom: false, "zoomin": true, "zoomout": true, "pan": false, "reset": true }};
+	var three = new JSONedtr( data3, '#output-3' );
+})
+</script>
+<style>
+	#help{
+		margin: 50px 50px 0px;
+	}
+
+	#output-1,
+	#output-2,
+	#output-3{
+		outline: 1px solid black;
+		margin: 10px;
+	}
+
+	h1{
+		padding-bottom: 0;
+		margin: 150px 0 0 10px;
+	}
+
+
+
+</style>
+</head>
+<body>
+	<div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="https://www.jqueryscript.net/other/visual-json-editor-jsonedtr.html">Download This Plugin</a></li>
+<li><a href="https://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+<h1>JSONedtr - jQuery JSON Editor Example</h1>
+	<div id="help">
+		<p>Click the <u><b>✚</b></u> sign to add a row.</p>
+		<p>Click the <u><b>✖</b></u> sign to delete a row.</p>
+		<p>Click any <u><b>key</b></u> or <u><i>value</i></u> to edit it.</p>
+		<p>See source of this file (Ctrl+u) for code.</p>
+	</div>
+
+	<h1>One</h1>
+	<div id="output-1"></div>
+	<h1>Two</h1>
+	<div id="output-2"></div>
+	<h1>Three</h1>
+	<div id="output-3"></div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

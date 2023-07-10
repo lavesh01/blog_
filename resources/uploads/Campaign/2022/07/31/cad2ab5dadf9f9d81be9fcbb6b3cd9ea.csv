@@ -1,0 +1,13 @@
+id,table_schema,table_name,column_name,join_table_schema,join_table_name,join_column_name,join_select_col,join_lebel,created_by,created_on,customer_id,modified_by,modified_on
+,alankxsq_bon9,bf_companies,Employee_Size_id,alankxsq_bon9,bf_udc_employee_size,id,name,Employee,9999999,,9999999,9999999,
+,alankxsq_bon9,bf_companies,Industry_Type_id,alankxsq_bon9,bf_udc_industry,id,name,Industry,9999999,,9999999,9999999,
+,alankxsq_bon9,bf_companies,NIC_Code_id,alankxsq_bon9,bf_udc_nic_code,id,name,NIC,9999999,,9999999,9999999,
+,alankxsq_bon9,bf_companies,Primary_Domain,alankxsq_bon9,bf_domains,id,domain_name,Domain,9999999,,9999999,9999999,
+,alankxsq_bon9,bf_companies,Revenue_id,alankxsq_bon9,bf_udc_revenue,id,name,Revenue,9999999,,9999999,9999999,
+,alankxsq_bon9,bf_companies,SIC_Code_id,alankxsq_bon9,bf_udc_sic_code,id,name,SIC,9999999,,9999999,9999999,
+,alankxsq_bon9,bf_prospects,company_id,alankxsq_bon9,bf_companies,id,Name,Company Name,9999999,,9999999,9999999,
+,alankxsq_bon9,bf_prospects,country,alankxsq_bon9,bf_udc_country,customer_id,name,Country,9999999,,9999999,9999999,
+,alankxsq_bon9,bf_prospects,domain_id,alankxsq_bon9,bf_domains,id,domain_name,Domain,9999999,,9999999,9999999,
+,alankxsq_bon9,bf_prospects,job_functions_id,alankxsq_bon9,bf_udc_job_function,id,name,Job Functions,9999999,,9999999,9999999,
+,alankxsq_bon9,bf_prospects,job_level_id,alankxsq_bon9,bf_udc_job_level,id,name,Job Level,9999999,,9999999,9999999,
+,alankxsq_bon9,bf_prospects,salutation_id,alankxsq_bon9,bf_udc_salutation,id,name,Salutation,9999999,,9999999,9999999,

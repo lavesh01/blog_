@@ -1,0 +1,52 @@
+<!doctype html> <html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"> 
+<style type="text/css">
+	img#phoneIcon {
+	    margin-top: 3px;
+	    min-width: 20px;
+	    margin-left: -8px;
+	}
+	.dialpad-buttons {
+	    text-align: center;
+	    max-width: 350px;
+	    display: grid;
+	    grid-template-columns: 2fr;
+	}
+	.call-now {
+	    display: inline-block;
+	    vertical-align: middle;
+	    width: 45px;
+	    height: 45px;
+	    border-radius: 50px/50px;
+	    line-height: 1;
+	    padding: 10px 20px;
+	    background-color: #26dc66;
+	    margin: auto;
+	    margin-left: 12px;
+	    cursor: pointer;
+	}
+	img, svg {
+    vertical-align: middle;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> </head>
+<body> <div class="container container-fluid mx-auto"> <div class="row text-center">
+<button class="btn-primary btn-success mx-auto mt-5">Call</button>
+<div class="dialpad-buttons" id="call" >
+    <div class="call-now"><img src="https://dialer.moitele.com/MoiTele_public/callbar/themes-nct/images-nct/call.svg" class="phoneIcon" id="phoneIcon"></div>
+    <div class="repeat-ico hidden"></div>
+</div>
+
+</div> </div>
+<iframe id="webphoneframe" src="https://dialer.moitele.com/MoiTele_public/callbar/index.html" width="100%"
+ frameborder="0" allow="microphone; camera", frameborder="0"
+style="margin:5px auto;display: block;"></iframe>
+<script> 
+	const callButton = $("#call").on("click", function (event) {
+			let data = { message: "DIAL_NUMBER", phoneNumber: "918090551004", engagementId: 455657 };
+			let iframe = document.getElementById('webphoneframe'); 
+			iframe.contentWindow.postMessage (data, 'https://dialer.moitele.com');
+}); </script> </body>
+</html>

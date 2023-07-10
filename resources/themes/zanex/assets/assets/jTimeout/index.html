@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Add powerful, styled confirmation tooltips to any site quickly, and easily!">
+    <meta name="author" content="HTMLGuy, LLC">
+
+    <title>jQuery Session Timeout Script</title>
+	<link rel='stylesheet' type='text/css' href='https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css'>
+	<link rel="stylesheet" type="text/css" href="https://htmlguyllc.github.io/jAlert/dist/jAlert.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+	<script src='https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js'></script>
+	<script src='https://htmlguyllc.github.io/jAlert/dist/jAlert.min.js'></script>
+	<script src='src/jTimeout.js'></script>
+  </head>
+
+  <body>
+  <div class='container'>
+    <div class='row'>
+    	<div class='col-sm-12'>
+    		<h1>jTimeout v3 (only 4kb!)</h1>
+	  		<h4>This cross-tab jQuery plugin keeps track of time and let's a user know before their session times out so they can extend it. Then tells them when it has expired so they can login again.</h4>
+	  	</div>
+	</div>
+	<div class='row'>
+	  	<div class='col-sm-12 col-md-6'>
+	  		<br><b>Watch the timer below and see how jTimeout reacts as it counts down/when you click the extend button.</b><br><br>
+	  		<input type='text' id='secondsRemaining' value='1440' readonly>
+	  		<a href='#' class='60Left btn btn-default'>60 Secs Left</a>
+	  		<a href='#' class='0Left btn btn-default'>Timed Out</a>
+	  		<a href='#' class='1440Left btn btn-default'>Reset</a>
+	  		<script>
+	  			$(function(){
+
+		  			$('.60Left').on('click', function(e){
+			  			e.preventDefault();
+			  			$.jTimeout.reset(60);
+			  			$('#secondsRemaining').val( $.jTimeout().getSecondsTillExpiration() );
+		  			});
+
+		  			$('.1440Left').on('click', function(e){
+			  			e.preventDefault();
+			  			$.jTimeout.reset();
+			  			$('#secondsRemaining').val( $.jTimeout().getSecondsTillExpiration() );
+		  			});
+
+		  			$('.0Left').on('click', function(e){
+			  			e.preventDefault();
+			  			$.jTimeout.reset(0);
+			  			$('#secondsRemaining').val( $.jTimeout().getSecondsTillExpiration() );
+		  			});
+
+	  				$.jTimeout({
+	  					/* For this example only */
+	  					'onClickExtend': function(jTimeout)
+	  					{
+	  						$('.jAlert').closeAlert();
+	  						$.jTimeout().resetExpiration();
+	  					},
+	  					'extendOnMouseMove': true,
+	  					'loginUrl': 'index.html',
+	  					'logoutUrl': 'index.html'
+	  				});
+
+	  				var timer,
+	  				setTimer = function(){
+	  					timer = window.setInterval(function(){
+	  						$('#secondsRemaining').val( $.jTimeout().getSecondsTillExpiration() );
+	  					}, 1000);
+	  				};
+
+	  				setTimer();
+
+	  			});
+	  		</script>
+	  		<br><br>
+	  		<a href='https://github.com/HTMLGuyLLC/jTimeout' class='btn btn-primary btn-lg'>View on Github</a>
+	  		<a href='https://github.com/HTMLGuyLLC/jTimeout/archive/master.zip' class='btn btn-success btn-lg'>Download</a>
+			<a href='https://htmlguy.com' class='btn btn-info btn-lg'>Created by HTMLGuy</a>
+			<form action="https://www.paypal.com/cgi-bin/webscr" id="paypal" method="post" target="_blank" style="font-size: .85em;line-height: 1.4em;margin-bottom: 10px;margin-top: 10px;"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="9H3AX8KJJWS6J"><a href="#" onclick="javascript:getElementById('paypal').submit();" class="btn btn-default btn-sm"> Donations are appreciated (via PayPal)</a></form>
+	  	</div>
+  		<div class='col-sm-12 col-md-6'>
+	  		How to use (dead simple):<br>
+	  		<pre>
+$(function(){
+   $.jTimeout();
+});</pre>
+	<br>
+	Dependencies:<br>
+	<ul>
+		<li>jQuery</li>
+		<li>jAlert (unless you override the callbacks) :: available here: <a href='https://github.com/HTMLGuyLLC/jAlert' target='_blank'>https://github.com/HTMLGuyLLC/jAlert</a></li>
+	</ul>
+	    </div>
+	</div>
+	<div class='row'>
+		<div class='col-sm-12'>
+			  		Options:<br>
+	  		<pre>
+$(function(){
+   $.jTimeout(
+   	{
+        expiration_key: 'jtimeout-session-expiration', //key used to store expiration in localstorage (change this for multiple timers)
+		flashTitle: true, //whether or not to flash the tab/title bar when about to timeout, or after timing out
+		flashTitleSpeed: 500, //how quickly to switch between the original title, and the warning text
+		flashingTitleText: '**WARNING**', //what to show in the tab/title bar when about to timeout, or after timing out
+		originalTitle: document.title, //store the original title of this page
+
+		timeoutAfter: 1440, //pass this from server side to be fully-dynamic. For PHP: ini_get('session.gc_maxlifetime'); - 1440 is generally the default timeout
+		heartbeat: 1, //how many seconds in between checking the expiration - warning: changing this can effect your prior countdown warning and timeout - for best results, stick with 1
+
+		extendOnMouseMove: true, //Whether or not to extend the session when the mouse is moved
+		mouseDebounce: 30, //How many seconds between extending the session when the mouse is moved (instead of extending a billion times within 5 seconds)
+		onMouseMove: false, //Override the standard $.get() request that uses the extendUrl with your own function.
+
+		extendUrl: '/dashboard', //URL to request in order to extend the session.
+		logoutUrl: '/logout', //URL to request in order to force a logout after the timeout. This way you can end a session early based on a shorter timeout OR if the front-end timeout doesn't sync with the backend one perfectly, you don't look like an idiot.
+		loginUrl: '/login', //URL to send a customer when they want to log back in
+
+		secondsPrior: 60, //how many seconds before timing out to run the next callback (onPriorCallback)
+		onPriorCallback: false, //override the popup that shows when getting within x seconds of timing out
+
+		onClickExtend: false, //override the click to extend button callback
+
+		onTimeout: false, //override the timeout function if you'd like
+		onSessionExtended: false //override the session extension method (triggered only after a timeout)
+	}
+   );
+
+   $.jTimeout().reset(); //will reset the expiration using the timeoutAfter option above
+   $.jTimeout().setExpiration(1000); //will set the expiration to 1000 seconds in the future
+   $.jTimeout().getExpiration(); //gets the expiration date string
+   $.jTimeout().getSecondsTillExpiration(); //gets the number of seconds until the session expires
+   $.jTimeout().destroy(); //detaches event handlers and stops flashing (if applicable)
+});</pre>
+		</div>
+	</div>
+  </div>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-126490722-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-126490722-3');
+</script>
+
+  </body>
+
+  </html>

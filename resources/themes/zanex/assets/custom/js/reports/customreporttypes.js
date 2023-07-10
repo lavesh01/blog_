@@ -1,0 +1,1 @@
+var data =    enable_common_dataTable( 'Report/ajax_customreporttypes' ,"#customrreportcharttypeview_dataTable","","","","" );

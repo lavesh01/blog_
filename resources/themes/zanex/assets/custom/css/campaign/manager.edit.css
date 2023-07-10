@@ -1,0 +1,9 @@
+/* iCheck */
+.skin [class*="icheckbox_"],
+.skin [class*="iradio_"], .icheck_square [class*="icheckbox_"],
+.icheck_square [class*="iradio_"] {
+  margin-right: 0.6rem; }
+
+.skin [class*="icheckbox_line"],
+.skin [class*="iradio_line"] {
+  margin-bottom: 0.6rem; }
