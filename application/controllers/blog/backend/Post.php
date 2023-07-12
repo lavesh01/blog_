@@ -56,15 +56,16 @@ public function saveFormData()
         $insert_id = $this->Blog_model->save_form_data($data);
         
         if ($insert_id) {
-            $response = array('status' => 'success', 'message' => 'Data saved successfully', 'post_id' => $insert_id);
+            $response = array('status' => 'success', 'message' => 'Post form Data saved successfully', 'post_id' => $insert_id);
         } else {
-            $response = array('status' => 'error', 'message' => 'Failed to save data.');
+            $response = array('status' => 'error', 'message' => 'Post form Failed to save data.');
         }
         
         echo json_encode($response);
         
     } else {
-        echo "Not Added: Required fields are missing.";
+        $response = array('status' => 'error', 'message' => 'Post form Required fields are missing.');
+        echo json_encode($response);
     }
 }
 
@@ -74,6 +75,7 @@ public function saveSocialTags()
     // var_dump($input);
 
     // Check if required fields are set and not empty
+    if (!empty($input["og_url"]) && !empty($input["og_type"]) && !empty($input["og_title"]) && !empty($input["og_description"]) && !empty($input["og_image"]) && !empty($input["twitter_site"]) && !empty($input["twitter_title"]) && !empty($input["twitter_description"]) && !empty($input["twitter_image"])) {
         $data = array(
             'og_url' => $input["og_url"],
             'og_type' => $input["og_type"],
@@ -84,24 +86,61 @@ public function saveSocialTags()
             'twitter_title' => $input["twitter_title"],
             'twitter_description' => $input["twitter_description"],
             'twitter_image' => $input["twitter_image"],
-            
         );
 
         $this->load->model('blog/Blog_model');
 
         $insert_id = $this->Blog_model->save_social_tags($data);
-        
+
         if ($insert_id) {
-            $response = array('status' => 'success', 'message' => 'Data saved successfully', 'post_id' => $insert_id);
+            $response = array('status' => 'success', 'message' => 'Socia tags Data saved successfully', 'post_id' => $insert_id);
         } else {
-            $response = array('status' => 'error', 'message' => 'Failed to save data.');
+            $response = array('status' => 'error', 'message' => 'Socia tags Failed to save data.');
         }
-        
+
         echo json_encode($response);
-        
-    // } else {
-    //     echo "Not Added: Required fields are missing.";
-    // }
+    } else {
+        $response = array('status' => 'error', 'message' => 'Socia tags Required fields are missing.');
+        echo json_encode($response);
+    }
+}
+
+public function getCategories()
+{
+    $this->load->model('blog/Blog_model');
+    $categories = $this->Blog_model->get_categories();
+
+    $data['categories'] = $categories;
+
+    $this->load->view('blog/blogpage', $data);
+}
+
+
+public function saveCategory()
+{
+        $input = $this->input->post("category_name");
+        var_dump($input);
+
+        if (isset($input) && !empty($input)) {
+            $data = array(
+                'category_name' => $input
+            );
+
+        $this->load->model('blog/Blog_model');
+
+        $insert_id = $this->Blog_model->save_category($data);
+
+        if ($insert_id) {
+            $response = array('status' => 'success', 'message' => 'Category Data saved successfully', 'post_id' => $insert_id);
+        } else {
+            $response = array('status' => 'error', 'message' => 'Category Failed to save data.');
+        }
+
+        echo json_encode($response);
+    } else {
+        $response = array('status' => 'error', 'message' => 'Category Required fields are missing.');
+        echo json_encode($response);
+    }
 }
 
 
@@ -140,6 +179,10 @@ public function index($table_name="")
     // $this->load->model('blog/Blog_model');
     // $data['form_data'] = $this->Blog_model->get_form_data();
 
+    $this->load->model('blog/Blog_model');
+    $categories = $this->Blog_model->get_categories();
+
+    $data['categories'] = $categories;
 
 
 

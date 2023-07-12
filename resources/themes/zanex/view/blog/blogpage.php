@@ -272,117 +272,6 @@
                                                     </div>
 
 
-                                                    <!-- <div class="row mb-4">
-                                                        <label class="form-label">Social tags:</label>
-
-                                                        <div class="mb-5">
-                                                            <div class="accordion-item">
-                                                                <h2 class="accordion-header" id="facebooktags">
-                                                                    <button class="accordion-button" type="button"
-                                                                        data-bs-toggle="collapse"
-                                                                        data-bs-target="#collapseOne"
-                                                                        aria-expanded="true"
-                                                                        aria-controls="collapseOne">
-                                                                        Facebook opengraph tags:
-                                                                    </button>
-                                                                </h2>
-                                                                <div id="collapseOne"
-                                                                    class="accordion-collapse collapse show"
-                                                                    aria-labelledby="facebooktags"
-                                                                    data-bs-parent="#accordionExample">
-                                                                    <div class="accordion-body">
-                                                                        <div>
-                                                                            <div class="row mb-3">
-                                                                                <label
-                                                                                    class="col-md-4 form-label">og-url:</label>
-                                                                                <input type="text"
-                                                                                    class="col-md-8 form-control">
-                                                                            </div>
-                                                                            <div class="row mb-3">
-                                                                                <label
-                                                                                    class="col-md-4 form-label">og-type:</label>
-                                                                                <input type="text"
-                                                                                    class="col-md-8 form-control">
-                                                                            </div>
-                                                                            <div class="row mb-3">
-                                                                                <label
-                                                                                    class="col-md-4 form-label">og-title:</label>
-                                                                                <input type="text"
-                                                                                    class="col-md-8 form-control">
-                                                                            </div>
-                                                                            <div class="row mb-3">
-                                                                                <label
-                                                                                    class="col-md-4 form-label">og-description:</label>
-                                                                                <input type="text"
-                                                                                    class="col-md-8 form-control">
-                                                                            </div>
-                                                                            <div class="row mb-3">
-                                                                                <label
-                                                                                    class="col-md-4 form-label">og-image:</label>
-                                                                                <input type="text"
-                                                                                    class="col-md-8 form-control">
-                                                                            </div>
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-
-                                                        <div class="">
-
-                                                            <div class="accordion-item">
-                                                                <h2 class="accordion-header" id="headingOne">
-                                                                    <button class="accordion-button" type="button"
-                                                                        data-bs-toggle="collapse"
-                                                                        data-bs-target="#twittertags"
-                                                                        aria-expanded="true"
-                                                                        aria-controls="twittertags">
-                                                                        Twitter card tags:
-                                                                    </button>
-                                                                </h2>
-                                                                <div id="twittertags"
-                                                                    class="accordion-collapse collapse show"
-                                                                    aria-labelledby="twittertags"
-                                                                    data-bs-parent="#accordionExample">
-                                                                    <div class="accordion-body">
-
-
-                                                                        <div class="row mb-3">
-                                                                            <label
-                                                                                class="col-md-4 form-label">twitter-site:</label>
-                                                                            <input type="text"
-                                                                                class="col-md-8 form-control">
-                                                                        </div>
-                                                                        <div class="row mb-3">
-                                                                            <label
-                                                                                class="col-md-4 form-label">twitter-title:</label>
-                                                                            <input type="text"
-                                                                                class="col-md-8 form-control">
-                                                                        </div>
-                                                                        <div class="row mb-3">
-                                                                            <label
-                                                                                class="col-md-4 form-label">twitter-description:</label>
-                                                                            <input type="text"
-                                                                                class="col-md-8 form-control">
-                                                                        </div>
-                                                                        <div class="row mb-3">
-                                                                            <label
-                                                                                class="col-md-4 form-label">twitter-image:</label>
-                                                                            <input type="text"
-                                                                                class="col-md-8 form-control">
-                                                                        </div>
-
-
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                        </div>
-                                                    </div> -->
-
-
                                                     <div class="row mb-4">
                                                         <label class="form-label">Social tags:</label>
                                                         <div class="mb-5">
@@ -512,7 +401,47 @@
                         <div class="tab-pane" id="tab-81">
                             <div class="card">
                                 <div class="card-body">
-                                    <h1>settings</h1>
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <div class="card-title">Additional Info.</div>
+                                                </div>
+                                                <div class="card-body">
+
+                                                    <div class="row mb-4">
+                                                        <label class="col-md-3 form-label">created date :</label>
+                                                        <div class="col-md-9">
+                                                            <input type="text" id="created_date" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-4">
+                                                        <label class="col-md-3 form-label">created by :</label>
+                                                        <div class="col-md-9">
+                                                            <input type="text" id="created_by" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-4">
+                                                        <label class="col-md-3 form-label">modified date :</label>
+                                                        <div class="col-md-9">
+                                                            <input type="text" id="modified_date" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mb-4">
+                                                        <label class="col-md-3 form-label">modified by :</label>
+                                                        <div class="col-md-9">
+                                                            <input type="text" id="modified_by" class="form-control">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
                                 </div>
                             </div>
 
@@ -531,44 +460,31 @@
                         </div>
                         <div class="card-body">
 
-                            <!-- Categroies  -->
-                            <!-- <div class="row mb-4">
-                                <label class="col-md-4 form-label">Category</label>
-                                <div class="col-md-8">
-                                    <select id="category" name="country" class="form-control form-select select2"
-                                        data-bs-placeholder="Select Category">
-                                        <option value="0">--Select--</option>
-                                        <option value="1">Technology</option>
-                                        <option value="2">Travel</option>
-                                        <option value="3">Food</option>
-                                        <option value="4">Fashion</option>
-                                    </select>
-                                </div>
-                            </div> -->
-
                             <!-- Categories -->
                             <div class="row mb-4">
-                                <label class="col-md-4 form-label">Category</label>
-                                <div class="col-md-8">
+                                <label class="col-md-12 form-label">Category</label>
+                                <div class="col-md-12">
                                     <select id="category" name="country" class="form-control form-select select2"
                                         data-bs-placeholder="Select Category">
-                                        <option value="0">--Select--</option>
-                                        <option value="1">Technology</option>
-                                        <option value="2">Travel</option>
-                                        <option value="3">Food</option>
-                                        <option value="4">Fashion</option>
+                                        <option value="0">Uncategorised</option>
+                                        <?php foreach ($categories as $category): ?>
+                                        <option value="<?php echo $category->id; ?>">
+                                            <?php echo $category->category_name; ?>
+                                        </option>
+                                        <?php endforeach; ?>
                                     </select>
                                 </div>
                             </div>
 
+
                             <!-- Add New Category -->
                             <div class="row mb-4">
-                                <label class="col-md-4 form-label">Add New Category</label>
                                 <div class="col-md-8">
                                     <div class="input-group">
-                                        <input type="text" id="new-category-input" class="form-control"
+                                        <input type="text" id="new-category-input" class="form-control form-control-sm"
                                             placeholder="Enter new category">
-                                        <button id="add-category-btn" class="btn btn-primary">Add</button>
+                                        <button id="add-category-btn" type="button"
+                                            class="btn btn-primary btn-sm">Add</button>
                                     </div>
                                 </div>
                             </div>
@@ -576,8 +492,8 @@
 
                             <!-- Sub Categroies  -->
                             <div class="row mb-4">
-                                <label class="col-md-4 form-label">Sub Categories</label>
-                                <div class="col-md-8">
+                                <label class="col-md-12 form-label">Sub Categories</label>
+                                <div class="col-md-12">
                                     <select id="sub_category" name="country" class="form-control form-select select2"
                                         data-bs-placeholder="Select Sub Category">
                                         <option value="0">--Select--</option>
@@ -586,6 +502,18 @@
                                         <option value="3">Food</option>
                                         <option value="4">Fashion</option>
                                     </select>
+                                </div>
+                            </div>
+
+                            <!-- Add New Sub Category -->
+                            <div class="row mb-4">
+                                <div class="col-md-8">
+                                    <div class="input-group">
+                                        <input type="text" id="new-sub-category-input"
+                                            class="form-control form-control-sm" placeholder="Enter new subcategory">
+                                        <button id="add-sub-category-btn" type="button"
+                                            class="btn btn-primary btn-sm">Add</button>
+                                    </div>
                                 </div>
                             </div>
 
@@ -605,17 +533,20 @@
                                                 </span>
                                                 <?php endforeach; ?>
                                             </div>
-                                            <div class="row tag-input">
-                                                <input type="text" id="tag-input-field"
-                                                    class="col-md-6 mr-10 form-control" style="margin-right: 5px;"
-                                                    placeholder="Add a tag">
-                                                <button id="add-tag-btn" class="col-md-4 btn btn-primary">Add
-                                                    Tag</button>
+
+                                            <div class="col-md-12">
+                                                <div class="input-group">
+                                                    <input type="text" id="tag-input-field"
+                                                        class="form-control form-control-sm" placeholder="Add a tag">
+                                                    <button id="add-tag-btn" type="button"
+                                                        class="btn btn-primary btn-sm">Add </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
 
 
 
@@ -661,34 +592,34 @@
                                 <div class="card-body">
                                     <div>
                                         <div class="row mb-2">
-                                            <label class="col-md-4 form-label mb-4">File Upload:</label>
-                                            <input class="col-md-8" type="file" name="files" id="featured_image"
+                                            <label class="col-md-5 form-label mb-4">File Upload:</label>
+                                            <input class="col-md-7" type="file" name="files" id="featured_image"
                                                 accept=".jpg, .png, image/jpeg, image/png">
                                         </div>
 
                                         <div class="row mb-2">
-                                            <label class="col-md-4 form-label">alt tag:</label>
-                                            <input type="text" class="col-md-8 form-control"
+                                            <label class="col-md-5 form-label">alt tag:</label>
+                                            <input type="text" class="col-md-7 form-control"
                                                 id="featured_image_alt_tag">
 
                                         </div>
 
                                         <div class="row mb-2">
-                                            <label class="col-md-4 form-label">title:</label>
-                                            <input type="text" class="col-md-8 form-control" id="featured_image_title">
+                                            <label class="col-md-5 form-label">title:</label>
+                                            <input type="text" class="col-md-7 form-control" id="featured_image_title">
 
                                         </div>
 
                                         <div class="row mb-2">
-                                            <label class="col-md-4 form-label">caption:</label>
-                                            <input type="text" class="col-md-8 form-control"
+                                            <label class="col-md-5 form-label">caption:</label>
+                                            <input type="text" class="col-md-7 form-control"
                                                 id="featured_image_caption">
 
                                         </div>
 
                                         <div class="row mb-2">
-                                            <label class="col-md-4 form-label">description:</label>
-                                            <input type="text" class="col-md-8 form-control"
+                                            <label class="col-md-5 form-label">description:</label>
+                                            <input type="text" class="col-md-7 form-control"
                                                 id="featured_image_description">
                                         </div>
                                     </div>
@@ -713,11 +644,32 @@
 </div>
 </div>
 
+
+
+
 <script>
 $(document).ready(function() {
-    $('#add-category-btn').click(function() {
-        var newCategory = $('#new-category-input').val().trim();
 
+    $('#add-category-btn').click(function(e) {
+        e.preventDefault();
+        var categoryName = $('#new-category-input').val();
+        console.log(categoryName);
+
+        $.ajax({
+            url: '<?php echo site_url("blog/backend/post/saveCategory"); ?>',
+            type: 'POST',
+            data: {
+                category_name: categoryName
+            },
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(xhr, status, error) {
+                console.log(error);
+            }
+        });
+
+        var newCategory = $('#new-category-input').val().trim();
         if (newCategory !== '') {
             var selectDropdown = $('#category');
             var optionElement = $('<option></option>').attr('value', newCategory).text(newCategory);
@@ -728,11 +680,27 @@ $(document).ready(function() {
             $('#new-category-input').val('');
         }
     });
-});
 
-$(document).ready(function() {
-    // Add Tag Button
-    $('#add-tag-btn').click(function() {
+    $('#add-sub-category-btn').click(function(e) {
+        e.preventDefault();
+
+        var newSubCategory = $('#new-sub-category-input').val().trim();
+        if (newSubCategory !== '') {
+            var selectDropdown = $('#sub_category');
+            var optionElement = $('<option></option>').attr('value', newSubCategory).text(
+                newSubCategory);
+
+            selectDropdown.append(optionElement);
+            selectDropdown.val(newSubCategory);
+
+            $('#new-sub-category-input').val('');
+        }
+    });
+
+
+
+    $('#add-tag-btn').click(function(e) {
+        e.preventDefault();
         var tagInput = $('#tag-input-field');
         var tagValue = tagInput.val().trim();
 
@@ -753,17 +721,18 @@ $(document).ready(function() {
         }
     });
 
-    // Delete Tag Button
     $(document).on('click', '.delete-tag', function() {
         $(this).parent('.tag').remove();
     });
+
 });
+
+
 
 $(document).ready(function() {
 
     $('#post-form').submit(function(e) {
         e.preventDefault();
-
         var ogUrl = $('#og-url-input').val();
         var ogType = $('#og-type-input').val();
         var ogTitle = $('#og-title-input').val();
@@ -774,7 +743,6 @@ $(document).ready(function() {
         var twitterDescription = $('#twitter-description-input').val();
         var twitterImage = $('#twitter-image-input').val();
 
-        // Create an object with the data
         var socialTagsData = {
             og_url: ogUrl,
             og_type: ogType,
@@ -787,7 +755,6 @@ $(document).ready(function() {
             twitter_image: twitterImage
         };
 
-        // Send the AJAX request
         $.ajax({
             url: '<?php echo site_url("blog/backend/post/saveSocialTags"); ?>',
             type: 'POST',
@@ -795,6 +762,17 @@ $(document).ready(function() {
             success: function(response) {
                 console.log(response);
                 $('#posts-container').append(response);
+
+                $('#og-url-input').val('');
+                $('#og-type-input').val('');
+                $('#og-title-input').val('');
+                $('#og-description-input').val('');
+                $('#og-image-input').val('');
+                $('#twitter-site-input').val('');
+                $('#twitter-title-input').val('');
+                $('#twitter-description-input').val('');
+                $('#twitter-image-input').val('');
+
             },
             error: function(xhr, status, error) {
                 console.log(error);
@@ -809,7 +787,6 @@ $(document).ready(function() {
 
     $('#post-form').submit(function(e) {
         e.preventDefault();
-
         var title = $('#title').val();
         var slug = $('#slug').val();
         var content = $('#content').val();
@@ -867,6 +844,29 @@ $(document).ready(function() {
             success: function(response) {
                 console.log(response);
                 $('#posts-container').append(response);
+
+
+                $('#title').val('');
+                $('#slug').val('');
+                $('#content').val('');
+                $('#meta_title').val('');
+                $('#meta_description').val('');
+                $('#meta_keywords').val('');
+                $('input[name="canonical_tags"]').prop('checked', false);
+                $('select[name="index"]').val('');
+                $('select[name="follow"]').val('');
+                $('#author_tag').val('');
+                $('#social_tags').val('');
+                $('#category').val('');
+                $('#sub_category').val('');
+                $('.tag').empty();
+                $('#status').val(0);
+                $('#featured').prop('checked', false);
+                $('#featured_image').val('');
+                $('#featured_image_title').val('');
+                $('#featured_image_alt_tag').val('');
+                $('#featured_image_description').val('');
+                $('#featured_image_caption').val('');
             },
             error: function(xhr, status, error) {
                 console.log(error);
@@ -874,35 +874,29 @@ $(document).ready(function() {
         });
 
         // Debugging console.log statements
-        console.log('post_title:', title);
-        console.log('slug:', slug);
-        console.log('post_content:', content);
-        console.log('meta_title:', metaTitle);
-        console.log('meta_description:', metaDescription);
-        console.log('meta_keywords:', metaKeywords);
-        console.log('canonical tags:', canonicalTagsValue);
-        console.log('robots tag follow:', robotsTagIndex);
-        console.log('robots tag index:', robotsTagFollow);
-        console.log('author_tag:', authorTag);
-        console.log('category:', category);
-        console.log('sub_category:', subCategory);
-        console.log('tags:', tags);
-        console.log('status:', status);
-        console.log('featured:', featured);
-        console.log('featured_image:', featuredImage);
-        console.log('featured_image_title:', featuredImageTitle);
-        console.log('featured_image_alt_tag:', featuredImageAltTag);
-        console.log('featured_image_description:', featuredImageDescription);
-        console.log('featured_image_caption:', featuredImageCaption);
+        // console.log('post_title:', title);
+        // console.log('slug:', slug);
+        // console.log('post_content:', content);
+        // console.log('meta_title:', metaTitle);
+        // console.log('meta_description:', metaDescription);
+        // console.log('meta_keywords:', metaKeywords);
+        // console.log('canonical tags:', canonicalTagsValue);
+        // console.log('robots tag follow:', robotsTagIndex);
+        // console.log('robots tag index:', robotsTagFollow);
+        // console.log('author_tag:', authorTag);
+        // console.log('category:', category);
+        // console.log('sub_category:', subCategory);
+        // console.log('tags:', tags);
+        // console.log('status:', status);
+        // console.log('featured:', featured);
+        // console.log('featured_image:', featuredImage);
+        // console.log('featured_image_title:', featuredImageTitle);
+        // console.log('featured_image_alt_tag:', featuredImageAltTag);
+        // console.log('featured_image_description:', featuredImageDescription);
+        // console.log('featured_image_caption:', featuredImageCaption);
 
     });
-});
 
-
-
-
-
-$(document).ready(function() {
     $('.delete-post').click(function() {
         var postId = $(this).data('post-id');
 
@@ -923,7 +917,6 @@ $(document).ready(function() {
     });
 });
 </script>
-
 
 
 <!-- <script src="../assets/plugins/wysiwyag/jquery.richtext.js"></script>

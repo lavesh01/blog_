@@ -1453,3 +1453,636 @@ ERROR - 2023-07-10 13:26:26 --> Cache: Failed to initialize APC; extension not l
 ERROR - 2023-07-10 13:26:26 --> Cache: Failed to initialize APC; extension not loaded/enabled?
 ERROR - 2023-07-10 13:26:57 --> Cache: Failed to initialize APC; extension not loaded/enabled?
 ERROR - 2023-07-10 13:26:58 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 13:50:41 --> 404 Page Not Found: Campaign/index
+ERROR - 2023-07-10 13:54:31 --> 404 Page Not Found: Campaign/index
+ERROR - 2023-07-10 13:54:38 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 13:54:40 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 13:54:40 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 13:54:40 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 13:54:40 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 13:54:40 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 13:54:40 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 13:54:40 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 13:54:40 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 13:54:40 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 13:54:40 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 13:54:41 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 13:54:47 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 13:54:47 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:00:54 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:00:56 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:00:56 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:00:56 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:00:56 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:00:56 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:00:57 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:00:57 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:00:57 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:00:57 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:00:57 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:00:57 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:03:58 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:04:01 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:04:01 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:04:01 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:04:01 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:04:01 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:04:02 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:04:02 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:04:02 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:04:02 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:04:02 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:04:02 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:04:02 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:04:02 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:04:02 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:04:02 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:04:33 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:04:34 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:04:35 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:04:35 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:04:35 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:04:35 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:04:35 --> 404 Page Not Found: blog/Assets/js
+ERROR - 2023-07-10 14:04:35 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: blog/Assets/js
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: blog/Assets/js
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: blog/Assets/js
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: blog/Assets/js
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: blog/Assets/js
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: blog/Assets/js
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:04:36 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:04:37 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:05:33 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:05:35 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:05:35 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:05:35 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:05:35 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:05:35 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:05:36 --> 404 Page Not Found: blog/Assets/js
+ERROR - 2023-07-10 14:05:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:05:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:05:36 --> 404 Page Not Found: blog/Assets/js
+ERROR - 2023-07-10 14:05:36 --> 404 Page Not Found: blog/Assets/js
+ERROR - 2023-07-10 14:05:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:05:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:05:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:05:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:05:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:05:36 --> 404 Page Not Found: blog/Assets/js
+ERROR - 2023-07-10 14:05:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:05:36 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:05:37 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:05:37 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:05:37 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:05:37 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:05:37 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:05:37 --> 404 Page Not Found: blog/Assets/js
+ERROR - 2023-07-10 14:05:37 --> 404 Page Not Found: blog/Assets/js
+ERROR - 2023-07-10 14:05:37 --> 404 Page Not Found: blog/Assets/js
+ERROR - 2023-07-10 14:05:37 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:05:37 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:05:37 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:05:37 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:05:37 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:05:37 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:07:37 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:07:39 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:07:39 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:07:39 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:07:39 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:07:39 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:07:40 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:07:40 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:07:40 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:07:40 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:07:40 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:07:40 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:07:40 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:07:40 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:07:40 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:07:40 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:07:59 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:08:00 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:08:00 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:08:00 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:08:00 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:08:00 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:08:01 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:08:01 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:08:01 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:08:01 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:08:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:08:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:08:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:08:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:08:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:08:01 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:08:53 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:08:55 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:08:55 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:08:55 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:08:55 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:08:55 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:08:56 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:08:56 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:08:56 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:08:56 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:08:56 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:10:49 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:10:55 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:10:55 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:10:55 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:10:56 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:10:56 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:10:57 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:10:57 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:10:57 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:10:58 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:10:58 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:10:58 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:10:58 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:10:58 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:10:58 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:10:58 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:11:14 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:11:16 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:11:17 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:11:17 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:11:17 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:11:17 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:11:18 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:11:18 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:11:18 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:11:18 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:11:18 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:11:18 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:11:18 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:11:18 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:11:19 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:11:19 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:11:54 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:11:54 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:12:04 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:12:04 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:15:01 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:15:03 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:15:03 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:15:03 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:15:03 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:15:03 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:15:03 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:15:03 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:15:03 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:15:03 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:15:03 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:15:04 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:15:04 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:15:04 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:15:04 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:15:04 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:15:07 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:15:08 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:15:29 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:15:30 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:15:30 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:15:30 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:15:30 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:15:30 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:15:31 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:15:31 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:15:31 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:15:31 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:15:31 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:15:31 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:15:31 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:15:31 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:15:31 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:15:31 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:15:35 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:15:35 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:15:42 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:15:42 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:16:04 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:16:04 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:16:12 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:16:14 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:16:14 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:16:14 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:16:14 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:16:14 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:16:14 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:16:14 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:16:15 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:16:15 --> 404 Page Not Found: blog/Assets/plugins
+ERROR - 2023-07-10 14:16:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:16:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:16:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:16:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:16:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:16:15 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:16:20 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:16:21 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:16:38 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:16:40 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:16:40 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:16:40 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:16:41 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:16:41 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:16:42 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:16:42 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:16:42 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:16:42 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:16:42 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:16:42 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:16:46 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:16:46 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:17:38 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:17:40 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:17:40 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:17:40 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:17:41 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:17:41 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:17:41 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:17:41 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:17:41 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:17:41 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:17:41 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:17:41 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:17:46 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:17:46 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:17:51 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:17:51 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:18:38 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:18:38 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:18:40 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:18:40 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:18:40 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:19:06 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:19:06 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:19:16 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:19:17 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:22:48 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:22:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:22:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:22:57 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:22:57 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:22:57 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:22:57 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:22:57 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:22:57 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:22:58 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:22:58 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:22:58 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:22:58 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:22:58 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:22:59 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:23:08 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:23:19 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:27:04 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:27:07 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:27:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:27:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:27:08 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:27:08 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:27:08 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:27:08 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:27:08 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:27:09 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:27:09 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:27:09 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:27:09 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:27:09 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:27:09 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:27:14 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:28:08 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:28:09 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:28:12 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:28:13 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:28:14 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:28:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:28:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:28:17 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:28:17 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:28:17 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:28:17 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:28:18 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:28:18 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:28:18 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:28:18 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:28:19 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:28:19 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:28:19 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:28:19 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:28:30 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:28:30 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:30:38 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:30:43 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:30:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:30:45 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:30:45 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:30:45 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:30:45 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:30:45 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:30:45 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:30:46 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:30:46 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:30:46 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:30:46 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:30:46 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:30:47 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:30:56 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:30:56 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:32:07 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:32:09 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:32:10 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:32:10 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:32:10 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:32:10 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:32:10 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:32:10 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:32:10 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:32:11 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:32:11 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:32:11 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:32:11 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:32:11 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:32:11 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:32:42 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:32:47 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:32:48 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:32:49 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:32:49 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:32:50 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:32:50 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:32:50 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:32:50 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:32:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:32:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:32:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:32:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:32:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:32:52 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:33:06 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:33:07 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:35:15 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:35:20 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:35:21 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:35:21 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:35:21 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:35:22 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:35:22 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:35:22 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:35:22 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:35:23 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:35:23 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:35:23 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:35:23 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:35:24 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:35:24 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:35:45 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:35:45 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:37:06 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:37:07 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:39:39 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:39:45 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:39:46 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:39:46 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:39:46 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:39:46 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:39:47 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:39:47 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:39:47 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:39:47 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:39:47 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:39:48 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:39:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:39:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:39:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:39:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:39:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:41:57 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:42:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:42:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:42:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:42:01 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:42:02 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:42:02 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:42:02 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:42:02 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:42:02 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:42:02 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:42:02 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:42:02 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:42:02 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:42:02 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:42:30 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:42:32 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:42:32 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:42:32 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:42:32 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:42:33 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:42:33 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:42:33 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:42:33 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:42:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:42:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:42:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:42:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:42:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:42:34 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:43:03 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:43:04 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:43:05 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:43:05 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:43:05 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:43:05 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:43:05 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:43:05 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:43:05 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:43:05 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:43:05 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:43:05 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:43:05 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:43:05 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:43:05 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:43:51 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:43:52 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:43:53 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:43:53 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:43:53 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:43:53 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:43:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:43:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:43:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:43:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:43:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:43:56 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:44:38 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:44:42 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:44:42 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:44:42 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:44:42 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:44:42 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:44:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:44:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:44:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:44:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:44:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:44:45 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:44:52 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:44:53 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 14:44:53 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 14:44:54 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 14:44:54 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:44:54 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 14:44:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:44:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:44:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:44:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:44:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 14:44:55 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:25:43 --> 404 Page Not Found: Campaign/index
+ERROR - 2023-07-10 15:25:50 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:25:51 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 15:25:51 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:25:51 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 15:25:51 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 15:25:51 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 15:25:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:25:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:25:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:25:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:25:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:25:52 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:34:06 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:34:09 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 15:34:09 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 15:34:09 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:34:09 --> Severity: Warning --> Undefined variable $form_data D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 15:34:09 --> Severity: Warning --> foreach() argument must be of type array|object, null given D:\xampp\htdocs\blogCd\resources\themes\zanex\view\blog\blogpage.php 17
+ERROR - 2023-07-10 15:34:10 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:34:10 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:34:10 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:34:10 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:34:10 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:34:10 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:34:13 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:34:13 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:34:13 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:34:13 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:34:13 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:34:13 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:34:14 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:35:39 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:35:41 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 15:35:41 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 15:35:41 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:35:42 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:35:42 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:35:42 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:35:42 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:35:42 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:35:42 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:36:10 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:36:11 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 15:36:11 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 15:36:11 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:36:12 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:36:12 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:36:12 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:36:12 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:36:12 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:36:12 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:37:53 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:37:55 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 15:37:55 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 15:37:55 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:37:56 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:38:30 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:38:31 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 15:38:31 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 15:38:31 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:38:32 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:38:32 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:38:32 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:38:32 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:38:32 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:38:32 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:40:55 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:40:56 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 15:40:57 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 15:40:57 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:40:57 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:40:57 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:40:57 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:40:57 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:40:57 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:40:57 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:42:06 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:42:08 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 15:42:08 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 15:42:08 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:42:09 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:42:09 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:42:09 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:42:09 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:42:09 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:42:09 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:43:12 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:43:13 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 15:43:13 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 15:43:13 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:43:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:43:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:43:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:43:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:43:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:43:14 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:43:50 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:43:51 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 15:43:51 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 15:43:51 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:43:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:43:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:43:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:43:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:43:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:43:52 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:44:21 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:44:22 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-10 15:44:22 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-10 15:44:22 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-10 15:44:22 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:44:22 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:44:22 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:44:22 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:44:22 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-10 15:44:22 --> Cache: Failed to initialize APC; extension not loaded/enabled?

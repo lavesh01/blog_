@@ -20,6 +20,16 @@ class Blog_model extends CI_Model {
         return $this->db->insert_id();
     }
 
+    public function get_categories(){
+        $query = $this->db->get('bf_category');
+        return $query->result();
+    }
+
+    public function save_category($data) {
+        $this->db->insert('bf_category', $data);
+        return $this->db->insert_id();
+    }
+
     public function delete_post($post_id) {
         $this->db->where('id', $post_id);
         $this->db->delete('bf_post');
