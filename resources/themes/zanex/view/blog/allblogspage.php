@@ -9,7 +9,7 @@
                     <table class="table table-bordered text-nowrap border-bottom w-100" id="responsive-datatable">
                         <thead>
                             <tr>
-                                <th class="wd-15p border-bottom-0">Blog id</th>
+                                <th class="wd-15p border-bottom-0">Post id</th>
                                 <th class="wd-30p border-bottom-0">Title</th>
                                 <th class="wd-10p border-bottom-0">Category</th>
                                 <th class="wd-10p border-bottom-0">Created on</th>
@@ -23,7 +23,10 @@
                             <tr id="post-<?php echo $data->id; ?>">
                                 <td><?php echo $data->id; ?></td>
                                 <td><?php echo $data->post_title; ?></td>
-                                <td><?php echo $data->category; ?></td>
+                                <td id="post-<?php echo $data->id; ?>">
+                                    <?php echo $data->category_name; ?>
+                                </td>
+
                                 <td><?php echo $data->created_on; ?></td>
                                 <td>
                                     <?php
@@ -48,7 +51,8 @@
                                         echo $statusText;
                                     ?>
                                 </td>
-                                <td>Edit</td>
+                                <td> <button class="btn btn-primary edit-post" data-post-id="<?php echo $data->id; ?>">
+                                        Edit </button> </td>
                                 <td> <button class="btn btn-primary delete-post"
                                         data-post-id="<?php echo $data->id; ?>">Delete Post</button> </td>
 
@@ -61,3 +65,35 @@
         </div>
     </div>
 </div>
+
+
+
+<script>
+$(document).ready(function() {
+    $('.edit-post').click(function() {
+        var postId = $(this).data('post-id');
+        console.log(postId);
+
+        window.location.href = 'http://localhost/blogCd/blog/backend/blogs/edit/' + postId;
+    });
+
+    $('.delete-post').click(function() {
+        var postId = $(this).data('post-id');
+
+        $.ajax({
+            url: '<?php echo site_url("blog/backend/post/deletePost"); ?>',
+            type: 'POST',
+            data: {
+                post_id: postId
+            },
+            success: function(response) {
+                console.log(response);
+                $('#post-' + postId).remove();
+            },
+            error: function(xhr, status, error) {
+                console.error(xhr.responseText);
+            }
+        });
+    });
+});
+</script>

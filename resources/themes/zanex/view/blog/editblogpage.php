@@ -13,80 +13,20 @@
 }
 </style>
 
+<?php
+// Retrieve the post data from the $post variable passed from the controller
+if ($post) {
+    echo '<h2>Title: ' . $post->post_title . '</h2>';
+} else {
+    echo '<h1>Blog post not found!</h1>';
+}
+?>
+
+
 <div class="row" id="user-profile">
     <div class="col-lg-12">
         <div class="card">
-            <div class="card-body">
-                <div class="wideget-user">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-xl-6">
-                            <div class="wideget-user-desc d-sm-flex">
-                                <div class="wideget-user-img">
-                                    <img class="" src="http://localhost/blogCd/resources/images/avatars/2.jpg"
-                                        alt="img">
-                                </div>
-                                <div class="user-wrap">
-                                    <h4>Admin</h4>
-                                    <h6 class="text-muted mb-3">Member Since: November 2017</h6>
-                                    <a href="javascript:void(0);" class="btn btn-primary mt-1 mb-1"><i
-                                            class="fa fa-rss"></i> Follow</a>
-                                    <a href="emailservices.html" class="btn btn-secondary mt-1 mb-1"><i
-                                            class="fa fa-envelope"></i> E-mail</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-xl-6">
-                            <div class="text-xl-right mt-4 mt-xl-0">
-                                <a href="emailservices.html" class="btn btn-white">Comments</a>
-                                <a href="editprofile.html" class="btn btn-primary">Edit Blog</a>
-                            </div>
-                            <div class="mt-5">
-                                <div class="main-profile-contact-list float-lg-end d-lg-flex">
-                                    <div class="me-5">
-                                        <div class="media">
-                                            <div class="media-icon bg-primary  me-3 mt-1">
-                                                <i class="fe fe-file-plus fs-20 text-white"></i>
-                                            </div>
-                                            <div class="media-body">
-                                                <span class="text-muted">Blogs Published</span>
-                                                <div class="fw-semibold fs-25">
-                                                    34
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="me-5 mt-5 mt-md-0">
-                                        <div class="media">
-                                            <div class="media-icon bg-success me-3 mt-1">
-                                                <i class="fe fe-users  fs-20 text-white"></i>
-                                            </div>
-                                            <div class="media-body">
-                                                <span class="text-muted">Archived</span>
-                                                <div class="fw-semibold fs-25">
-                                                    6
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="me-0 mt-5 mt-md-0">
-                                        <div class="media">
-                                            <div class="media-icon bg-orange me-3 mt-1">
-                                                <i class="fe fe-wifi fs-20 text-white"></i>
-                                            </div>
-                                            <div class="media-body">
-                                                <span class="text-muted">Featured</span>
-                                                <div class="fw-semibold fs-25">
-                                                    10
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <div class="border-top">
                 <div class="wideget-user-tab">
                     <div class="tab-menu-heading">
@@ -96,7 +36,6 @@
                                 </li>
                                 <li><a href="#tab-61" data-bs-toggle="tab" class="">Meta Tags</a>
                                 </li>
-                                <!-- <li><a href="#tab-71" data-bs-toggle="tab" class="">All Blogs</a></li> -->
                                 <li><a href="#tab-81" data-bs-toggle="tab" class="">Settings</a></li>
                             </ul>
                         </div>
@@ -105,7 +44,8 @@
             </div>
         </div>
 
-        <form id="post-form" method="post" action='<?php echo site_url("blog/backend/post/saveFormData"); ?>'>
+        <form id="post-form" method="put" action="<?php echo site_url('blog/backend/blogs/update'); ?>">
+
             <div class="row">
                 <div class="col-xl-8">
                     <!-- Blog posts  -->
@@ -114,14 +54,15 @@
                             <div id="profile-log-switch">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h3>Fill out the form to create a blog post</h3>
+                                        <h3>Update the blog post</h3>
 
 
                                         <div class="row">
                                             <div class="col-xl-12">
                                                 <div class="card">
                                                     <div class="card-header">
-                                                        <div class="card-title">Add New Post</div>
+                                                        <div class="card-title">
+                                                            Add New Post</div>
                                                     </div>
                                                     <div class="card-body">
                                                         <div class="form horizontal">
@@ -131,7 +72,8 @@
                                                                     Title:</label>
                                                                 <div class="col-md-9">
                                                                     <input type="text" class="form-control" id="title"
-                                                                        placeholder="">
+                                                                        placeholder=""
+                                                                        value="<?php echo $post->post_title; ?>">
                                                                 </div>
                                                             </div>
 
@@ -140,7 +82,8 @@
                                                                     Slug:</label>
                                                                 <div class="col-md-9">
                                                                     <input type="text" class="form-control" id="slug"
-                                                                        placeholder="">
+                                                                        placeholder=""
+                                                                        value="<?php echo $post->slug; ?>">
                                                                 </div>
                                                             </div>
 
@@ -150,7 +93,7 @@
                                                                     :</label>
                                                                 <div class="mb-4">
                                                                     <textarea class="content" name="content"
-                                                                        id="content"></textarea>
+                                                                        id="content"><?php echo $post->post_content; ?></textarea>
                                                                 </div>
                                                             </div>
 
@@ -185,7 +128,8 @@
                                                     <div class="row mb-4">
                                                         <label class="col-md-3 form-label">meta title :</label>
                                                         <div class="col-md-9">
-                                                            <input type="text" id="meta_title" class="form-control">
+                                                            <input type="text" id="meta_title" class="form-control"
+                                                                value="<?php echo $post->meta_title; ?>">
                                                         </div>
                                                     </div>
 
@@ -196,7 +140,8 @@
                                                         <label class="col-md-3 form-label">meta description :</label>
                                                         <div class="col-md-9">
                                                             <input type="text" id="meta_description"
-                                                                class="form-control">
+                                                                class="form-control"
+                                                                value="<?php echo $post->meta_description; ?>">
                                                         </div>
                                                     </div>
 
@@ -204,7 +149,8 @@
                                                         <label class="col-md-3 form-label">meta keywords :</label>
                                                         <div class="col-md-9">
                                                             <input type="text" id="meta_keywords" class="form-control"
-                                                                placeholder="Write the keywords and add comma to add another">
+                                                                placeholder="Write the keywords and add comma to add another"
+                                                                value="<?php echo $post->meta_keywords; ?>">
                                                         </div>
                                                     </div>
 
@@ -216,13 +162,15 @@
                                                                     <label
                                                                         class="col-md-6 d-flex custom-control custom-radio">
                                                                         <input type="radio" class="custom-control-input"
-                                                                            name="canonical_tags" value="1" checked>
+                                                                            name="canonical_tags" value="1"
+                                                                            <?php if ($post->meta_canonical == 1) echo 'checked'; ?>>
                                                                         <span class="custom-control-label">Yes</span>
                                                                     </label>
                                                                     <label
                                                                         class="col-md-6 d-flex custom-control custom-radio">
                                                                         <input type="radio" class="custom-control-input"
-                                                                            name="canonical_tags" value="0">
+                                                                            name="canonical_tags" value="0"
+                                                                            <?php if ($post->meta_canonical == 0) echo 'checked'; ?>>
                                                                         <span class="custom-control-label">No</span>
                                                                     </label>
                                                                 </div>
@@ -237,15 +185,27 @@
                                                         <div class="col-md-4">
                                                             <select name="follow"
                                                                 class="form-control form-select select2">
-                                                                <option value="0">nofollow</option>
-                                                                <option value="1">follow</option>
+                                                                <option value="0"
+                                                                    <?php if ($post->robots_tag_follow == 0) echo 'selected'; ?>>
+                                                                    nofollow
+                                                                </option>
+                                                                <option value="1"
+                                                                    <?php if ($post->robots_tag_follow == 1) echo 'selected'; ?>>
+                                                                    follow
+                                                                </option>
                                                             </select>
                                                         </div>
                                                         <div class="col-md-4">
                                                             <select name="index"
                                                                 class="form-control form-select select2">
-                                                                <option value="0">noindex</option>
-                                                                <option value="1">index</option>
+                                                                <option value="0"
+                                                                    <?php if ($post->robots_tag_index == 0) echo 'selected'; ?>>
+                                                                    noindex
+                                                                </option>
+                                                                <option value="1"
+                                                                    <?php if ($post->robots_tag_index == 1) echo 'selected'; ?>>
+                                                                    index
+                                                                </option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -254,7 +214,8 @@
                                                     <div class="row mb-4">
                                                         <label class="col-md-3 form-label">author:</label>
                                                         <div class="col-md-9">
-                                                            <input type="text" id="author_tag" class="form-control">
+                                                            <input type="text" id="author_tag" class="form-control"
+                                                                value="<?php echo $post->author_tag; ?>">
                                                         </div>
                                                     </div>
 
@@ -282,32 +243,37 @@
                                                                                 <label
                                                                                     class="col-md-4 form-label">og-url:</label>
                                                                                 <input id="og-url-input" type="text"
-                                                                                    class="col-md-8 form-control">
+                                                                                    class="col-md-8 form-control"
+                                                                                    value="<?php echo $post->og_url; ?>">
                                                                             </div>
                                                                             <div class="row mb-3">
                                                                                 <label
                                                                                     class="col-md-4 form-label">og-type:</label>
                                                                                 <input id="og-type-input" type="text"
-                                                                                    class="col-md-8 form-control">
+                                                                                    class="col-md-8 form-control"
+                                                                                    value="<?php echo $post->og_type; ?>">
                                                                             </div>
                                                                             <div class="row mb-3">
                                                                                 <label
                                                                                     class="col-md-4 form-label">og-title:</label>
                                                                                 <input id="og-title-input" type="text"
-                                                                                    class="col-md-8 form-control">
+                                                                                    class="col-md-8 form-control"
+                                                                                    value="<?php echo $post->og_title; ?>">
                                                                             </div>
                                                                             <div class="row mb-3">
                                                                                 <label
                                                                                     class="col-md-4 form-label">og-description:</label>
                                                                                 <input id="og-description-input"
                                                                                     type="text"
-                                                                                    class="col-md-8 form-control">
+                                                                                    class="col-md-8 form-control"
+                                                                                    value="<?php echo $post->og_description; ?>">
                                                                             </div>
                                                                             <div class="row mb-3">
                                                                                 <label
                                                                                     class="col-md-4 form-label">og-image:</label>
                                                                                 <input id="og-image-input" type="text"
-                                                                                    class="col-md-8 form-control">
+                                                                                    class="col-md-8 form-control"
+                                                                                    value="<?php echo $post->og_image; ?>">
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -334,26 +300,30 @@
                                                                             <label
                                                                                 class="col-md-4 form-label">twitter-site:</label>
                                                                             <input id="twitter-site-input" type="text"
-                                                                                class="col-md-8 form-control">
+                                                                                class="col-md-8 form-control"
+                                                                                value="<?php echo $post->twitter_site; ?>">
                                                                         </div>
                                                                         <div class="row mb-3">
                                                                             <label
                                                                                 class="col-md-4 form-label">twitter-title:</label>
                                                                             <input id="twitter-title-input" type="text"
-                                                                                class="col-md-8 form-control">
+                                                                                class="col-md-8 form-control"
+                                                                                value="<?php echo $post->twitter_title; ?>">
                                                                         </div>
                                                                         <div class="row mb-3">
                                                                             <label
                                                                                 class="col-md-4 form-label">twitter-description:</label>
                                                                             <input id="twitter-description-input"
                                                                                 type="text"
-                                                                                class="col-md-8 form-control">
+                                                                                class="col-md-8 form-control"
+                                                                                value="<?php echo $post->twitter_description; ?>">
                                                                         </div>
                                                                         <div class="row mb-3">
                                                                             <label
                                                                                 class="col-md-4 form-label">twitter-image:</label>
                                                                             <input id="twitter-image-input" type="text"
-                                                                                class="col-md-8 form-control">
+                                                                                class="col-md-8 form-control"
+                                                                                value="<?php echo $post->twitter_image; ?>">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -374,15 +344,6 @@
                             </div>
 
                         </div>
-
-                        <!-- All Blogs  -->
-                        <!-- <div class="tab-pane" id="tab-71">
-                        <div class="card">
-                            <div class="card-body">
-                                <h1>hello all blogs</h1>
-                            </div>
-                        </div>
-                    </div> -->
 
                         <!-- Settings  -->
                         <div class="tab-pane" id="tab-81">
@@ -447,6 +408,7 @@
                         </div>
                         <div class="card-body">
 
+
                             <!-- Categories -->
                             <div class="row mb-4">
                                 <label class="col-md-12 form-label">Category</label>
@@ -456,7 +418,8 @@
                                         <option value="0" data-category-id="0">Uncategorised</option>
                                         <?php foreach ($categories as $category): ?>
                                         <option value="<?php echo $category->id; ?>"
-                                            data-category-id="<?php echo $category->id; ?>">
+                                            data-category-id="<?php echo $category->id; ?>"
+                                            <?php if ($category->id == $post->category) echo 'selected'; ?>>
                                             <?php echo $category->category_name; ?>
                                         </option>
                                         <?php endforeach; ?>
@@ -486,7 +449,8 @@
                                         data-bs-placeholder="Select Sub Category">
                                         <option value="0">--Select--</option>
                                         <?php foreach ($subcategories as $subcategory): ?>
-                                        <option value="<?php echo $subcategory->id; ?>">
+                                        <option value="<?php echo $subcategory->id; ?>"
+                                            <?php if ($subcategory->id == $post->sub_category) echo 'selected'; ?>>
                                             <?php echo $subcategory->subcategory_name; ?>
                                         </option>
                                         <?php endforeach; ?>
@@ -508,13 +472,18 @@
 
 
                             <!-- Tags  -->
+
                             <div class="row mb-4">
                                 <label class="col-md-4 form-label">Tags</label>
                                 <div class="">
                                     <div class="text-wrap">
                                         <div class="example">
+
                                             <div class="mb-2 tags" id="tags">
-                                                <?php foreach ($tags as $tag): ?>
+                                                <?php 
+                                                    $tagArray = explode(",", $post->tags); 
+                                                    foreach ($tagArray as $tag): 
+                                                    ?>
                                                 <span class="tag">
                                                     <?php echo $tag; ?>
                                                     <a href="javascript:void(0)" class="tag-addon delete-tag"><i
@@ -522,13 +491,12 @@
                                                 </span>
                                                 <?php endforeach; ?>
                                             </div>
-
                                             <div class="col-md-12">
                                                 <div class="input-group">
                                                     <input type="text" id="tag-input-field"
                                                         class="form-control form-control-sm" placeholder="Add a tag">
                                                     <button id="add-tag-btn" type="button"
-                                                        class="btn btn-primary btn-sm">Add </button>
+                                                        class="btn btn-primary btn-sm">Add</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -545,10 +513,14 @@
                                 <div class="col-md-8">
                                     <select id="status" name="country" class="form-control form-select select2"
                                         data-bs-placeholder="Select Status">
-                                        <option value="0">Draft</option>
-                                        <option value="1">Published</option>
-                                        <option value="2">Archived</option>
-                                        <option value="3">Trash</option>
+                                        <option value="0" <?php if ($post->status == 0) echo 'selected'; ?>>Draft
+                                        </option>
+                                        <option value="1" <?php if ($post->status == 1) echo 'selected'; ?>>Published
+                                        </option>
+                                        <option value="2" <?php if ($post->status == 2) echo 'selected'; ?>>Archived
+                                        </option>
+                                        <option value="3" <?php if ($post->status == 3) echo 'selected'; ?>>Trash
+                                        </option>
                                     </select>
                                 </div>
                             </div>
@@ -558,7 +530,7 @@
                                 <div class="form-label">Featured:</div>
                                 <label class="custom-switch">
                                     <input id="featured" type="checkbox" name="custom-switch-checkbox"
-                                        class="custom-switch-input">
+                                        class="custom-switch-input" <?php if ($post->featured == 1) echo 'checked'; ?>>
                                     <span class=" custom-switch-indicator"></span>
                                     <span class=" custom-switch-description">Do you want this blog to be in one of
                                         your
@@ -582,34 +554,37 @@
                                     <div>
                                         <div class="row mb-2">
                                             <label class="col-md-5 form-label mb-4">File Upload:</label>
-                                            <input class="col-md-7" type="file" name="files" id="featured_image"
+                                            <input id="featured_image" value="<?php echo $post->featured_image; ?>">
+                                            <input class="col-md-7" type="file" name="files"
                                                 accept=".jpg, .png, image/jpeg, image/png">
                                         </div>
 
                                         <div class="row mb-2">
                                             <label class="col-md-5 form-label">alt tag:</label>
-                                            <input type="text" class="col-md-7 form-control"
-                                                id="featured_image_alt_tag">
+                                            <input type="text" class="col-md-7 form-control" id="featured_image_alt_tag"
+                                                value="<?php echo $post->featured_image_alt_tag; ?>">
 
                                         </div>
 
                                         <div class="row mb-2">
                                             <label class="col-md-5 form-label">title:</label>
-                                            <input type="text" class="col-md-7 form-control" id="featured_image_title">
+                                            <input type="text" class="col-md-7 form-control" id="featured_image_title"
+                                                value="<?php echo $post->featured_image_title; ?>">
 
                                         </div>
 
                                         <div class="row mb-2">
                                             <label class="col-md-5 form-label">caption:</label>
-                                            <input type="text" class="col-md-7 form-control"
-                                                id="featured_image_caption">
+                                            <input type="text" class="col-md-7 form-control" id="featured_image_caption"
+                                                value="<?php echo $post->featured_image_caption; ?>">
 
                                         </div>
 
                                         <div class="row mb-2">
                                             <label class="col-md-5 form-label">description:</label>
                                             <input type="text" class="col-md-7 form-control"
-                                                id="featured_image_description">
+                                                id="featured_image_description"
+                                                value="<?php echo $post->featured_image_description; ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -617,9 +592,8 @@
 
 
                             <div class="card-footer">
-                                <button type="submit" class="btn btn-primary"> Post </button>
-                                <!-- <a href="javascript:void(0)" class="btn btn-primary">Post</a> -->
-                                <a href="javascript:void(0)" class="btn btn-default float-end">Discard</a>
+                                <button id="update-btn" data-post-id="<?php echo $post->id; ?>" type="submit"
+                                    class="btn btn-primary"> Update </button>
                             </div>
 
                         </div>
@@ -638,11 +612,45 @@
 
 <script>
 $(document).ready(function() {
-    $('#category').on('change', function() {
-        var selectedOption = $(this).find(':selected');
-        var categoryID = selectedOption.data('category-id');
-        console.log(categoryID);
+
+    const fileInput = document.getElementById('featured_image');
+    const selectedFile = document.getElementById('selected_file');
+
+    fileInput.addEventListener('change', function() {
+        selectedFile.textContent = fileInput.files[0] ? fileInput.files[0].name : '';
     });
+
+
+    $('#add-tag-btn').click(function(e) {
+        e.preventDefault();
+        var tagInput = $('#tag-input-field');
+        var tagValue = tagInput.val().trim();
+
+        if (tagValue !== '') {
+            var tagSpan = $('<span class="tag"></span>').text(tagValue);
+            var deleteLink = $(
+                '<a href="javascript:void(0)" class="tag-addon delete-tag"><i class="fe fe-x"></i></a>'
+            );
+
+            deleteLink.click(function() {
+                $(this).parent('.tag').remove();
+            });
+
+            tagSpan.append(deleteLink);
+            $('#tags').append(tagSpan);
+
+            tagInput.val('');
+        }
+    });
+
+    $(document).on('click', '.delete-tag', function() {
+        $(this).parent('.tag').remove();
+    });
+
+});
+
+
+$(document).ready(function() {
 
     $('#add-category-btn').click(function(e) {
         e.preventDefault();
@@ -726,45 +734,14 @@ $(document).ready(function() {
     });
 
 
-
-
-    $('#add-tag-btn').click(function(e) {
+    $('#update-btn').click(function(e) {
         e.preventDefault();
-        var tagInput = $('#tag-input-field');
-        var tagValue = tagInput.val().trim();
+        var id = $(this).data('post-id');
+        var url = 'http://localhost/blogCd/blog/backend/blogs/update/' + id;
 
-        if (tagValue !== '') {
-            var tagSpan = $('<span class="tag"></span>').text(tagValue);
-            var deleteLink = $(
-                '<a href="javascript:void(0)" class="tag-addon delete-tag"><i class="fe fe-x"></i></a>'
-            );
-
-            deleteLink.click(function() {
-                $(this).parent('.tag').remove();
-            });
-
-            tagSpan.append(deleteLink);
-            $('#tags').append(tagSpan);
-
-            tagInput.val('');
-        }
-    });
-
-    $(document).on('click', '.delete-tag', function() {
-        $(this).parent('.tag').remove();
-    });
-
-});
-
-
-
-$(document).ready(function() {
-
-    $('#post-form').submit(function(e) {
-        e.preventDefault();
-        var title = $('#title').val();
+        var post_title = $('#title').val();
         var slug = $('#slug').val();
-        var content = $('#content').val();
+        var post_content = $('#content').val();
         var metaTitle = $('#meta_title').val();
         var metaDescription = $('#meta_description').val();
         var metaKeywords = $('#meta_keywords').val();
@@ -783,13 +760,6 @@ $(document).ready(function() {
         var twitterDescription = $('#twitter-description-input').val();
         var twitterImage = $('#twitter-image-input').val();
 
-
-        // $('#category').on('change', function() {
-        //     var selectedOption = $(this).find(':selected');
-        //     var categoryID = selectedOption.data('category-id');
-        //     console.log(categoryID);
-        // });
-
         var subCategory = $('#sub_category').val();
         var category = $('#category').val();
 
@@ -807,130 +777,54 @@ $(document).ready(function() {
         var featuredImageDescription = $('#featured_image_description').val();
         var featuredImageCaption = $('#featured_image_caption').val();
 
-        $.ajax({
-            url: '<?php echo site_url("blog/backend/post/saveFormData"); ?>',
-            type: 'POST',
-            data: {
-                post_title: title,
-                slug: slug,
-                post_content: content,
-                meta_title: metaTitle,
-                meta_description: metaDescription,
-                meta_keywords: metaKeywords,
-                meta_canonical: canonicalTagsValue,
-                robots_tag_index: robotsTagIndex,
-                robots_tag_follow: robotsTagFollow,
-                author_tag: authorTag,
 
-                og_url: ogUrl,
-                og_type: ogType,
-                og_title: ogTitle,
-                og_description: ogDescription,
-                og_image: ogImage,
-                twitter_site: twitterSite,
-                twitter_title: twitterTitle,
-                twitter_description: twitterDescription,
-                twitter_image: twitterImage,
+        var postData = {
+            id: id,
+            post_title: post_title,
+            slug: slug,
+            post_content: post_content,
+            meta_title: metaTitle,
+            meta_description: metaDescription,
+            meta_keywords: metaKeywords,
+            meta_canonical: canonicalTagsValue,
+            robots_tag_index: robotsTagIndex,
+            robots_tag_follow: robotsTagFollow,
+            author_tag: authorTag,
 
-                category: category,
-                sub_category: subCategory,
-                tags: tags,
-                status: status,
-                featured: featured,
-                featured_image: featuredImage,
-                featured_image_title: featuredImageTitle,
-                featured_image_alt_tag: featuredImageAltTag,
-                featured_image_description: featuredImageDescription,
-                featured_image_caption: featuredImageCaption
-            },
-            success: function(response) {
-                console.log(response);
-                $('#posts-container').append(response);
+            og_url: ogUrl,
+            og_type: ogType,
+            og_title: ogTitle,
+            og_description: ogDescription,
+            og_image: ogImage,
+            twitter_site: twitterSite,
+            twitter_title: twitterTitle,
+            twitter_description: twitterDescription,
+            twitter_image: twitterImage,
 
-
-                $('#title').val('');
-                $('#slug').val('');
-                $('#content').val('');
-                $('#meta_title').val('');
-                $('#meta_description').val('');
-                $('#meta_keywords').val('');
-                $('input[name="canonical_tags"]').prop('checked', false);
-                $('select[name="index"]').val('');
-                $('select[name="follow"]').val('');
-                $('#author_tag').val('');
-
-                $('#og-url-input').val('');
-                $('#og-type-input').val('');
-                $('#og-title-input').val('');
-                $('#og-description-input').val('');
-                $('#og-image-input').val('');
-                $('#twitter-site-input').val('');
-                $('#twitter-title-input').val('');
-                $('#twitter-description-input').val('');
-                $('#twitter-image-input').val('');
-                $('#social_tags').val('');
-                $('#category').val('');
-                $('#sub_category').val('');
-                $('.tag').empty();
-                $('#status').val(0);
-                $('#featured').prop('checked', false);
-                $('#featured_image').val('');
-                $('#featured_image_title').val('');
-                $('#featured_image_alt_tag').val('');
-                $('#featured_image_description').val('');
-                $('#featured_image_caption').val('');
-            },
-            error: function(xhr, status, error) {
-                console.log(error);
-            }
-        });
-
-        // Debugging console.log statements
-        // console.log('post_title:', title);
-        // console.log('slug:', slug);
-        // console.log('post_content:', content);
-        // console.log('meta_title:', metaTitle);
-        // console.log('meta_description:', metaDescription);
-        // console.log('meta_keywords:', metaKeywords);
-        // console.log('canonical tags:', canonicalTagsValue);
-        // console.log('robots tag follow:', robotsTagIndex);
-        // console.log('robots tag index:', robotsTagFollow);
-        // console.log('author_tag:', authorTag);
-        console.log('category:', category);
-        console.log('sub_category:', subCategory);
-        // console.log('tags:', tags);
-        // console.log('status:', status);
-        // console.log('featured:', featured);
-        // console.log('featured_image:', featuredImage);
-        // console.log('featured_image_title:', featuredImageTitle);
-        // console.log('featured_image_alt_tag:', featuredImageAltTag);
-        // console.log('featured_image_description:', featuredImageDescription);
-        // console.log('featured_image_caption:', featuredImageCaption);
-
-    });
-
-    $('.delete-post').click(function() {
-        var postId = $(this).data('post-id');
+            category: category,
+            sub_category: subCategory,
+            tags: tags,
+            status: status,
+            featured: featured,
+            featured_image: featuredImage,
+            featured_image_title: featuredImageTitle,
+            featured_image_alt_tag: featuredImageAltTag,
+            featured_image_description: featuredImageDescription,
+            featured_image_caption: featuredImageCaption
+        };
 
         $.ajax({
-            url: '<?php echo site_url("blog/backend/post/deletePost"); ?>',
-            type: 'POST',
-            data: {
-                post_id: postId
-            },
+            url: url,
+            type: 'PUT',
+            data: postData,
             success: function(response) {
                 console.log(response);
-                $('#post-' + postId).remove();
             },
             error: function(xhr, status, error) {
-                console.error(xhr.responseText);
+                console.error(error);
             }
         });
+        console.log(postData);
     });
 });
 </script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
-<!-- <script src="../assets/plugins/wysiwyag/jquery.richtext.js"></script>
-<script src="../assets/plugins/wysiwyag/wysiwyag.js"></script> -->

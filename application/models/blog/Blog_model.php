@@ -5,29 +5,62 @@ class Blog_model extends CI_Model {
         $this->load->database();
     }
 
+    public function getBlogPost($postId) {
+        $this->db->where('id', $postId);
+        $query = $this->db->get('bf_post');
+    
+        if ($query->num_rows() > 0) {
+            return $query->row(); 
+        } else {
+            return false; 
+        }
+    }
+    
+    public function getBlogPosts(){
+    $this->db->select('bf_post.*, bf_category.category_name, bf_sub_category.subcategory_name');
+    $this->db->from('bf_post');
+    $this->db->join('bf_category', 'bf_post.category = bf_category.id', 'left');
+    $this->db->join('bf_sub_category', 'bf_post.sub_category = bf_sub_category.id', 'left');
+    $query = $this->db->get();
+
+    if ($query->num_rows() > 0) {
+        return $query->result();
+    } else {
+        return array();
+    }
+    }
+
+
+    // public function getBlogPosts()
+    // {
+    //     $this->db->select('bf_post.*, bf_category.category_name');
+    //     $this->db->from('bf_post');
+    //     $this->db->join('bf_category', 'bf_post.category = bf_category.id', 'left');
+    //     $query = $this->db->get();
+
+    //     if ($query->num_rows() > 0) {
+    //         return $query->result();
+    //     } else {
+    //         return array();
+    //     }
+    // }
+
+
+    public function updateBlogPost($postId, $updatedData) {
+        $this->db->where('id', $postId);
+        $this->db->update('bf_post', $updatedData);
+        return $this->db->affected_rows() > 0;
+    }
+    
+
     public function get_form_data(){
         $query = $this->db->get("bf_post");
         return $query->result();
     }
 
-    public function save_form_data($data) {
-        $this->db->insert('bf_post', $data);
-        return $this->db->insert_id();
-    }
-
-    public function save_social_tags($data) {
-        $this->db->insert('bf_social_tags', $data);
-        return $this->db->insert_id();
-    }
-
     public function get_categories(){
         $query = $this->db->get('bf_category');
         return $query->result();
-    }
-
-    public function save_category($data) {
-        $this->db->insert('bf_category', $data);
-        return $this->db->insert_id();
     }
 
     public function delete_post($post_id) {

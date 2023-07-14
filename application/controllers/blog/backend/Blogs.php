@@ -7,14 +7,7 @@ public function __construct() {
        parent::__construct();
 }
 
-public function showFormData()
-{
-       $this->load->model('blog/Blog_model');   
 
-       $data['form_data'] = $this->Blog_model->get_form_data();
-   
-       $this->load_view('blog/blogpage', $data);
-}
 
 public function deletepost() {
     $post_id = $this->input->post('post_id');
@@ -31,6 +24,87 @@ public function deletepost() {
     echo json_encode($response);
 }
 
+public function edit($postId) {
+    $this->load->model('blog/Blog_model');
+    $post = $this->Blog_model->getBlogPost($postId);
+
+
+    $this->load->model('blog/Post_model');
+    $categories = $this->Post_model->get_categories();
+    $subcategories = $this->Post_model->get_subcategories();
+
+    $data['categories'] = $categories;
+    $data['subcategories'] = $subcategories;
+
+    if ($post) {
+        $data['post'] = $post;
+
+        $this->load_view('blog/editblogpage', $data);
+    } else {
+        echo "Blog post not found!";
+    }
+}
+
+public function update($id) {
+    // $input = $this->input->put();
+    // $input = json_decode($this->input->raw_input_stream, true);
+    // var_dump(file_get_contents('php://input'));
+    parse_str(file_get_contents('php://input'), $input);
+
+
+    // var_dump($input);
+    if (isset($input["post_title"]) && isset($input["slug"]) && isset($input["post_content"]) && !empty($input["post_title"]) && !empty($input["slug"]) && !empty($input["post_content"])){
+    $updatedData = array(
+        'post_title' => $input['post_title'],
+        'slug' => $input['slug'],
+        'post_content' => $input['post_content'],
+        'meta_title' => $input['meta_title'],
+        'meta_description' => $input['meta_description'],
+        'meta_keywords' => $input["meta_keywords"],
+        'meta_canonical' => $input["meta_canonical"],
+        'robots_tag_index' => $input["robots_tag_index"],
+        'robots_tag_follow' => $input["robots_tag_follow"],
+        'author_tag' => $input["author_tag"],
+        'og_url' => $input["og_url"],
+        'og_type' => $input["og_type"],
+        'og_title' => $input["og_title"],
+        'og_description' => $input["og_description"],
+        'og_image' => $input["og_image"],
+        'twitter_site' => $input["twitter_site"],
+        'twitter_title' => $input["twitter_title"],
+        'twitter_description' => $input["twitter_description"],
+        'twitter_image' => $input["twitter_image"],
+        'category' => $input["category"],
+        'sub_category' => $input["sub_category"],
+        'tags' => implode(",", $input["tags"]),
+        'status' => $input["status"],
+        'featured' => $input["featured"],
+        'featured_image' => $input["featured_image"],
+        'featured_image_title' => $input["featured_image_title"],
+        'featured_image_alt_tag' => $input["featured_image_alt_tag"],
+        'featured_image_description' => $input["featured_image_description"],
+        'featured_image_caption' => $input["featured_image_caption"]
+    );
+    
+    $this->load->model('blog/Blog_model');
+    $success = $this->Blog_model->updateBlogPost($id, $updatedData);
+    
+    if ($success) {
+        $response = array('status' => 'success', 'message' => 'Blog post updated successfully');
+    } else {
+        $response = array('status' => 'error', 'message' => 'Failed to update blog post');
+    }
+    
+    echo json_encode($response);
+} else {
+    $response = array('status' => 'error', 'message' => 'Post form Required fields are missing.');
+    echo json_encode($response);
+}
+
+}
+
+
+
 public function index($table_name="")
 {
 
@@ -44,18 +118,13 @@ public function index($table_name="")
     $data["css"] = [ site_url()."resources/themes/".$this->theme_selected_template."/assetsassets/x-editable/bootstrap4-editable/css/bootstrap-editable.css",
     site_url()."resources/themes/".$this->theme_selected_template."/assetsassets/x-editable/poshytip/tip-yellowsimple/tip-yellowsimple.css",
     ];
-       
-    
-    $this->load->model('blog/Blog_model');   
 
-    $data['form_data'] = $this->Blog_model->get_form_data();
+    $this->load->model('blog/Blog_model');
+    $data['form_data'] = $this->Blog_model->getBlogPosts();
 
     $this->load_view("blog/allblogspage", $data, 'operation/sidebar/sidebar');
       
 }
-
-
-
 
 
 public function addBugs($table_name="")

@@ -7,24 +7,11 @@ public function __construct() {
        parent::__construct();
 }
 
-public function showFormData()
-{
-    $tags = array('Technology');
-    $data['tags'] = $tags;
-
-       $this->load->model('blog/Blog_model');   
-
-       $data['form_data'] = $this->Blog_model->get_form_data();
-   
-       $this->load_view('blog/blogpage', $data);
-}
 
 public function saveFormData()
 {
     $input = $this->input->post();
-    // var_dump($input);
 
-    // Check if required fields are set and not empty
     if (isset($input["post_title"]) && isset($input["slug"]) && isset($input["post_content"]) && !empty($input["post_title"]) && !empty($input["slug"]) && !empty($input["post_content"]))
     {
         $data = array(
@@ -38,7 +25,17 @@ public function saveFormData()
             'robots_tag_index' => $input["robots_tag_index"],
             'robots_tag_follow' => $input["robots_tag_follow"],
             'author_tag' => $input["author_tag"],
-            'social_tags' => $input["social_tags"],
+            
+            'og_url' => $input["og_url"],
+            'og_type' => $input["og_type"],
+            'og_title' => $input["og_title"],
+            'og_description' => $input["og_description"],
+            'og_image' => $input["og_image"],
+            'twitter_site' => $input["twitter_site"],
+            'twitter_title' => $input["twitter_title"],
+            'twitter_description' => $input["twitter_description"],
+            'twitter_image' => $input["twitter_image"],
+
             'category' => $input["category"],
             'sub_category' => $input["sub_category"],
             'tags' => implode(",", $input["tags"]),
@@ -51,9 +48,9 @@ public function saveFormData()
             'featured_image_caption' => $input["featured_image_caption"]
         );
 
-        $this->load->model('blog/Blog_model');
+        $this->load->model('blog/Post_model');
 
-        $insert_id = $this->Blog_model->save_form_data($data);
+        $insert_id = $this->Post_model->save_form_data($data);
         
         if ($insert_id) {
             $response = array('status' => 'success', 'message' => 'Post form Data saved successfully', 'post_id' => $insert_id);
@@ -69,46 +66,10 @@ public function saveFormData()
     }
 }
 
-public function saveSocialTags()
-{
-    $input = $this->input->post();
-    // var_dump($input);
-
-    // Check if required fields are set and not empty
-    if (!empty($input["og_url"]) && !empty($input["og_type"]) && !empty($input["og_title"]) && !empty($input["og_description"]) && !empty($input["og_image"]) && !empty($input["twitter_site"]) && !empty($input["twitter_title"]) && !empty($input["twitter_description"]) && !empty($input["twitter_image"])) {
-        $data = array(
-            'og_url' => $input["og_url"],
-            'og_type' => $input["og_type"],
-            'og_title' => $input["og_title"],
-            'og_description' => $input["og_description"],
-            'og_image' => $input["og_image"],
-            'twitter_site' => $input["twitter_site"],
-            'twitter_title' => $input["twitter_title"],
-            'twitter_description' => $input["twitter_description"],
-            'twitter_image' => $input["twitter_image"],
-        );
-
-        $this->load->model('blog/Blog_model');
-
-        $insert_id = $this->Blog_model->save_social_tags($data);
-
-        if ($insert_id) {
-            $response = array('status' => 'success', 'message' => 'Socia tags Data saved successfully', 'post_id' => $insert_id);
-        } else {
-            $response = array('status' => 'error', 'message' => 'Socia tags Failed to save data.');
-        }
-
-        echo json_encode($response);
-    } else {
-        $response = array('status' => 'error', 'message' => 'Socia tags Required fields are missing.');
-        echo json_encode($response);
-    }
-}
-
 public function getCategories()
 {
-    $this->load->model('blog/Blog_model');
-    $categories = $this->Blog_model->get_categories();
+    $this->load->model('blog/Post_model');
+    $categories = $this->Post_model->get_categories();
 
     $data['categories'] = $categories;
 
@@ -126,12 +87,12 @@ public function saveCategory()
                 'category_name' => $input
             );
 
-        $this->load->model('blog/Blog_model');
+        $this->load->model('blog/Post_model');
 
-        $insert_id = $this->Blog_model->save_category($data);
+        $category_row = $this->Post_model->save_category($data);
 
-        if ($insert_id) {
-            $response = array('status' => 'success', 'message' => 'Category Data saved successfully', 'post_id' => $insert_id);
+        if ($category_row) {
+            $response = $category_row;
         } else {
             $response = array('status' => 'error', 'message' => 'Category Failed to save data.');
         }
@@ -142,13 +103,50 @@ public function saveCategory()
         echo json_encode($response);
     }
 }
+public function getSubcategories()
+{
+    $this->load->model('blog/Post_model');
+    $subcategories = $this->Post_model->get_subcategories();
+
+    $data['subcategories'] = $subcategories;
+
+    $this->load->view('blog/blogpage', $data);
+}
+
+
+public function saveSubcategory()
+{
+    $input = $this->input->post("subcategory_name");
+    var_dump($input);
+
+    if (isset($input) && !empty($input)) {
+        $data = array(
+            'subcategory_name' => $input
+        );
+
+        $this->load->model('blog/Post_model');
+
+        $subcategory_row = $this->Post_model->save_subcategory($data);
+
+        if ($subcategory_row) {
+            $response = $subcategory_row;
+        } else {
+            $response = array('status' => 'error', 'message' => 'Subcategory failed to save data.');
+        }
+
+        echo json_encode($response);
+    } else {
+        $response = array('status' => 'error', 'message' => 'Subcategory required fields are missing.');
+        echo json_encode($response);
+    }
+}
 
 
 public function deletepost() {
     $post_id = $this->input->post('post_id');
 
-    $this->load->model('blog/Blog_model');
-    $rows_affected = $this->Blog_model->delete_post($post_id);
+    $this->load->model('blog/Post_model');
+    $rows_affected = $this->Post_model->delete_post($post_id);
 
     if ($rows_affected > 0) {
         $response = array('status' => 'success', 'message' => 'Post deleted successfully');
@@ -175,18 +173,14 @@ public function index($table_name="")
     site_url()."resources/themes/".$this->theme_selected_template."/assetsassets/x-editable/poshytip/tip-yellowsimple/tip-yellowsimple.css",
     ];
 
-    
-    // $this->load->model('blog/Blog_model');
-    // $data['form_data'] = $this->Blog_model->get_form_data();
-
-    $this->load->model('blog/Blog_model');
-    $categories = $this->Blog_model->get_categories();
+    $this->load->model('blog/Post_model');
+    $categories = $this->Post_model->get_categories();
+    $subcategories = $this->Post_model->get_subcategories();
 
     $data['categories'] = $categories;
+    $data['subcategories'] = $subcategories;
 
 
-
-       
     $this->load_view("blog/blogpage", $data, 'operation/sidebar/sidebar');
       
 }

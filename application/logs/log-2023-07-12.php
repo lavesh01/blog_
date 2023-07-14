@@ -984,3 +984,4 @@ ERROR - 2023-07-12 13:46:11 --> 404 Page Not Found: Resources/themes
 ERROR - 2023-07-12 13:46:11 --> 404 Page Not Found: Resources/themes
 ERROR - 2023-07-12 13:46:11 --> 404 Page Not Found: Resources/themes
 ERROR - 2023-07-12 13:46:11 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-12 14:50:31 --> Severity: Warning --> Undefined array key "HTTP_REFERER" D:\xampp\htdocs\blogCd\application\controllers\Auth.php 22
