@@ -554,9 +554,10 @@ if ($post) {
                                     <div>
                                         <div class="row mb-2">
                                             <label class="col-md-5 form-label mb-4">File Upload:</label>
-                                            <input id="featured_image" value="<?php echo $post->featured_image; ?>">
-                                            <input class="col-md-7" type="file" name="files"
-                                                accept=".jpg, .png, image/jpeg, image/png">
+                                            <input class="col-md-7 form-control" id="featured_image"
+                                                value="<?php echo $post->featured_image; ?>">
+                                            <!-- <input class="col-md-7" type="file" name="files"
+                                                accept=".jpg, .png, image/jpeg, image/png"> -->
                                         </div>
 
                                         <div class="row mb-2">
@@ -734,7 +735,10 @@ $(document).ready(function() {
     });
 
 
+
     $('#update-btn').click(function(e) {
+        var $form = $('#post-form');
+        var $submitButton = $form.find('button[type="submit"]');
         e.preventDefault();
         var id = $(this).data('post-id');
         var url = 'http://localhost/blogCd/blog/backend/blogs/update/' + id;
@@ -813,6 +817,8 @@ $(document).ready(function() {
             featured_image_caption: featuredImageCaption
         };
 
+        $submitButton.prop('disabled', true).text('Submitting...');
+
         $.ajax({
             url: url,
             type: 'PUT',
@@ -822,6 +828,10 @@ $(document).ready(function() {
             },
             error: function(xhr, status, error) {
                 console.error(error);
+            },
+            complete: function() {
+                $submitButton.prop('disabled', false).text('Update');
+                alert("Post Updated Successfully!");
             }
         });
         console.log(postData);

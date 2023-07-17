@@ -105,7 +105,8 @@
             </div>
         </div>
 
-        <form id="post-form" method="post" action='<?php echo site_url("blog/backend/post/saveFormData"); ?>'>
+        <form id="post-form" method="post">
+
             <div class="row">
                 <div class="col-xl-8">
                     <!-- Blog posts  -->
@@ -130,8 +131,9 @@
                                                                 <label for="inputName" class="col-md-3 form-label">
                                                                     Title:</label>
                                                                 <div class="col-md-9">
-                                                                    <input type="text" class="form-control" id="title"
-                                                                        placeholder="">
+                                                                    <input type="text" class="form-control"
+                                                                        id="post_title" placeholder="" name="post_title"
+                                                                        required>
                                                                 </div>
                                                             </div>
 
@@ -140,7 +142,7 @@
                                                                     Slug:</label>
                                                                 <div class="col-md-9">
                                                                     <input type="text" class="form-control" id="slug"
-                                                                        placeholder="">
+                                                                        placeholder="" name="slug" required>
                                                                 </div>
                                                             </div>
 
@@ -149,8 +151,8 @@
                                                                 <label class="form-label mb-4">Post Content
                                                                     :</label>
                                                                 <div class="mb-4">
-                                                                    <textarea class="content" name="content"
-                                                                        id="content"></textarea>
+                                                                    <textarea class="content" name="post_content"
+                                                                        id="post_content" required></textarea>
                                                                 </div>
                                                             </div>
 
@@ -185,7 +187,8 @@
                                                     <div class="row mb-4">
                                                         <label class="col-md-3 form-label">meta title :</label>
                                                         <div class="col-md-9">
-                                                            <input type="text" id="meta_title" class="form-control">
+                                                            <input type="text" id="meta_title" class="form-control"
+                                                                name="meta_title" required>
                                                         </div>
                                                     </div>
 
@@ -196,7 +199,7 @@
                                                         <label class="col-md-3 form-label">meta description :</label>
                                                         <div class="col-md-9">
                                                             <input type="text" id="meta_description"
-                                                                class="form-control">
+                                                                class="form-control" name="meta_description" required>
                                                         </div>
                                                     </div>
 
@@ -204,7 +207,8 @@
                                                         <label class="col-md-3 form-label">meta keywords :</label>
                                                         <div class="col-md-9">
                                                             <input type="text" id="meta_keywords" class="form-control"
-                                                                placeholder="Write the keywords and add comma to add another">
+                                                                placeholder="Write the keywords and add comma to add another"
+                                                                name="meta_keywords" required>
                                                         </div>
                                                     </div>
 
@@ -216,13 +220,13 @@
                                                                     <label
                                                                         class="col-md-6 d-flex custom-control custom-radio">
                                                                         <input type="radio" class="custom-control-input"
-                                                                            name="canonical_tags" value="1" checked>
+                                                                            name="meta_canonical" value="1" checked>
                                                                         <span class="custom-control-label">Yes</span>
                                                                     </label>
                                                                     <label
                                                                         class="col-md-6 d-flex custom-control custom-radio">
                                                                         <input type="radio" class="custom-control-input"
-                                                                            name="canonical_tags" value="0">
+                                                                            name="meta_canonical" value="0">
                                                                         <span class="custom-control-label">No</span>
                                                                     </label>
                                                                 </div>
@@ -235,14 +239,14 @@
                                                     <div class="row mb-4">
                                                         <label class="col-md-3 form-label">robots tags:</label>
                                                         <div class="col-md-4">
-                                                            <select name="follow"
+                                                            <select name="robots_tag_follow"
                                                                 class="form-control form-select select2">
                                                                 <option value="0">nofollow</option>
                                                                 <option value="1">follow</option>
                                                             </select>
                                                         </div>
                                                         <div class="col-md-4">
-                                                            <select name="index"
+                                                            <select name="robots_tag_index"
                                                                 class="form-control form-select select2">
                                                                 <option value="0">noindex</option>
                                                                 <option value="1">index</option>
@@ -254,7 +258,8 @@
                                                     <div class="row mb-4">
                                                         <label class="col-md-3 form-label">author:</label>
                                                         <div class="col-md-9">
-                                                            <input type="text" id="author_tag" class="form-control">
+                                                            <input type="text" id="author_tag" class="form-control"
+                                                                name="author_tag" required>
                                                         </div>
                                                     </div>
 
@@ -282,32 +287,37 @@
                                                                                 <label
                                                                                     class="col-md-4 form-label">og-url:</label>
                                                                                 <input id="og-url-input" type="text"
-                                                                                    class="col-md-8 form-control">
+                                                                                    class="col-md-8 form-control"
+                                                                                    name="og_url" required>
                                                                             </div>
                                                                             <div class="row mb-3">
                                                                                 <label
                                                                                     class="col-md-4 form-label">og-type:</label>
                                                                                 <input id="og-type-input" type="text"
-                                                                                    class="col-md-8 form-control">
+                                                                                    class="col-md-8 form-control"
+                                                                                    name="og_type" required>
                                                                             </div>
                                                                             <div class="row mb-3">
                                                                                 <label
                                                                                     class="col-md-4 form-label">og-title:</label>
                                                                                 <input id="og-title-input" type="text"
-                                                                                    class="col-md-8 form-control">
+                                                                                    class="col-md-8 form-control"
+                                                                                    name="og_title" required>
                                                                             </div>
                                                                             <div class="row mb-3">
                                                                                 <label
                                                                                     class="col-md-4 form-label">og-description:</label>
                                                                                 <input id="og-description-input"
                                                                                     type="text"
-                                                                                    class="col-md-8 form-control">
+                                                                                    class="col-md-8 form-control"
+                                                                                    name="og_description" required>
                                                                             </div>
                                                                             <div class="row mb-3">
                                                                                 <label
                                                                                     class="col-md-4 form-label">og-image:</label>
                                                                                 <input id="og-image-input" type="text"
-                                                                                    class="col-md-8 form-control">
+                                                                                    class="col-md-8 form-control"
+                                                                                    name="og_image" required>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -334,26 +344,30 @@
                                                                             <label
                                                                                 class="col-md-4 form-label">twitter-site:</label>
                                                                             <input id="twitter-site-input" type="text"
-                                                                                class="col-md-8 form-control">
+                                                                                class="col-md-8 form-control"
+                                                                                name="twitter_site" required>
                                                                         </div>
                                                                         <div class="row mb-3">
                                                                             <label
                                                                                 class="col-md-4 form-label">twitter-title:</label>
                                                                             <input id="twitter-title-input" type="text"
-                                                                                class="col-md-8 form-control">
+                                                                                class="col-md-8 form-control"
+                                                                                name="twitter_title" required>
                                                                         </div>
                                                                         <div class="row mb-3">
                                                                             <label
                                                                                 class="col-md-4 form-label">twitter-description:</label>
                                                                             <input id="twitter-description-input"
                                                                                 type="text"
-                                                                                class="col-md-8 form-control">
+                                                                                class="col-md-8 form-control"
+                                                                                name="twitter_description" required>
                                                                         </div>
                                                                         <div class="row mb-3">
                                                                             <label
                                                                                 class="col-md-4 form-label">twitter-image:</label>
                                                                             <input id="twitter-image-input" type="text"
-                                                                                class="col-md-8 form-control">
+                                                                                class="col-md-8 form-control"
+                                                                                name="twitter_image" required>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -451,9 +465,9 @@
                             <div class="row mb-4">
                                 <label class="col-md-12 form-label">Category</label>
                                 <div class="col-md-12">
-                                    <select id="category" name="country" class="form-control form-select select2"
+                                    <select id="category" name="category" class="form-control form-select select2"
                                         data-bs-placeholder="Select Category">
-                                        <option value="0" data-category-id="0">Uncategorised</option>
+                                        <option value="0" data-category-id="0">UnCategorised</option>
                                         <?php foreach ($categories as $category): ?>
                                         <option value="<?php echo $category->id; ?>"
                                             data-category-id="<?php echo $category->id; ?>">
@@ -482,9 +496,10 @@
                             <div class="row mb-4">
                                 <label class="col-md-12 form-label">Sub Categories</label>
                                 <div class="col-md-12">
-                                    <select id="sub_category" name="country" class="form-control form-select select2"
+                                    <select id="sub_category" name="sub_category"
+                                        class="form-control form-select select2"
                                         data-bs-placeholder="Select Sub Category">
-                                        <option value="0">--Select--</option>
+                                        <option value="0">UnSubcategorised</option>
                                         <?php foreach ($subcategories as $subcategory): ?>
                                         <option value="<?php echo $subcategory->id; ?>">
                                             <?php echo $subcategory->subcategory_name; ?>
@@ -515,7 +530,7 @@
                                         <div class="example">
                                             <div class="mb-2 tags" id="tags">
                                                 <?php foreach ($tags as $tag): ?>
-                                                <span class="tag">
+                                                <span class="tag" name="tags">
                                                     <?php echo $tag; ?>
                                                     <a href="javascript:void(0)" class="tag-addon delete-tag"><i
                                                             class="fe fe-x"></i></a>
@@ -543,7 +558,7 @@
                             <div class="row mb-4">
                                 <label class="col-md-4 form-label">Status</label>
                                 <div class="col-md-8">
-                                    <select id="status" name="country" class="form-control form-select select2"
+                                    <select id="status" name="status" class="form-control form-select select2"
                                         data-bs-placeholder="Select Status">
                                         <option value="0">Draft</option>
                                         <option value="1">Published</option>
@@ -557,8 +572,8 @@
                             <div class="form-group">
                                 <div class="form-label">Featured:</div>
                                 <label class="custom-switch">
-                                    <input id="featured" type="checkbox" name="custom-switch-checkbox"
-                                        class="custom-switch-input">
+                                    <input id="featured" type="checkbox" name="featured" class="custom-switch-input"
+                                        checked>
                                     <span class=" custom-switch-indicator"></span>
                                     <span class=" custom-switch-description">Do you want this blog to be in one of
                                         your
@@ -580,36 +595,42 @@
                                 </div>
                                 <div class="card-body">
                                     <div>
+                                        <!-- <div class="row mb-2">
+                                            <label class="col-md-5 form-label mb-4">File Upload:</label>
+                                            <input class="col-md-7" type="file" name="featured_image"
+                                                id="featured_image" accept=".jpg, .png, image/jpeg, image/png">
+                                        </div> -->
                                         <div class="row mb-2">
                                             <label class="col-md-5 form-label mb-4">File Upload:</label>
-                                            <input class="col-md-7" type="file" name="files" id="featured_image"
-                                                accept=".jpg, .png, image/jpeg, image/png">
+                                            <input class="col-md-7 form-control" name="featured_image"
+                                                id="featured_image">
                                         </div>
 
                                         <div class="row mb-2">
                                             <label class="col-md-5 form-label">alt tag:</label>
-                                            <input type="text" class="col-md-7 form-control"
-                                                id="featured_image_alt_tag">
+                                            <input type="text" class="col-md-7 form-control" id="featured_image_alt_tag"
+                                                name="featured_image_alt_tag">
 
                                         </div>
 
                                         <div class="row mb-2">
                                             <label class="col-md-5 form-label">title:</label>
-                                            <input type="text" class="col-md-7 form-control" id="featured_image_title">
+                                            <input type="text" class="col-md-7 form-control" id="featured_image_title"
+                                                name="featured_image_title">
 
                                         </div>
 
                                         <div class="row mb-2">
                                             <label class="col-md-5 form-label">caption:</label>
-                                            <input type="text" class="col-md-7 form-control"
-                                                id="featured_image_caption">
+                                            <input type="text" class="col-md-7 form-control" id="featured_image_caption"
+                                                name="featured_image_caption">
 
                                         </div>
 
                                         <div class="row mb-2">
                                             <label class="col-md-5 form-label">description:</label>
                                             <input type="text" class="col-md-7 form-control"
-                                                id="featured_image_description">
+                                                id="featured_image_description" name="featured_image_description">
                                         </div>
                                     </div>
                                 </div>
@@ -638,11 +659,6 @@
 
 <script>
 $(document).ready(function() {
-    $('#category').on('change', function() {
-        var selectedOption = $(this).find(':selected');
-        var categoryID = selectedOption.data('category-id');
-        console.log(categoryID);
-    });
 
     $('#add-category-btn').click(function(e) {
         e.preventDefault();
@@ -754,63 +770,107 @@ $(document).ready(function() {
         $(this).parent('.tag').remove();
     });
 
-});
 
+    var $form = $('#post-form');
 
+    var $submitButton = $form.find('button[type="submit"]');
+    var $requiredInputs = $form.find(':input[required]');
 
-$(document).ready(function() {
+    var rules = {
+        post_title: 'Please enter a title.',
+        slug: 'Please enter a slug.',
+        post_content: 'Please enter the post content.',
+        meta_title: 'required',
+        meta_description: 'required',
+        meta_keywords: 'required',
+        meta_canonical: 'required',
+        robots_tag_index: 'required',
+        robots_tag_follow: 'required',
+        author_tag: 'required',
+        og_url: {
+            required: true,
+            url: true
+        },
+        og_type: 'required',
+        og_title: 'required',
+        og_description: 'required',
+        og_image: 'required',
+        twitter_site: 'required',
+        twitter_title: 'required',
+        twitter_description: 'required',
+        twitter_image: 'required',
+    };
 
-    $('#post-form').submit(function(e) {
-        e.preventDefault();
-        var title = $('#title').val();
-        var slug = $('#slug').val();
-        var content = $('#content').val();
-        var metaTitle = $('#meta_title').val();
-        var metaDescription = $('#meta_description').val();
-        var metaKeywords = $('#meta_keywords').val();
-        var canonicalTagsValue = $('input[name="canonical_tags"]:checked').val();
-        var robotsTagIndex = $('select[name="index"]').val();
-        var robotsTagFollow = $('select[name="follow"]').val();
-        var authorTag = $('#author_tag').val();
+    var messages = {
+        post_title: 'Please enter a title.',
+        slug: 'Please enter a slug.',
+        post_content: 'Please enter the post content.',
+        meta_title: 'Please enter the meta title.',
+        meta_description: 'Please enter the meta description.',
+        meta_keywords: 'Please enter the meta keywords.',
+        meta_canonical: 'Please enter the canonical tags.',
+        robots_tag_index: 'Please select the robots tag index.',
+        robots_tag_follow: 'Please select the robots tag follow.',
+        author_tag: 'Please enter the author tag.',
+        og_url: {
+            required: 'Please enter the Open Graph URL.',
+            url: 'Please enter a valid URL for the Open Graph URL.'
+        },
+        og_type: 'Please enter the Open Graph type.',
+        og_title: 'Please enter the Open Graph title.',
+        og_description: 'Please enter the Open Graph description.',
+        og_image: 'Please enter the Open Graph image.',
+        twitter_site: 'Please enter the Twitter site.',
+        twitter_title: 'Please enter the Twitter title.',
+        twitter_description: 'Please enter the Twitter description.',
+        twitter_image: 'Please enter the Twitter image.',
+    };
 
-        var ogUrl = $('#og-url-input').val();
-        var ogType = $('#og-type-input').val();
-        var ogTitle = $('#og-title-input').val();
-        var ogDescription = $('#og-description-input').val();
-        var ogImage = $('#og-image-input').val();
-        var twitterSite = $('#twitter-site-input').val();
-        var twitterTitle = $('#twitter-title-input').val();
-        var twitterDescription = $('#twitter-description-input').val();
-        var twitterImage = $('#twitter-image-input').val();
+    $form.validate({
+        rules: rules,
+        messages: messages,
+        submitHandler: function(form) {
 
+            console.log('submitHandler executed');
 
-        // $('#category').on('change', function() {
-        //     var selectedOption = $(this).find(':selected');
-        //     var categoryID = selectedOption.data('category-id');
-        //     console.log(categoryID);
-        // });
+            var title = $('#post_title').val();
+            var slug = $('#slug').val();
+            var content = $('#post_content').val();
+            var metaTitle = $('#meta_title').val();
+            var metaDescription = $('#meta_description').val();
+            var metaKeywords = $('#meta_keywords').val();
+            var canonicalTagsValue = $('input[name="meta_canonical"]:checked').val();
+            var robotsTagIndex = $('select[name="robots_tag_index"]').val();
+            var robotsTagFollow = $('select[name="robots_tag_follow"]').val();
+            var authorTag = $('#author_tag').val();
 
-        var subCategory = $('#sub_category').val();
-        var category = $('#category').val();
+            var ogUrl = $('#og-url-input').val();
+            var ogType = $('#og-type-input').val();
+            var ogTitle = $('#og-title-input').val();
+            var ogDescription = $('#og-description-input').val();
+            var ogImage = $('#og-image-input').val();
+            var twitterSite = $('#twitter-site-input').val();
+            var twitterTitle = $('#twitter-title-input').val();
+            var twitterDescription = $('#twitter-description-input').val();
+            var twitterImage = $('#twitter-image-input').val();
+            var subCategory = $('#sub_category').val();
+            var category = $('#category').val();
 
-        var tags = [];
-        $('.tag').each(function() {
-            var tag = $(this).text().trim();
-            tags.push(tag);
-        });
+            var tags = [];
+            $('.tag').each(function() {
+                var tag = $(this).text().trim();
+                tags.push(tag);
+            });
 
-        var status = $('#status').val();
-        var featured = $('#featured').prop('checked') ? 1 : 0;
-        var featuredImage = $('#featured_image').val();
-        var featuredImageTitle = $('#featured_image_title').val();
-        var featuredImageAltTag = $('#featured_image_alt_tag').val();
-        var featuredImageDescription = $('#featured_image_description').val();
-        var featuredImageCaption = $('#featured_image_caption').val();
+            var status = $('#status').val();
+            var featured = $('#featured').prop('checked') ? 1 : 0;
+            var featuredImage = $('#featured_image').val();
+            var featuredImageTitle = $('#featured_image_title').val();
+            var featuredImageAltTag = $('#featured_image_alt_tag').val();
+            var featuredImageDescription = $('#featured_image_description').val();
+            var featuredImageCaption = $('#featured_image_caption').val();
 
-        $.ajax({
-            url: '<?php echo site_url("blog/backend/post/saveFormData"); ?>',
-            type: 'POST',
-            data: {
+            var formData = {
                 post_title: title,
                 slug: slug,
                 post_content: content,
@@ -821,7 +881,6 @@ $(document).ready(function() {
                 robots_tag_index: robotsTagIndex,
                 robots_tag_follow: robotsTagFollow,
                 author_tag: authorTag,
-
                 og_url: ogUrl,
                 og_type: ogType,
                 og_title: ogTitle,
@@ -831,7 +890,6 @@ $(document).ready(function() {
                 twitter_title: twitterTitle,
                 twitter_description: twitterDescription,
                 twitter_image: twitterImage,
-
                 category: category,
                 sub_category: subCategory,
                 tags: tags,
@@ -842,72 +900,35 @@ $(document).ready(function() {
                 featured_image_alt_tag: featuredImageAltTag,
                 featured_image_description: featuredImageDescription,
                 featured_image_caption: featuredImageCaption
-            },
-            success: function(response) {
-                console.log(response);
-                $('#posts-container').append(response);
+            };
+            console.log(formData);
 
+            $submitButton.prop('disabled', true).text('Submitting...');
 
-                $('#title').val('');
-                $('#slug').val('');
-                $('#content').val('');
-                $('#meta_title').val('');
-                $('#meta_description').val('');
-                $('#meta_keywords').val('');
-                $('input[name="canonical_tags"]').prop('checked', false);
-                $('select[name="index"]').val('');
-                $('select[name="follow"]').val('');
-                $('#author_tag').val('');
+            $.ajax({
+                url: '<?php echo site_url("blog/backend/post/saveFormData"); ?>',
+                type: 'POST',
+                data: formData,
+                dataType: 'json',
+                success: function(response) {
+                    console.log(response);
 
-                $('#og-url-input').val('');
-                $('#og-type-input').val('');
-                $('#og-title-input').val('');
-                $('#og-description-input').val('');
-                $('#og-image-input').val('');
-                $('#twitter-site-input').val('');
-                $('#twitter-title-input').val('');
-                $('#twitter-description-input').val('');
-                $('#twitter-image-input').val('');
-                $('#social_tags').val('');
-                $('#category').val('');
-                $('#sub_category').val('');
-                $('.tag').empty();
-                $('#status').val(0);
-                $('#featured').prop('checked', false);
-                $('#featured_image').val('');
-                $('#featured_image_title').val('');
-                $('#featured_image_alt_tag').val('');
-                $('#featured_image_description').val('');
-                $('#featured_image_caption').val('');
-            },
-            error: function(xhr, status, error) {
-                console.log(error);
-            }
-        });
+                    $form[0].reset();
+                    $('.tag').empty();
+                },
+                error: function(xhr, status, error) {
+                    console.log(error);
+                },
+                complete: function() {
+                    $submitButton.prop('disabled', false).text('Post');
+                    alert("Form Saved Successfully!")
+                }
+            });
 
-        // Debugging console.log statements
-        // console.log('post_title:', title);
-        // console.log('slug:', slug);
-        // console.log('post_content:', content);
-        // console.log('meta_title:', metaTitle);
-        // console.log('meta_description:', metaDescription);
-        // console.log('meta_keywords:', metaKeywords);
-        // console.log('canonical tags:', canonicalTagsValue);
-        // console.log('robots tag follow:', robotsTagIndex);
-        // console.log('robots tag index:', robotsTagFollow);
-        // console.log('author_tag:', authorTag);
-        console.log('category:', category);
-        console.log('sub_category:', subCategory);
-        // console.log('tags:', tags);
-        // console.log('status:', status);
-        // console.log('featured:', featured);
-        // console.log('featured_image:', featuredImage);
-        // console.log('featured_image_title:', featuredImageTitle);
-        // console.log('featured_image_alt_tag:', featuredImageAltTag);
-        // console.log('featured_image_description:', featuredImageDescription);
-        // console.log('featured_image_caption:', featuredImageCaption);
-
+            return false;
+        }
     });
+
 
     $('.delete-post').click(function() {
         var postId = $(this).data('post-id');
@@ -930,7 +951,45 @@ $(document).ready(function() {
 });
 </script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
+<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
 
 
 <!-- <script src="../assets/plugins/wysiwyag/jquery.richtext.js"></script>
 <script src="../assets/plugins/wysiwyag/wysiwyag.js"></script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- post_title
+slug
+post_content
+meta_title
+meta_description
+meta_keywords
+author_tag
+og_url
+og_type
+og_title
+og_description
+og_image
+twitter_site
+twitter_title
+twitter_description
+twitter_image
+category
+sub_category
+featured_image
+featured_image_title
+featured_image_alt_tag
+featured_image_description
+featured_image_caption -->

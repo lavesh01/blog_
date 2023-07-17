@@ -7,13 +7,40 @@ public function __construct() {
        parent::__construct();
 }
 
-
 public function saveFormData()
 {
-    $input = $this->input->post();
-
-    if (isset($input["post_title"]) && isset($input["slug"]) && isset($input["post_content"]) && !empty($input["post_title"]) && !empty($input["slug"]) && !empty($input["post_content"]))
-    {
+    $this->load->library('form_validation');
+    
+    $this->form_validation->set_rules('post_title', 'Post Title', 'required');
+    $this->form_validation->set_rules('slug', 'Slug', 'required');
+    $this->form_validation->set_rules('post_content', 'Post Content', 'required');
+    $this->form_validation->set_rules('meta_title', 'Meta Title', 'required');
+    $this->form_validation->set_rules('meta_description', 'Meta Description', 'required');
+    $this->form_validation->set_rules('meta_keywords', 'Meta Keywords', 'required');
+    $this->form_validation->set_rules('author_tag', 'Author Tag', 'required');
+    $this->form_validation->set_rules('og_url', 'OG URL', 'required');
+    $this->form_validation->set_rules('og_type', 'OG Type', 'required');
+    $this->form_validation->set_rules('og_title', 'OG Title', 'required');
+    $this->form_validation->set_rules('og_description', 'OG Description', 'required');
+    $this->form_validation->set_rules('og_image', 'OG Image', 'required');
+    $this->form_validation->set_rules('twitter_site', 'Twitter Site', 'required');
+    $this->form_validation->set_rules('twitter_title', 'Twitter Title', 'required');
+    $this->form_validation->set_rules('twitter_description', 'Twitter Description', 'required');
+    $this->form_validation->set_rules('twitter_image', 'Twitter Image', 'required');
+    // $this->form_validation->set_rules('category', 'Category', 'required');
+    // $this->form_validation->set_rules('sub_category', 'Sub Category', 'required');
+    // $this->form_validation->set_rules('featured_image', 'Featured Image', 'required');
+    // $this->form_validation->set_rules('featured_image_title', 'Featured Image Title', 'required');
+    // $this->form_validation->set_rules('featured_image_alt_tag', 'Featured Image Alt Tag', 'required');
+    // $this->form_validation->set_rules('featured_image_description', 'Featured Image Description', 'required');
+    // $this->form_validation->set_rules('featured_image_caption', 'Featured Image Caption', 'required');
+    
+    if ($this->form_validation->run() == FALSE) {
+        $response = array('status' => 'error', 'errors' => $this->form_validation->error_array());
+        $this->output->set_content_type('application/json')->set_output(json_encode($response));
+    } else {
+        $input = $this->input->post();
+        
         $data = array(
             'post_title' => $input["post_title"],
             'slug' => $input["slug"],
@@ -25,7 +52,6 @@ public function saveFormData()
             'robots_tag_index' => $input["robots_tag_index"],
             'robots_tag_follow' => $input["robots_tag_follow"],
             'author_tag' => $input["author_tag"],
-            
             'og_url' => $input["og_url"],
             'og_type' => $input["og_type"],
             'og_title' => $input["og_title"],
@@ -35,7 +61,6 @@ public function saveFormData()
             'twitter_title' => $input["twitter_title"],
             'twitter_description' => $input["twitter_description"],
             'twitter_image' => $input["twitter_image"],
-
             'category' => $input["category"],
             'sub_category' => $input["sub_category"],
             'tags' => implode(",", $input["tags"]),
@@ -59,12 +84,90 @@ public function saveFormData()
         }
         
         echo json_encode($response);
-        
-    } else {
-        $response = array('status' => 'error', 'message' => 'Post form Required fields are missing.');
-        echo json_encode($response);
     }
 }
+
+
+
+// public function saveFormData()
+// {
+//     $input = $this->input->post();
+
+//     if (
+//         isset($input["post_title"]) && !empty($input["post_title"]) &&
+//         isset($input["slug"]) && !empty($input["slug"]) &&
+//         isset($input["post_content"]) && !empty($input["post_content"]) &&
+//         isset($input["meta_title"]) && !empty($input["meta_title"]) &&
+//         isset($input["meta_description"]) && !empty($input["meta_description"]) &&
+//         isset($input["meta_keywords"]) && !empty($input["meta_keywords"]) &&
+//         isset($input["author_tag"]) && !empty($input["author_tag"]) &&
+//         isset($input["og_url"]) && !empty($input["og_url"]) &&
+//         isset($input["og_type"]) && !empty($input["og_type"]) &&
+//         isset($input["og_title"]) && !empty($input["og_title"]) &&
+//         isset($input["og_description"]) && !empty($input["og_description"]) &&
+//         isset($input["og_image"]) && !empty($input["og_image"]) &&
+//         isset($input["twitter_site"]) && !empty($input["twitter_site"]) &&
+//         isset($input["twitter_title"]) && !empty($input["twitter_title"]) &&
+//         isset($input["twitter_description"]) && !empty($input["twitter_description"]) &&
+//         isset($input["twitter_image"]) && !empty($input["twitter_image"]) &&
+//         isset($input["category"]) && !empty($input["category"]) &&
+//         isset($input["sub_category"]) && !empty($input["sub_category"]) &&
+//         isset($input["featured_image"]) && !empty($input["featured_image"]) &&
+//         isset($input["featured_image_title"]) && !empty($input["featured_image_title"]) &&
+//         isset($input["featured_image_alt_tag"]) && !empty($input["featured_image_alt_tag"]) &&
+//         isset($input["featured_image_description"]) && !empty($input["featured_image_description"]) &&
+//         isset($input["featured_image_caption"]) && !empty($input["featured_image_caption"])
+//     )
+//     {
+//         $data = array(
+//             'post_title' => $input["post_title"],
+//             'slug' => $input["slug"],
+//             'post_content' => $input["post_content"],
+//             'meta_title' => $input["meta_title"],
+//             'meta_description' => $input["meta_description"],
+//             'meta_keywords' => $input["meta_keywords"],
+//             'meta_canonical' => $input["meta_canonical"],
+//             'robots_tag_index' => $input["robots_tag_index"],
+//             'robots_tag_follow' => $input["robots_tag_follow"],
+//             'author_tag' => $input["author_tag"],
+//             'og_url' => $input["og_url"],
+//             'og_type' => $input["og_type"],
+//             'og_title' => $input["og_title"],
+//             'og_description' => $input["og_description"],
+//             'og_image' => $input["og_image"],
+//             'twitter_site' => $input["twitter_site"],
+//             'twitter_title' => $input["twitter_title"],
+//             'twitter_description' => $input["twitter_description"],
+//             'twitter_image' => $input["twitter_image"],
+//             'category' => $input["category"],
+//             'sub_category' => $input["sub_category"],
+//             // 'tags' => implode(",", $input["tags"]),
+//             'status' => $input["status"],
+//             'featured' => $input["featured"],
+//             // 'featured_image' => $input["featured_image"],
+//             'featured_image_title' => $input["featured_image_title"],
+//             'featured_image_alt_tag' => $input["featured_image_alt_tag"],
+//             'featured_image_description' => $input["featured_image_description"],
+//             'featured_image_caption' => $input["featured_image_caption"]
+//         );
+
+//         $this->load->model('blog/Post_model');
+
+//         $insert_id = $this->Post_model->save_form_data($data);
+        
+//         if ($insert_id) {
+//             $response = array('status' => 'success', 'message' => 'Post form Data saved successfully', 'post_id' => $insert_id);
+//         } else {
+//             $response = array('status' => 'error', 'message' => 'Post form Failed to save data.');
+//         }
+        
+//         echo json_encode($response);
+        
+//     } else {
+//         $response = array('status' => 'error', 'message' => 'Post form Required fields are missing.');
+//         echo json_encode($response);
+//     }
+// }
 
 public function getCategories()
 {

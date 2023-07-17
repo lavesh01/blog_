@@ -10,8 +10,10 @@ class Test extends CI_Controller   {
     public function index(){
         $this->load->model('blog/Blog_model');
         $data['form_data'] = $this->Blog_model->getBlogPosts();
-
+        
+        $this->load->view('frontend/partials/header');
         $this->load->view('frontend/blogfrontend', $data);
+        $this->load->view('frontend/partials/footer');
     }
 
 
