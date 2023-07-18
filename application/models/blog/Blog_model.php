@@ -30,22 +30,6 @@ class Blog_model extends CI_Model {
     }
     }
 
-
-    // public function getBlogPosts()
-    // {
-    //     $this->db->select('bf_post.*, bf_category.category_name');
-    //     $this->db->from('bf_post');
-    //     $this->db->join('bf_category', 'bf_post.category = bf_category.id', 'left');
-    //     $query = $this->db->get();
-
-    //     if ($query->num_rows() > 0) {
-    //         return $query->result();
-    //     } else {
-    //         return array();
-    //     }
-    // }
-
-
     public function updateBlogPost($postId, $updatedData) {
         $this->db->where('id', $postId);
         $this->db->update('bf_post', $updatedData);

@@ -53,6 +53,12 @@ function createSingleMenuLizanex($arr, $key, $title, $url, $class="")
                                 Blogs</span></a>
                     </li>
 
+                    <!-- Menus TAB  -->
+                    <li class="slide">
+                        <a class="side-menu__item" data-bs-toggle="slide" href="<?=site_url().'blog/backend/menus'?>"><i
+                                class="side-menu__icon fe fe-book"></i><span class="side-menu__label">Menus</span></a>
+                    </li>
+
 
                     <?php if($this->customer_id == 9999999 ) {?>
                     <a class="side-menu__item" data-bs-toggle="slide"
