@@ -1,122 +1,77 @@
 <style>
-.cs-div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: #f1f1f9;
-}
-
-.cs-menu {
-    padding: 10px 15px;
+/* Hide the input fields with IDs branch-id-input, branch-parent-id-input, and branch-level-input */
+#branch-id-input,
+#branch-parent-id-input,
+#branch-level-input {
+    display: none;
 }
 </style>
 
+<div class="row">
+    <div class="col-xl-6">
+        <div class="wrapper">
+            <ul id="left-tree"></ul>
+        </div>
+    </div>
 
-<div class="card">
-    <div class="card-body">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="card-header">
-                    <div class="card-title">Add menus
-                    </div>
-                </div>
 
-                <div class="card-body">
-                    <div class="row mb-4">
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-body">
+                <div id="branch-details-container">
+                    <h3>Branch Details</h3>
 
-                        <div class="col-xl-8 mb-4">
-                            <label for="menu" class="col-md-4 form-label">
-                                Add new menu:</label>
-                            <div class="input-group col-md-8">
+                    <div id="branch-details" class="mb-5">
 
-                                <input type="text" class="form-control" id="menu" placeholder="" name="name">
-                                <button id="add-menu-btn" type="button" class="btn btn-primary">Add</button>
+                        <p><input class="form-control" type="text" id="branch-id-input">
+                        </p>
+                        <p><input class="form-control" type="text" id="branch-parent-id-input">
+                        </p>
+                        <p><input class="form-control" type="text" id="branch-level-input"></p>
+                        <p><strong class="mb-3">Title:</strong> <input class="form-control" type="text"
+                                id="branch-title-input"></p>
+
+                        <div class="row">
+                            <div class="input-group col-md-12 mb-5">
+
+                                <select class="form-control" id="type" name="type">
+                                    <option value="page">Pages</option>
+                                    <!-- <option value="category">Categories</option> -->
+                                </select>
+
+                                <select class="form-control" id="pages" name="pages">
+                                    <option value="">Search your page:</option>
+                                    <option value="page-1">Page 1</option>
+                                    <option value="page-2">Page 2</option>
+                                    <option value="page-3">Page 3</option>
+                                </select>
+
+
+                                <input type="text" class="form-control" id="slug" placeholder="Enter the page url"
+                                    name="slug">
+
                             </div>
                         </div>
 
-                        <div class="col-xl-4">
-                            <div id="menu-container">
-                                <?php foreach ($menus as $menu): ?>
-                                <div class="card cs-div" data-m-id="<?php echo $menu->m_id ?>">
-                                    <div class="mr-auto cs-menu"><?php echo $menu->m_name; ?></div>
-                                    <button type="button" class="btn btn-icon btn-danger delete-menu"
-                                        data-m-id="<?php echo $menu->m_id ?>">
-                                        <i class="fe fe-trash"></i>
-                                    </button>
-                                </div>
-                                <?php endforeach; ?>
-                            </div>
-                        </div>
-
+                        <button id="edit-branch" class="btn btn-primary">Edit</button>
+                        <button id="save-branch" class="btn btn-primary">Save</button>
 
                     </div>
                 </div>
-
             </div>
         </div>
-
 
     </div>
 </div>
 
 
 <script>
-$(document).ready(function() {
-    $('#add-menu-btn').click(function() {
-        var menuName = $('#menu').val();
-
-        $.ajax({
-            url: '<?php echo base_url('blog/backend/menus/addMenu'); ?>',
-            method: 'POST',
-            data: {
-                name: menuName
-            },
-            success: function(response) {
-                var menu = JSON.parse(response);
-                var m_name = menu.menu.m_name;
-                var m_id = menu.menu.m_id;
-                console.log(menu.menu);
-
-                if (m_id && m_name) {
-                    var menuElement =
-                        '<div class="card cs-div" data-m-id="' +
-                        m_id + '">' +
-                        '<div class="mr-auto cs-menu">' + m_name + '</div>' +
-                        '<button type="button" class="btn btn-icon btn-danger delete-menu" data-m-id="' +
-                        m_id + '">' +
-                        '<i class="fe fe-trash"></i>' +
-                        '</button>' +
-                        '</div>';
-                    $('#menu-container').append(menuElement);
-                }
-
-            },
-            error: function(xhr, status, error) {
-                console.log(error);
-            }
-        });
-    });
-});
-
+const dataLeft = <?php echo json_encode($menuItems); ?>;
 
 $(document).ready(function() {
-    $(document).on('click', '.delete-menu', function() {
-        var menuId = $(this).data('m-id');
-
-        $.ajax({
-            url: '<?php echo base_url('blog/backend/menus/deleteMenu'); ?>',
-            method: 'POST',
-            data: {
-                menuId: menuId
-            },
-            success: function(response) {
-                console.log(response);
-                $('.card[data-m-id="' + menuId + '"]').remove();
-            },
-            error: function(xhr, status, error) {
-                console.log(error);
-            }
-        });
+    $('#pages').select2({
+        placeholder: 'Search your page',
+        allowClear: true,
     });
 });
 </script>

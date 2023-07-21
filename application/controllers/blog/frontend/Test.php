@@ -22,6 +22,28 @@ class Test extends CI_Controller   {
         $this->load->view('frontend/partials/footer');
     }
 
+    public function about(){
+        $data['dropdown'] = $this->Menu_m->menu_all();
+		$data['select'] = $this->Menu_m->menu_select();
+        $data['categories'] = $this->Menu_m->getCategories();
+
+        $this->load->view('frontend/partials/menus', $data);
+        $this->load->view('frontend/partials/header');
+        $this->load->view('frontend/about');
+        $this->load->view('frontend/partials/footer');
+    }
+
+    public function home(){
+        $data['dropdown'] = $this->Menu_m->menu_all();
+		$data['select'] = $this->Menu_m->menu_select();
+        $data['categories'] = $this->Menu_m->getCategories();
+
+        $this->load->view('frontend/partials/menus', $data);
+        $this->load->view('frontend/partials/header');
+        $this->load->view('frontend/home');
+        $this->load->view('frontend/partials/footer');
+    }
+
     public function menus(){
         $data['dropdown'] = $this->Menu_m->menu_all();
 		$data['select'] = $this->Menu_m->menu_select();

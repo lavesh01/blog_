@@ -7,33 +7,79 @@ public function __construct() {
        parent::__construct();
        $this->load->model('blog/Menu_model');
 }
-public function addMenu() {
-    $menuName = $this->input->post('name');
-    $data['menu'] = $this->Menu_model->addMenu($menuName);
-    echo json_encode($data);
+
+public function save_branch()
+{
+    $data = $this->input->post();
+
+    if (!isset($data['id']) || !isset($data['parent_id']) || !isset($data['level']) || !isset($data['title'])) {
+        echo $this->ajax__response_data_preperation('Error', 'Missing data in the request', 'error');
+        return;
+    }
+
+    if (empty($data['type']) || empty($data['selected_type']) || empty($data['slug'])) {
+        echo $this->ajax__response_data_preparation('Error', 'Missing data for additional fields', 'error');
+        return;
+    }
+
+    $result = $this->Menu_model->save_branch($data);
+    
+    if ($result === 'success') {
+        echo $this->ajax__response_data_preperation('Saved Branch', 'Branch data saved successfully', 'success');
+    } else {
+        echo $this->ajax__response_data_preperation('Error', 'Failed to save branch data', 'error');
+    }
+    
 }
 
-public function deleteMenu() {
-    $menuId = $this->input->post('menuId');
-    $this->Menu_model->deleteMenu($menuId);
+public function remove_branch()
+{
+    $id = $this->input->post('id');
+    $this->Menu_model->remove_branch($id);
 }
 
+public function update_branch()
+{
+    $input_data = $this->input->input_stream(); 
+    $this->Menu_model->update_branch($input_data);
+    
+    echo $this->ajax__response_data_preperation('Updated Branch','Branch data updated successfully','success') ;
+}
+
+public function get_menu_items() {
+    $id = $this->input->post('id');
+
+    if (!$id) {
+        echo $this->ajax__response_data_preparation('Error', 'Missing ID in the request', 'error');
+        return;
+    }
+
+    $menu = $this->Menu_model->get_menu_by_id($id);
+
+    if (!$menu) {
+        echo $this->ajax__response_data_preparation('Error', 'Menu not found', 'error');
+        return;
+    }
+
+    // echo $this->ajax__response_data_preparation('Menu Details', 'Menu data retrieved successfully', 'success', $menu);
+    echo json_encode($menu);
+}
 
 public function index($table_name="")
 {
 
     $data["title"] =  "Bug Reporting";
     $data["js"] =  [
-            site_url()."resources/themes/".$this->theme_selected_template."/assetsassets/x-editable/moment/moment.min.js",
-           site_url()."resources/themes/".$this->theme_selected_template."/assetsassets/x-editable/bootstrap4-editable/js/bootstrap-editable.min.js",
-            site_url()."resources/themes/".$this->theme_selected_template."/assetsassets/x-editable/poshytip/jquery.poshytip.min.js",
-            site_url()."resources/themes/".$this->theme_selected_template."/assets/custom/js/bugs/index.js" ];
+            "https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js",
+            site_url()."resources/themes/".$this->theme_selected_template."/assets/sortable-list-tree/js/treeSortable.js",
+            site_url()."resources/themes/".$this->theme_selected_template."/assets/sortable-list-tree/js/script.js"];
 
-    $data["css"] = [ site_url()."resources/themes/".$this->theme_selected_template."/assetsassets/x-editable/bootstrap4-editable/css/bootstrap-editable.css",
-    site_url()."resources/themes/".$this->theme_selected_template."/assetsassets/x-editable/poshytip/tip-yellowsimple/tip-yellowsimple.css",
+    $data["css"] = [ 
+        "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css",
+        site_url()."resources/themes/".$this->theme_selected_template."/assets/sortable-list-tree/css/treeSortable.css",
     ];
 
-    $data['menus'] = $this->Menu_model->getMenus();
+    $data['menuItems'] = $this->Menu_model->getMenuItems();
 
     $this->load_view("blog/menuspage", $data, 'operation/sidebar/sidebar');
       
@@ -74,5 +120,42 @@ public function addBugs($table_name="")
         die;
 
     }
+
+    // public function addMenu() {
+//     $menuName = $this->input->post('name');
+//     $menuUrl = $this->input->post('menu_url');
+//     $menuType = $this->input->post('menu_type');
+//     $data['menu'] = $this->Menu_model->addMenu($menuName, $menuUrl,$menuType);
+//     echo json_encode($data);
+// }
+
+// public function deleteMenu() {
+//     $menuId = $this->input->post('menuId');
+//     $this->Menu_model->deleteMenu($menuId);
+// }
+
+// public function addMenuItem()
+// {
+//     $menuId = $this->input->post('menu_id');
+//     $menuItemName = $this->input->post('menu_item_name');
+
+//     if (!empty($menuId) && !empty($menuItemName)) {
+//         $this->Menu_model->addMenuItem($menuId, $menuItemName);
+//         $menuItemData = $this->Menu_model->getMenuItemById($menuId);
+//         echo json_encode($menuItemData);
+//     } else {
+//         echo json_encode(['error' => 'Menu ID and Menu Item Name are required.']);
+//     }
+// }
+
+// public function getSubMenus($menuId) {
+//     $subMenus = $this->Menus_model->getMenuItemById($menuId);
+
+//     if ($subMenus) {
+//         echo json_encode($subMenus);
+//     } else {
+//         echo json_encode(array());
+//     }
+// }
 
 }

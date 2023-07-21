@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <?php foreach ($dropdown as $key ): ?>
                     <?php if($key->menu_id!=$key->menu_item_id): ?>
                     <li>
-                        <a href="#"><?php echo $key->m_name;?></a>
+                        <a href="<?php echo $key->m_url;?>"><?php echo $key->m_name;?></a>
                     </li>
                     <?php else: ?>
                     <li class="dropdown">
