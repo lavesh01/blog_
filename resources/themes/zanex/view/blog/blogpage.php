@@ -186,7 +186,7 @@
                                                                     </div>
 
                                                                     <div id="selectedEditor"
-                                                                        style="width: auto; height: 100vh">
+                                                                        style="width: auto; height: 100vh;overflow: scroll;">
 
                                                                         <textarea id="tinymce">
                                                                             Welcome to TinyMCE!

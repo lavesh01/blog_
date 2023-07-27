@@ -1238,3 +1238,876 @@ ERROR - 2023-07-27 21:01:05 --> 404 Page Not Found: Resources/themes
 ERROR - 2023-07-27 21:01:05 --> 404 Page Not Found: Resources/themes
 ERROR - 2023-07-27 21:01:05 --> 404 Page Not Found: Resources/themes
 ERROR - 2023-07-27 21:01:05 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:49 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:08:52 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 21:08:52 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 21:08:52 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:08:53 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:54 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:08:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:29 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:18:33 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 21:18:34 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 21:18:34 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:18:35 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:35 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:35 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:35 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:35 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:35 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:18:36 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:36 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:36 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:36 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:36 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:37 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:37 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:37 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:37 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:37 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:37 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:37 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:37 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:37 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:37 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:37 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:37 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:37 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:37 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:37 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:18:37 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:19:40 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:19:43 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 21:19:43 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 21:19:43 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:19:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:19:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:19:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:19:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:19:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:19:45 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:19:50 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:19:52 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 21:19:52 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 21:19:52 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:19:53 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:19:53 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:19:53 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:19:53 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:19:53 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:19:54 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:20:02 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:20:03 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 21:20:03 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 21:20:03 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:20:04 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:20:04 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:20:04 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:20:04 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:20:04 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:20:05 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:20:10 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:20:11 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 21:20:11 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 21:20:11 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:20:12 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:20:12 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:20:12 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:20:12 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:20:12 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:20:12 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:20:52 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:20:56 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 21:20:56 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 21:20:56 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:20:58 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:20:58 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:20:58 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:20:58 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:20:58 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:20:58 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:21:07 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:21:11 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:12 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:12 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:13 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 21:21:13 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 21:21:13 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:21:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:15 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:21:27 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:21:30 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 21:21:30 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:21:30 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 21:21:32 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:32 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:32 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:32 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:32 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:33 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:21:42 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:21:43 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 21:21:43 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 21:21:43 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:21:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:44 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:21:47 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:21:48 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 21:21:48 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 21:21:48 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:21:49 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:49 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:49 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:49 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:49 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:21:50 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:22:21 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:22:23 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 21:22:23 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 21:22:23 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:22:24 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:22:24 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:22:24 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:22:24 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:22:24 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:22:25 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:22:28 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:22:30 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 21:22:30 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 21:22:30 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:22:31 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:22:31 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:22:31 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:22:31 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:22:31 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:22:31 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:23:12 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:23:13 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:13 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:13 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:13 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:13 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:14 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:23:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:34 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:23:38 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:39 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:40 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:40 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 21:23:40 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 21:23:40 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:23:42 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:42 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:42 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:42 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:42 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:42 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:23:53 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:23:57 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:23:57 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:57 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:57 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:57 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:57 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:58 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:23:58 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:58 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:58 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:58 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:58 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:59 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:59 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:59 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:59 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:59 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:59 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:59 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:59 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:59 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:59 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:59 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:59 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:59 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:59 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:59 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:23:59 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:11 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:25:14 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 21:25:14 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 21:25:14 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:25:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:16 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:25:19 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:25:19 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:19 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:19 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:19 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:19 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:19 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:25:21 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:25:21 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:21 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:21 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:21 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:21 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:22 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:25:22 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:22 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:22 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:22 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:22 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:22 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:23 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:23 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:23 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:23 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:23 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:23 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:23 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:23 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:23 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:23 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:23 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:23 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:23 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:23 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:25:23 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:26:39 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:26:39 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:26:39 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:26:39 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:26:40 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:26:40 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:26:40 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:02 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:33:05 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 21:33:05 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 21:33:05 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:33:07 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:07 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:07 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:07 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:07 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:07 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:33:12 --> 404 Page Not Found: Dashboard/index
+ERROR - 2023-07-27 21:33:19 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:33:19 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:19 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:19 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:19 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:19 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:20 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:33:20 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:20 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:20 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:20 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:20 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:20 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:20 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:20 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:20 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:20 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:21 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:21 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:21 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:21 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:21 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:21 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:21 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:21 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:21 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:21 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:33:21 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:44 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:34:49 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 21:34:49 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 21:34:49 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:34:50 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:50 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:50 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:50 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:50 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:51 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:34:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:34:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:43 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:37:45 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 21:37:45 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 21:37:45 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:37:47 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:47 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:47 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:47 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:47 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:48 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:37:52 --> 404 Page Not Found: Dashboard/index
+ERROR - 2023-07-27 21:37:54 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:37:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:55 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 21:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 21:37:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:30:52 --> 404 Page Not Found: Campaign/index
+ERROR - 2023-07-27 23:31:03 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:31:05 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 23:31:05 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 23:31:05 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:31:05 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:05 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:05 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:05 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:05 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:05 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:31:13 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:31:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:14 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:31:15 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:31:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:16 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:31:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:17 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:17 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:17 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:17 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:17 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:17 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:17 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:17 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:17 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:17 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:17 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:17 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:17 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:17 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:31:17 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:21 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:32:23 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 23:32:23 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 23:32:23 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:32:24 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:24 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:24 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:24 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:24 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:24 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:32:31 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:32:31 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:31 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:31 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:31 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:31 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:31 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:32:33 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:32:33 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:33 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:33 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:33 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:33 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:33 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:32:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:32:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:13 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:33:15 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 23:33:15 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 23:33:15 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:33:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:16 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:16 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:33:51 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:33:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:52 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:33:55 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:33:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:55 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:33:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:33:56 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:34:02 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:34:02 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:34:02 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:34:02 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:34:02 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:34:02 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:34:03 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:35:41 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:35:45 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:35:47 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:35:48 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:35:48 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 23:35:49 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 23:35:49 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:35:50 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:35:50 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:35:50 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:35:51 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:35:51 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:35:51 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:36:03 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:36:04 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:04 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:04 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:04 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:04 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:05 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:36:06 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:36:06 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:06 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:06 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:06 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:06 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:07 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:36:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:08 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:36:09 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:05 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:38:40 --> 404 Page Not Found: Dashboard/index
+ERROR - 2023-07-27 23:38:43 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:38:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:44 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:38:50 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:38:51 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:52 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:53 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 23:38:53 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 23:38:53 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:38:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:38:55 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:32 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:39:32 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:32 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:32 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:32 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:32 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:32 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:39:36 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:39:37 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 23:39:37 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 23:39:37 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:39:42 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:39:43 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 23:39:43 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 23:39:43 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:39:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:44 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:44 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:39:47 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:39:48 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 23:39:48 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 23:39:48 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:39:49 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:49 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:49 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:49 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:49 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:49 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:49 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:49 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:49 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:49 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:50 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:50 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:50 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:50 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:50 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:50 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:50 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:50 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:50 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:50 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:50 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:55 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:39:56 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 23:39:56 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 23:39:56 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:39:57 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:57 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:57 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:57 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:57 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:39:57 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:39:59 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:40:00 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 23:40:00 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 23:40:00 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:40:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:01 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:04 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:40:05 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 23:40:05 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 23:40:05 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:40:05 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:05 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:05 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:05 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:05 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:06 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:40:08 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:40:09 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:40:11 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:40:12 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 23:40:12 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 23:40:13 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:40:13 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:13 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:13 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:14 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:40:57 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:41:06 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:41:12 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:41:12 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:12 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:12 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:12 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:12 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:12 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:41:23 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:41:25 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 23:41:25 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 23:41:25 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:41:27 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:41:28 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 23:41:28 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 23:41:28 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:41:29 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:29 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:29 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:29 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:29 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:29 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:41:31 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:41:32 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:41:33 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 23:41:33 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 23:41:34 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:41:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:34 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:35 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:35 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:35 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:35 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:35 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:35 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:41:54 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:42:07 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:44:35 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:46:26 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:48:46 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:50:21 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:50:39 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:50:39 --> Severity: Warning --> Undefined array key "post_content" D:\xampp\htdocs\blogCd\application\controllers\blog\backend\Blogs.php 62
+ERROR - 2023-07-27 23:56:29 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:56:31 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:56:32 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:56:32 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:56:32 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 23:56:32 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 23:56:32 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:56:42 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:56:42 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:56:42 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:56:42 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:56:42 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:56:42 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:56:42 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:56:46 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:56:47 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:56:48 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:56:48 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:56:48 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 23:56:48 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 23:56:49 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:58:04 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:58:05 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:06 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:06 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:06 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 23:58:06 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 23:58:06 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:58:07 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:07 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:07 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:07 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:07 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:07 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:58:11 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:58:13 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:13 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:13 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:13 --> 404 Page Not Found: Notification/index
+ERROR - 2023-07-27 23:58:13 --> 404 Page Not Found: Timetracker/get_current_task
+ERROR - 2023-07-27 23:58:13 --> Cache: Failed to initialize APC; extension not loaded/enabled?
+ERROR - 2023-07-27 23:58:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:15 --> 404 Page Not Found: Resources/themes
+ERROR - 2023-07-27 23:58:15 --> 404 Page Not Found: Resources/themes

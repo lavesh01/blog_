@@ -7,6 +7,39 @@ public function __construct() {
        parent::__construct();
 }
 
+public function index($table_name="")
+{
+
+    $data["title"] =  "Update Post";
+    $data["js"] =  [                
+        "https://rawgit.com/artf/grapesjs-preset-webpage/master/dist/grapesjs-preset-webpage.min.js",
+        "https://cdn.jsdelivr.net/npm/grapesjs-preset-webpage@1.0.3/dist/index.min.js",
+        "https://cdn.jsdelivr.net/npm/grapesjs-blocks-basic@1.0.2/dist/index.min.js",
+        "https://cdn.jsdelivr.net/npm/grapesjs-plugin-forms@2.0.6/dist/index.min.js",
+        "https://cdn.jsdelivr.net/npm/grapesjs-custom-code@1.0.2/dist/index.min.js",
+        "https://cdn.jsdelivr.net/npm/grapesjs-component-countdown@1.0.2/dist/index.min.js",
+        "https://cdn.jsdelivr.net/npm/grapesjs-navbar@1.0.2/dist/index.min.js",
+        "https://cdn.jsdelivr.net/npm/grapesjs-typed@2.0.1/dist/index.min.js",
+        "https://cdn.jsdelivr.net/npm/grapesjs-tooltip@0.1.8/dist/index.min.js",
+        "https://cdn.jsdelivr.net/npm/grapesjs-tabs@1.0.6/dist/grapesjs-tabs.min.js",
+        site_url()."resources/themes/".$this->theme_selected_template."/assets/grapesjs/dist/grapes.min.js",
+        
+        site_url()."resources/themes/".$this->theme_selected_template."/assets/custom/js/blog/post.js",
+    ];
+
+    $data["css"] = [ 
+        "https://rawgit.com/artf/grapesjs-preset-webpage/master/dist/grapesjs-preset-webpage.min.css",
+        site_url()."resources/themes/".$this->theme_selected_template."/assets/grapesjs/dist/css/grapes.min.css",
+
+        site_url()."resources/themes/".$this->theme_selected_template."/assets/custom/css/blog/blog.css",
+    ];
+
+    $this->load->model('blog/Blog_model');
+    $data['form_data'] = $this->Blog_model->getBlogPosts();
+
+    $this->load_view("blog/allblogspage", $data, 'operation/sidebar/sidebar');
+}
+
 
 public function deletepost() {
     $post_id = $this->input->post('post_id');
@@ -52,7 +85,10 @@ public function update($id) {
 
 
     // var_dump($input);
-    if (isset($input["post_title"]) && isset($input["slug"]) && isset($input["post_content"]) && !empty($input["post_title"]) && !empty($input["slug"]) && !empty($input["post_content"])){
+    if ( 
+        isset($input["post_title"]) && isset($input["slug"]) && isset($input["post_content"]) 
+        && !empty($input["post_title"]) && !empty($input["slug"]) && !empty($input["post_content"])
+    ){
     $updatedData = array(
         'post_title' => $input['post_title'],
         'slug' => $input['slug'],
@@ -89,40 +125,17 @@ public function update($id) {
     $success = $this->Blog_model->updateBlogPost($id, $updatedData);
     
     if ($success) {
-        $response = array('status' => 'success', 'message' => 'Blog post updated successfully');
+        echo $this->ajax__response_data_preperation('Updated', 'Post data updated successfully', 'success');
     } else {
-        $response = array('status' => 'error', 'message' => 'Failed to update blog post');
+        echo $this->ajax__response_data_preperation('Error', 'Missing data in the request', 'error');
     }
-    
-    echo json_encode($response);
 } else {
-    $response = array('status' => 'error', 'message' => 'Post form Required fields are missing.');
-    echo json_encode($response);
+    echo $this->ajax__response_data_preperation('Error', 'Failed to update branch data', 'error');
 }
 
 }
 
 
-public function index($table_name="")
-{
-
-    $data["title"] =  "Bug Reporting";
-    $data["js"] =  [
-            site_url()."resources/themes/".$this->theme_selected_template."/assetsassets/x-editable/moment/moment.min.js",
-           site_url()."resources/themes/".$this->theme_selected_template."/assetsassets/x-editable/bootstrap4-editable/js/bootstrap-editable.min.js",
-            site_url()."resources/themes/".$this->theme_selected_template."/assetsassets/x-editable/poshytip/jquery.poshytip.min.js",
-            site_url()."resources/themes/".$this->theme_selected_template."/assets/custom/js/bugs/index.js" ];
-
-    $data["css"] = [ site_url()."resources/themes/".$this->theme_selected_template."/assetsassets/x-editable/bootstrap4-editable/css/bootstrap-editable.css",
-    site_url()."resources/themes/".$this->theme_selected_template."/assetsassets/x-editable/poshytip/tip-yellowsimple/tip-yellowsimple.css",
-    ];
-
-    $this->load->model('blog/Blog_model');
-    $data['form_data'] = $this->Blog_model->getBlogPosts();
-
-    $this->load_view("blog/allblogspage", $data, 'operation/sidebar/sidebar');
-      
-}
 
 
 public function addBugs($table_name="")

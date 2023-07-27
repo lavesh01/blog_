@@ -33,7 +33,11 @@ class Blog_model extends CI_Model {
     public function updateBlogPost($postId, $updatedData) {
         $this->db->where('id', $postId);
         $this->db->update('bf_post', $updatedData);
-        return $this->db->affected_rows() > 0;
+        if( $this->db->affected_rows() > 0) {
+            return true;
+        }else{
+            return false;
+        }
     }
     
 

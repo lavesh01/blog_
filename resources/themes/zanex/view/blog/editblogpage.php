@@ -1,17 +1,3 @@
-<style>
-.tag {
-    font-size: 0.75rem;
-    color: #0d0c22;
-    background-color: #f1f1f9;
-    border-radius: 3px;
-    padding: 0 0.5rem;
-    line-height: 2em;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    cursor: default;
-    font-weight: 400;
-}
-</style>
 
 <?php
 // Retrieve the post data from the $post variable passed from the controller
@@ -92,13 +78,26 @@ if ($post) {
                                                                 <label class="form-label mb-4">Post Content
                                                                     :</label>
                                                                 <div class="mb-4">
-                                                                    <!-- <textarea class="content" name="content" rows="10"
+
+                                                                    <div id="selectedEditor"
+                                                                        style="width: auto; height: 100vh;overflow: scroll;">
+
+                                                                        <!-- <textarea class="content" name="content" rows="10"
                                                                         cols="60"
                                                                         id="content"><?php echo $post->post_content; ?></textarea> -->
 
 
-                                                                    <textarea
-                                                                        id="tinymce"><?php echo $post->post_content; ?></textarea>
+                                                                        <!-- <textarea
+                                                                        id="tinymce"><?php echo $post->post_content; ?></textarea> -->
+
+
+                                                                        <div id="gjs">
+                                                                            <div style="padding: 25px">
+                                                                                <?php echo $post->post_content; ?>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
                                                                 </div>
                                                             </div>
 
@@ -619,27 +618,74 @@ if ($post) {
 <script>
 $(document).ready(function() {
 
+    var grapes_editor = grapesjs.init({
+        container: '#gjs',
+        fromElement: true,
+        height: '100%',
+        showOffsets: 1,
+        noticeOnUnload: 0,
+        storageManager: {
+            type: 'local',
+            autosave: true,
+            autoload: true,
+            stepsBeforeSave: 1,
+            options: {
+                local: {
+                    key: 'gjsProject',
+                },
+            }
+        },
 
-    tinymce.init({
-        selector: 'textarea#tinymce',
-        plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
-        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
-        tinycomments_mode: 'embedded',
-        tinycomments_author: 'Author name',
-        mergetags_list: [{
-                value: 'First.Name',
-                title: 'First Name'
-            },
-            {
-                value: 'Email',
-                title: 'Email'
-            },
-        ]
+        plugins: ['grapesjs-preset-webpage', "gjs-blocks-basic", 'grapesjs-plugin-forms',
+            'grapesjs-custom-code', 'grapesjs-component-countdown', 'grapesjs-navbar',
+            'grapesjs-typed', 'grapesjs-tooltip', 'grapesjs-tabs'
+        ],
+        pluginsOpts: {
+            'grapesjs-preset-webpage': {},
+            "gjs-blocks-basic": {},
+            'grapes.js-plugin-forms': {},
+            'grapesjs-custom-code': {},
+            'grapesjs-component-countdown': {},
+            'grapesjs-navbar': {},
+            'grapesjs-typed': {},
+            'grapesjs-tooltip': {},
+            'grapesjs-tabs': {},
+        },
+
     });
-    // var savedContent = '<?php echo addslashes($post->post_content); ?>';
 
-    // Inject the saved content into the TinyMCE editor
-    // tinymce.activeEditor.setContent(savedContent);
+    // Use the API
+    const blockManager = grapes_editor.Blocks;
+
+    blockManager.add('h1-block', {
+        label: 'Heading',
+        content: '<h1>Put your title here</h1>',
+        category: 'Basic',
+        attributes: {
+            title: 'Insert h1 block'
+        }
+    });
+
+
+
+    // tinymce.init({
+    //     selector: 'textarea#tinymce',
+    //     plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+    //     toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+    //     tinycomments_mode: 'embedded',
+    //     tinycomments_author: 'Author name',
+    //     mergetags_list: [{
+    //             value: 'First.Name',
+    //             title: 'First Name'
+    //         },
+    //         {
+    //             value: 'Email',
+    //             title: 'Email'
+    //         },
+    //     ]
+    // });
+
+
 
     const fileInput = document.getElementById('featured_image');
     const selectedFile = document.getElementById('selected_file');
@@ -675,15 +721,10 @@ $(document).ready(function() {
         $(this).parent('.tag').remove();
     });
 
-});
-
-
-$(document).ready(function() {
 
     $('#add-category-btn').click(function(e) {
         e.preventDefault();
         var categoryName = $('#new-category-input').val();
-
 
         $.ajax({
             url: '<?php echo site_url("blog/backend/post/saveCategory"); ?>',
@@ -712,7 +753,6 @@ $(document).ready(function() {
 
                 selectDropdown.append(newOption);
                 selectDropdown.val(data.id);
-
 
             },
             error: function(xhr, status, error) {
@@ -772,7 +812,26 @@ $(document).ready(function() {
 
         var post_title = $('#title').val();
         var slug = $('#slug').val();
-        var post_content = $('#content').val();
+
+        // var content = tinymce.activeEditor.getContent();
+        var content = content = grapes_editor.getHtml();
+
+        // var editorValue = $('input[name="editor"]:checked').val();
+        // console.log(editorValue);
+
+        // var content;
+        // if (editorValue === '1') {
+        //     content = tinymce.activeEditor.getContent();
+        // } else if (editorValue === '0') {
+
+        //     console.log(grapes_editor.getHtml());
+        //     console.log(grapes_editor.getCss());
+
+        //     content = grapes_editor.getHtml();
+
+        // }
+        // console.log(content);
+
         var metaTitle = $('#meta_title').val();
         var metaDescription = $('#meta_description').val();
         var metaKeywords = $('#meta_keywords').val();
@@ -813,7 +872,7 @@ $(document).ready(function() {
             id: id,
             post_title: post_title,
             slug: slug,
-            post_content: post_content,
+            post_content: content,
             meta_title: metaTitle,
             meta_description: metaDescription,
             meta_keywords: metaKeywords,
@@ -852,13 +911,17 @@ $(document).ready(function() {
             data: postData,
             success: function(response) {
                 console.log(response);
+                if (response.title == "Updated") {
+                    alert("Post Updated Successfully!");
+                } else {
+                    alert("Error : Required fields missing.");
+                }
             },
             error: function(xhr, status, error) {
                 console.error(error);
             },
             complete: function() {
                 $submitButton.prop('disabled', false).text('Update');
-                alert("Post Updated Successfully!");
             }
         });
         console.log(postData);
