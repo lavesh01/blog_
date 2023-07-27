@@ -11,6 +11,7 @@ public function saveFormData()
 {
     $this->load->library('form_validation');
     
+    $this->form_validation->set_rules('post_type', 'Post Type', 'required');
     $this->form_validation->set_rules('post_title', 'Post Title', 'required');
     $this->form_validation->set_rules('slug', 'Slug', 'required');
     $this->form_validation->set_rules('post_content', 'Post Content', 'required');
@@ -42,6 +43,7 @@ public function saveFormData()
         $input = $this->input->post();
         
         $data = array(
+            'post_type' => $input["post_type"],
             'post_title' => $input["post_title"],
             'slug' => $input["slug"],
             'post_content' => $input["post_content"],
@@ -86,88 +88,6 @@ public function saveFormData()
         echo json_encode($response);
     }
 }
-
-
-
-// public function saveFormData()
-// {
-//     $input = $this->input->post();
-
-//     if (
-//         isset($input["post_title"]) && !empty($input["post_title"]) &&
-//         isset($input["slug"]) && !empty($input["slug"]) &&
-//         isset($input["post_content"]) && !empty($input["post_content"]) &&
-//         isset($input["meta_title"]) && !empty($input["meta_title"]) &&
-//         isset($input["meta_description"]) && !empty($input["meta_description"]) &&
-//         isset($input["meta_keywords"]) && !empty($input["meta_keywords"]) &&
-//         isset($input["author_tag"]) && !empty($input["author_tag"]) &&
-//         isset($input["og_url"]) && !empty($input["og_url"]) &&
-//         isset($input["og_type"]) && !empty($input["og_type"]) &&
-//         isset($input["og_title"]) && !empty($input["og_title"]) &&
-//         isset($input["og_description"]) && !empty($input["og_description"]) &&
-//         isset($input["og_image"]) && !empty($input["og_image"]) &&
-//         isset($input["twitter_site"]) && !empty($input["twitter_site"]) &&
-//         isset($input["twitter_title"]) && !empty($input["twitter_title"]) &&
-//         isset($input["twitter_description"]) && !empty($input["twitter_description"]) &&
-//         isset($input["twitter_image"]) && !empty($input["twitter_image"]) &&
-//         isset($input["category"]) && !empty($input["category"]) &&
-//         isset($input["sub_category"]) && !empty($input["sub_category"]) &&
-//         isset($input["featured_image"]) && !empty($input["featured_image"]) &&
-//         isset($input["featured_image_title"]) && !empty($input["featured_image_title"]) &&
-//         isset($input["featured_image_alt_tag"]) && !empty($input["featured_image_alt_tag"]) &&
-//         isset($input["featured_image_description"]) && !empty($input["featured_image_description"]) &&
-//         isset($input["featured_image_caption"]) && !empty($input["featured_image_caption"])
-//     )
-//     {
-//         $data = array(
-//             'post_title' => $input["post_title"],
-//             'slug' => $input["slug"],
-//             'post_content' => $input["post_content"],
-//             'meta_title' => $input["meta_title"],
-//             'meta_description' => $input["meta_description"],
-//             'meta_keywords' => $input["meta_keywords"],
-//             'meta_canonical' => $input["meta_canonical"],
-//             'robots_tag_index' => $input["robots_tag_index"],
-//             'robots_tag_follow' => $input["robots_tag_follow"],
-//             'author_tag' => $input["author_tag"],
-//             'og_url' => $input["og_url"],
-//             'og_type' => $input["og_type"],
-//             'og_title' => $input["og_title"],
-//             'og_description' => $input["og_description"],
-//             'og_image' => $input["og_image"],
-//             'twitter_site' => $input["twitter_site"],
-//             'twitter_title' => $input["twitter_title"],
-//             'twitter_description' => $input["twitter_description"],
-//             'twitter_image' => $input["twitter_image"],
-//             'category' => $input["category"],
-//             'sub_category' => $input["sub_category"],
-//             // 'tags' => implode(",", $input["tags"]),
-//             'status' => $input["status"],
-//             'featured' => $input["featured"],
-//             // 'featured_image' => $input["featured_image"],
-//             'featured_image_title' => $input["featured_image_title"],
-//             'featured_image_alt_tag' => $input["featured_image_alt_tag"],
-//             'featured_image_description' => $input["featured_image_description"],
-//             'featured_image_caption' => $input["featured_image_caption"]
-//         );
-
-//         $this->load->model('blog/Post_model');
-
-//         $insert_id = $this->Post_model->save_form_data($data);
-        
-//         if ($insert_id) {
-//             $response = array('status' => 'success', 'message' => 'Post form Data saved successfully', 'post_id' => $insert_id);
-//         } else {
-//             $response = array('status' => 'error', 'message' => 'Post form Failed to save data.');
-//         }
-        
-//         echo json_encode($response);
-        
-//     } else {
-//         $response = array('status' => 'error', 'message' => 'Post form Required fields are missing.');
-//         echo json_encode($response);
-//     }
-// }
 
 public function getCategories()
 {
@@ -265,14 +185,21 @@ public function index($table_name="")
     $tags = array('Technology');
     $data['tags'] = $tags;
 
-    $data["title"] =  "Bug Reporting";
+    $data["title"] =  "Post";
     $data["js"] =  [
+        site_url()."resources/themes/".$this->theme_selected_template."/assets/grapesjs/dist/grapes.min.js",
+        
+            site_url()."resources/themes/".$this->theme_selected_template."/assets/custom/js/blog/post.js",
             site_url()."resources/themes/".$this->theme_selected_template."/assetsassets/x-editable/moment/moment.min.js",
            site_url()."resources/themes/".$this->theme_selected_template."/assetsassets/x-editable/bootstrap4-editable/js/bootstrap-editable.min.js",
             site_url()."resources/themes/".$this->theme_selected_template."/assetsassets/x-editable/poshytip/jquery.poshytip.min.js",
             site_url()."resources/themes/".$this->theme_selected_template."/assets/custom/js/bugs/index.js" ];
 
-    $data["css"] = [ site_url()."resources/themes/".$this->theme_selected_template."/assetsassets/x-editable/bootstrap4-editable/css/bootstrap-editable.css",
+    $data["css"] = [ 
+        site_url()."resources/themes/".$this->theme_selected_template."/assets/grapesjs/dist/css/grapes.min.css",
+
+    site_url()."resources/themes/".$this->theme_selected_template."/assets/custom/css/blog/blog.css",
+    site_url()."resources/themes/".$this->theme_selected_template."/assetsassets/x-editable/bootstrap4-editable/css/bootstrap-editable.css",
     site_url()."resources/themes/".$this->theme_selected_template."/assetsassets/x-editable/poshytip/tip-yellowsimple/tip-yellowsimple.css",
     ];
 
@@ -287,9 +214,6 @@ public function index($table_name="")
     $this->load_view("blog/blogpage", $data, 'operation/sidebar/sidebar');
       
 }
-
-
-
 
 
 public function addBugs($table_name="")

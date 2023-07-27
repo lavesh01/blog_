@@ -412,6 +412,7 @@ function TreeSortable(options) {
         $(treeSelector).calculateSiblingDistances();
         self.updateBranchZIndex();
         self.branchesLeftShifting();
+        return {"uid": uid ,  "parent_id" :  parent_id , "level" :   level , "title" : title};
     };
 
     this.addSiblingBranch = function ($triggerElement) {
@@ -450,6 +451,7 @@ function TreeSortable(options) {
         $(treeSelector).calculateSiblingDistances();
         self.updateBranchZIndex();
         self.branchesLeftShifting();
+        return {"uid": uid ,  "parent_id" :  parent_id , "level" :   level , "title" : title};
     };
 
     this.removeBranch = function ($triggerElement) {

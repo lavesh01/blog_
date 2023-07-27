@@ -12,22 +12,24 @@ public function save_branch()
 {
     $data = $this->input->post();
 
-    if (!isset($data['id']) || !isset($data['parent_id']) || !isset($data['level']) || !isset($data['title'])) {
+    $input_data = $this->input->input_stream();
+    if (
+        !isset($input_data['parent_id']) ||
+        !isset($input_data['level']) ||
+        !isset($input_data['title']) || empty($input_data['title']) 
+    ) {
         echo $this->ajax__response_data_preperation('Error', 'Missing data in the request', 'error');
-        return;
-    }
-
-    if (empty($data['type']) || empty($data['selected_type']) || empty($data['slug'])) {
-        echo $this->ajax__response_data_preparation('Error', 'Missing data for additional fields', 'error');
-        return;
+        die();
     }
 
     $result = $this->Menu_model->save_branch($data);
-    
-    if ($result === 'success') {
-        echo $this->ajax__response_data_preperation('Saved Branch', 'Branch data saved successfully', 'success');
+
+    if ($result == "error") {
+        echo $this->ajax__response_data_preperation('Error', 'Failed to save branch data', 'error', $result );
     } else {
-        echo $this->ajax__response_data_preperation('Error', 'Failed to save branch data', 'error');
+        $input_data['menu_id'] = $result; 
+        echo $this->ajax__response_data_preperation('Saved', 'Branch data saved successfully', 'success', $input_data);
+
     }
     
 }
@@ -35,15 +37,60 @@ public function save_branch()
 public function remove_branch()
 {
     $id = $this->input->post('id');
-    $this->Menu_model->remove_branch($id);
+    $result = $this->Menu_model->remove_branch($id);
+
+    if ($result == "success") {
+        echo $this->ajax__response_data_preperation('Deleted', 'Branch data saved successfully', 'success');
+
+    } else {
+        echo $this->ajax__response_data_preperation('Error', 'Failed to save branch data', 'error');
+    }
 }
 
 public function update_branch()
 {
-    $input_data = $this->input->input_stream(); 
-    $this->Menu_model->update_branch($input_data);
+    $input_data = $this->input->input_stream();
+    if (
+        !isset($input_data['id']) ||
+        !isset($input_data['parent_id']) ||
+        !isset($input_data['level']) ||
+        !isset($input_data['title']) || empty($input_data['title']) ||
+        !isset($input_data['type']) || 
+        !isset($input_data['selected_type']) || empty($input_data['selected_type'])
+    ) {
+        echo $this->ajax__response_data_preperation('Error', 'Missing data in the request', 'error');
+        return;
+    }
+   
+    $update_result = $this->Menu_model->update_branch($input_data);
+   
+    if ($update_result) {
+        echo $this->ajax__response_data_preperation('Updated', 'Branch data updated successfully', 'success');
+    } else {
+        echo $this->ajax__response_data_preperation('Error', 'Failed to update branch data', 'error');
+    }
+}
+
+public function update_branch_onSort()
+{
+    $input_data = $this->input->input_stream();
+    if (
+        !isset($input_data['id']) ||
+        !isset($input_data['parent_id']) ||
+        !isset($input_data['level']) ||
+        !isset($input_data['order']) 
+    ) {
+        echo $this->ajax__response_data_preperation('Error', 'Missing data in the request', 'error');
+        return;
+    }
+   
+    $update_result = $this->Menu_model->update_branch($input_data);
     
-    echo $this->ajax__response_data_preperation('Updated Branch','Branch data updated successfully','success') ;
+    if ($update_result) {
+        echo $this->ajax__response_data_preperation('Updated', 'Branch data updated successfully', 'success');
+    } else {
+        echo $this->ajax__response_data_preperation('Error', 'Failed to update branch data', 'error');
+    }
 }
 
 public function get_menu_items() {
@@ -55,20 +102,20 @@ public function get_menu_items() {
     }
 
     $menu = $this->Menu_model->get_menu_by_id($id);
-
-    if (!$menu) {
+    
+    if ($menu) {
+        echo json_encode($menu);
+        // $input_data['menu_id'] = $menu;
+        // echo $this->ajax__response_data_preparation('Menu Details', 'Menu data retrieved successfully', 'success', $menu);
+    }else{
         echo $this->ajax__response_data_preparation('Error', 'Menu not found', 'error');
-        return;
-    }
-
-    // echo $this->ajax__response_data_preparation('Menu Details', 'Menu data retrieved successfully', 'success', $menu);
-    echo json_encode($menu);
+    } 
 }
 
 public function index($table_name="")
 {
 
-    $data["title"] =  "Bug Reporting";
+    $data["title"] =  "Menus";
     $data["js"] =  [
             "https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js",
             site_url()."resources/themes/".$this->theme_selected_template."/assets/sortable-list-tree/js/treeSortable.js",
@@ -120,42 +167,5 @@ public function addBugs($table_name="")
         die;
 
     }
-
-    // public function addMenu() {
-//     $menuName = $this->input->post('name');
-//     $menuUrl = $this->input->post('menu_url');
-//     $menuType = $this->input->post('menu_type');
-//     $data['menu'] = $this->Menu_model->addMenu($menuName, $menuUrl,$menuType);
-//     echo json_encode($data);
-// }
-
-// public function deleteMenu() {
-//     $menuId = $this->input->post('menuId');
-//     $this->Menu_model->deleteMenu($menuId);
-// }
-
-// public function addMenuItem()
-// {
-//     $menuId = $this->input->post('menu_id');
-//     $menuItemName = $this->input->post('menu_item_name');
-
-//     if (!empty($menuId) && !empty($menuItemName)) {
-//         $this->Menu_model->addMenuItem($menuId, $menuItemName);
-//         $menuItemData = $this->Menu_model->getMenuItemById($menuId);
-//         echo json_encode($menuItemData);
-//     } else {
-//         echo json_encode(['error' => 'Menu ID and Menu Item Name are required.']);
-//     }
-// }
-
-// public function getSubMenus($menuId) {
-//     $subMenus = $this->Menus_model->getMenuItemById($menuId);
-
-//     if ($subMenus) {
-//         echo json_encode($subMenus);
-//     } else {
-//         echo json_encode(array());
-//     }
-// }
 
 }

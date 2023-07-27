@@ -92,8 +92,13 @@ if ($post) {
                                                                 <label class="form-label mb-4">Post Content
                                                                     :</label>
                                                                 <div class="mb-4">
-                                                                    <textarea class="content" name="content"
-                                                                        id="content"><?php echo $post->post_content; ?></textarea>
+                                                                    <!-- <textarea class="content" name="content" rows="10"
+                                                                        cols="60"
+                                                                        id="content"><?php echo $post->post_content; ?></textarea> -->
+
+
+                                                                    <textarea
+                                                                        id="tinymce"><?php echo $post->post_content; ?></textarea>
                                                                 </div>
                                                             </div>
 
@@ -613,6 +618,28 @@ if ($post) {
 
 <script>
 $(document).ready(function() {
+
+
+    tinymce.init({
+        selector: 'textarea#tinymce',
+        plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+        tinycomments_mode: 'embedded',
+        tinycomments_author: 'Author name',
+        mergetags_list: [{
+                value: 'First.Name',
+                title: 'First Name'
+            },
+            {
+                value: 'Email',
+                title: 'Email'
+            },
+        ]
+    });
+    // var savedContent = '<?php echo addslashes($post->post_content); ?>';
+
+    // Inject the saved content into the TinyMCE editor
+    // tinymce.activeEditor.setContent(savedContent);
 
     const fileInput = document.getElementById('featured_image');
     const selectedFile = document.getElementById('selected_file');

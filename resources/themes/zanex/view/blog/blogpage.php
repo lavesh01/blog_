@@ -1,18 +1,3 @@
-<style>
-.tag {
-    font-size: 0.75rem;
-    color: #0d0c22;
-    background-color: #f1f1f9;
-    border-radius: 3px;
-    padding: 0 0.5rem;
-    line-height: 2em;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    cursor: default;
-    font-weight: 400;
-}
-</style>
-
 <div class="row" id="user-profile">
     <div class="col-lg-12">
         <div class="card">
@@ -115,7 +100,28 @@
                             <div id="profile-log-switch">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h3>Fill out the form to create a blog post</h3>
+                                        <h3 class="mb-4">Fill out the form to create a post</h3>
+
+
+                                        <div class="row mb-4">
+                                            <h3 class="col-md-3 form-label">Post Type: </h3>
+                                            <div class="col-md-9 d-flex">
+                                                <div class="custom-controls-stacked">
+                                                    <div class="d-flex">
+                                                        <label class="col-md-6 d-flex custom-control custom-radio">
+                                                            <input type="radio" class="custom-control-input"
+                                                                name="post_type" value="0" checked>
+                                                            <span class="custom-control-label">Blog</span>
+                                                        </label>
+                                                        <label class="col-md-6 d-flex custom-control custom-radio">
+                                                            <input type="radio" class="custom-control-input"
+                                                                name="post_type" value="1">
+                                                            <span class="custom-control-label">Pages</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
 
 
                                         <div class="row">
@@ -150,9 +156,49 @@
                                                             <div class="row">
                                                                 <label class="form-label mb-4">Post Content
                                                                     :</label>
+
+
+
                                                                 <div class="mb-4">
-                                                                    <textarea class="content" name="post_content"
-                                                                        id="post_content" required></textarea>
+
+                                                                    <div class="col-md-9 d-flex mb-5">
+                                                                        <div class="custom-controls-stacked">
+                                                                            <div class="d-flex">
+                                                                                <label
+                                                                                    class="col-md-6 d-flex custom-control custom-radio">
+                                                                                    <input type="radio"
+                                                                                        class="custom-control-input"
+                                                                                        name="editor" value="1" checked>
+                                                                                    <span
+                                                                                        class="custom-control-label">TinyMCE</span>
+
+                                                                                </label>
+                                                                                <label
+                                                                                    class="col-md-6 d-flex custom-control custom-radio">
+                                                                                    <input type="radio"
+                                                                                        class="custom-control-input"
+                                                                                        name="editor" value="0">
+                                                                                    <span
+                                                                                        class="custom-control-label">Grapejs</span>
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div id="selectedEditor"
+                                                                        style="width: auto; height: 100vh">
+
+                                                                        <textarea id="tinymce">
+                                                                            Welcome to TinyMCE!
+                                                                        </textarea>
+
+                                                                        <div id="gjs">
+                                                                            <div style="padding: 25px">Hello World</div>
+                                                                        </div>
+
+                                                                    </div>
+
+
                                                                 </div>
                                                             </div>
 
@@ -653,343 +699,3 @@
 </div>
 </div>
 </div>
-
-
-
-
-<script>
-$(document).ready(function() {
-
-    $('#add-category-btn').click(function(e) {
-        e.preventDefault();
-        var categoryName = $('#new-category-input').val();
-
-
-        $.ajax({
-            url: '<?php echo site_url("blog/backend/post/saveCategory"); ?>',
-            type: 'POST',
-            data: {
-                category_name: categoryName
-            },
-            success: function(response) {
-
-                var startIndex = response.indexOf('{');
-                var endIndex = response.lastIndexOf('}');
-                var jsonString = response.substring(startIndex, endIndex + 1);
-
-                var data = JSON.parse(jsonString);
-
-                console.log(data);
-
-                console.log(data.id);
-                console.log(data.category_name);
-
-                var selectDropdown = $('#category');
-                var newOption = $('<option></option>')
-                    .attr('value', data.id)
-                    .attr('data-category-id', data.id)
-                    .text(data.category_name);
-
-                selectDropdown.append(newOption);
-                selectDropdown.val(data.id);
-
-
-            },
-            error: function(xhr, status, error) {
-                console.log(error);
-            }
-        });
-
-        $('#new-category-input').val('');
-    });
-
-    $('#add-sub-category-btn').click(function(e) {
-        e.preventDefault();
-        var subCategoryName = $('#new-sub-category-input').val();
-
-        $.ajax({
-            url: '<?php echo site_url("blog/backend/post/saveSubCategory"); ?>',
-            type: 'POST',
-            data: {
-                subcategory_name: subCategoryName
-            },
-            success: function(response) {
-                var startIndex = response.indexOf('{');
-                var endIndex = response.lastIndexOf('}');
-                var jsonString = response.substring(startIndex, endIndex + 1);
-
-                var data = JSON.parse(jsonString);
-
-                console.log(data);
-
-                console.log(data.id);
-                console.log(data.subcategory_name);
-
-                var selectDropdown = $('#sub_category');
-                var newOption = $('<option></option>')
-                    .attr('value', data.id)
-                    .text(data.subcategory_name);
-
-                selectDropdown.append(newOption);
-                selectDropdown.val(data.id);
-            },
-            error: function(xhr, status, error) {
-                console.log(error);
-            }
-        });
-
-        $('#new-sub-category-input').val('');
-    });
-
-
-
-
-    $('#add-tag-btn').click(function(e) {
-        e.preventDefault();
-        var tagInput = $('#tag-input-field');
-        var tagValue = tagInput.val().trim();
-
-        if (tagValue !== '') {
-            var tagSpan = $('<span class="tag"></span>').text(tagValue);
-            var deleteLink = $(
-                '<a href="javascript:void(0)" class="tag-addon delete-tag"><i class="fe fe-x"></i></a>'
-            );
-
-            deleteLink.click(function() {
-                $(this).parent('.tag').remove();
-            });
-
-            tagSpan.append(deleteLink);
-            $('#tags').append(tagSpan);
-
-            tagInput.val('');
-        }
-    });
-
-    $(document).on('click', '.delete-tag', function() {
-        $(this).parent('.tag').remove();
-    });
-
-
-    var $form = $('#post-form');
-
-    var $submitButton = $form.find('button[type="submit"]');
-    var $requiredInputs = $form.find(':input[required]');
-
-    var rules = {
-        post_title: 'Please enter a title.',
-        slug: 'Please enter a slug.',
-        post_content: 'Please enter the post content.',
-        meta_title: 'required',
-        meta_description: 'required',
-        meta_keywords: 'required',
-        meta_canonical: 'required',
-        robots_tag_index: 'required',
-        robots_tag_follow: 'required',
-        author_tag: 'required',
-        og_url: {
-            required: true,
-            url: true
-        },
-        og_type: 'required',
-        og_title: 'required',
-        og_description: 'required',
-        og_image: 'required',
-        twitter_site: 'required',
-        twitter_title: 'required',
-        twitter_description: 'required',
-        twitter_image: 'required',
-    };
-
-    var messages = {
-        post_title: 'Please enter a title.',
-        slug: 'Please enter a slug.',
-        post_content: 'Please enter the post content.',
-        meta_title: 'Please enter the meta title.',
-        meta_description: 'Please enter the meta description.',
-        meta_keywords: 'Please enter the meta keywords.',
-        meta_canonical: 'Please enter the canonical tags.',
-        robots_tag_index: 'Please select the robots tag index.',
-        robots_tag_follow: 'Please select the robots tag follow.',
-        author_tag: 'Please enter the author tag.',
-        og_url: {
-            required: 'Please enter the Open Graph URL.',
-            url: 'Please enter a valid URL for the Open Graph URL.'
-        },
-        og_type: 'Please enter the Open Graph type.',
-        og_title: 'Please enter the Open Graph title.',
-        og_description: 'Please enter the Open Graph description.',
-        og_image: 'Please enter the Open Graph image.',
-        twitter_site: 'Please enter the Twitter site.',
-        twitter_title: 'Please enter the Twitter title.',
-        twitter_description: 'Please enter the Twitter description.',
-        twitter_image: 'Please enter the Twitter image.',
-    };
-
-    $form.validate({
-        rules: rules,
-        messages: messages,
-        submitHandler: function(form) {
-
-            console.log('submitHandler executed');
-
-            var title = $('#post_title').val();
-            var slug = $('#slug').val();
-            var content = $('#post_content').val();
-            var metaTitle = $('#meta_title').val();
-            var metaDescription = $('#meta_description').val();
-            var metaKeywords = $('#meta_keywords').val();
-            var canonicalTagsValue = $('input[name="meta_canonical"]:checked').val();
-            var robotsTagIndex = $('select[name="robots_tag_index"]').val();
-            var robotsTagFollow = $('select[name="robots_tag_follow"]').val();
-            var authorTag = $('#author_tag').val();
-
-            var ogUrl = $('#og-url-input').val();
-            var ogType = $('#og-type-input').val();
-            var ogTitle = $('#og-title-input').val();
-            var ogDescription = $('#og-description-input').val();
-            var ogImage = $('#og-image-input').val();
-            var twitterSite = $('#twitter-site-input').val();
-            var twitterTitle = $('#twitter-title-input').val();
-            var twitterDescription = $('#twitter-description-input').val();
-            var twitterImage = $('#twitter-image-input').val();
-            var subCategory = $('#sub_category').val();
-            var category = $('#category').val();
-
-            var tags = [];
-            $('.tag').each(function() {
-                var tag = $(this).text().trim();
-                tags.push(tag);
-            });
-
-            var status = $('#status').val();
-            var featured = $('#featured').prop('checked') ? 1 : 0;
-            var featuredImage = $('#featured_image').val();
-            var featuredImageTitle = $('#featured_image_title').val();
-            var featuredImageAltTag = $('#featured_image_alt_tag').val();
-            var featuredImageDescription = $('#featured_image_description').val();
-            var featuredImageCaption = $('#featured_image_caption').val();
-
-            var formData = {
-                post_title: title,
-                slug: slug,
-                post_content: content,
-                meta_title: metaTitle,
-                meta_description: metaDescription,
-                meta_keywords: metaKeywords,
-                meta_canonical: canonicalTagsValue,
-                robots_tag_index: robotsTagIndex,
-                robots_tag_follow: robotsTagFollow,
-                author_tag: authorTag,
-                og_url: ogUrl,
-                og_type: ogType,
-                og_title: ogTitle,
-                og_description: ogDescription,
-                og_image: ogImage,
-                twitter_site: twitterSite,
-                twitter_title: twitterTitle,
-                twitter_description: twitterDescription,
-                twitter_image: twitterImage,
-                category: category,
-                sub_category: subCategory,
-                tags: tags,
-                status: status,
-                featured: featured,
-                featured_image: featuredImage,
-                featured_image_title: featuredImageTitle,
-                featured_image_alt_tag: featuredImageAltTag,
-                featured_image_description: featuredImageDescription,
-                featured_image_caption: featuredImageCaption
-            };
-            console.log(formData);
-
-            $submitButton.prop('disabled', true).text('Submitting...');
-
-            $.ajax({
-                url: '<?php echo site_url("blog/backend/post/saveFormData"); ?>',
-                type: 'POST',
-                data: formData,
-                dataType: 'json',
-                success: function(response) {
-                    console.log(response);
-
-                    $form[0].reset();
-                    $('.tag').empty();
-                },
-                error: function(xhr, status, error) {
-                    console.log(error);
-                },
-                complete: function() {
-                    $submitButton.prop('disabled', false).text('Post');
-                    alert("Form Saved Successfully!")
-                }
-            });
-
-            return false;
-        }
-    });
-
-
-    $('.delete-post').click(function() {
-        var postId = $(this).data('post-id');
-
-        $.ajax({
-            url: '<?php echo site_url("blog/backend/post/deletePost"); ?>',
-            type: 'POST',
-            data: {
-                post_id: postId
-            },
-            success: function(response) {
-                console.log(response);
-                $('#post-' + postId).remove();
-            },
-            error: function(xhr, status, error) {
-                console.error(xhr.responseText);
-            }
-        });
-    });
-});
-</script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-<script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
-<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
-
-
-<!-- <script src="../assets/plugins/wysiwyag/jquery.richtext.js"></script>
-<script src="../assets/plugins/wysiwyag/wysiwyag.js"></script> -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- post_title
-slug
-post_content
-meta_title
-meta_description
-meta_keywords
-author_tag
-og_url
-og_type
-og_title
-og_description
-og_image
-twitter_site
-twitter_title
-twitter_description
-twitter_image
-category
-sub_category
-featured_image
-featured_image_title
-featured_image_alt_tag
-featured_image_description
-featured_image_caption -->

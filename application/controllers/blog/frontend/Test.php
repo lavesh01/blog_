@@ -20,6 +20,14 @@ class Test extends CI_Controller   {
         $this->load->view('frontend/partials/header');
         $this->load->view('frontend/blogfrontend', $data);
         $this->load->view('frontend/partials/footer');
+
+        $data["css"] =  [
+            site_url()."/assets/custom/css/frontend_styles.css",
+        ];
+
+        // $data["js"] =  [
+        //     "https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js",
+        // ];
     }
 
     public function about(){
@@ -50,6 +58,11 @@ class Test extends CI_Controller   {
         $data['categories'] = $this->Menu_m->getCategories();
         
 		$this->load->view('frontend/partials/menus', $data);
+    }
+
+    public function navbar(){
+        $this->load->view('frontend/navbar');
+        
     }
 
 }

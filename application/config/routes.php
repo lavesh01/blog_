@@ -61,13 +61,6 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 // $route['post/showFormData'] = 'blog/backend/post/showFormData';
-// $route['blog/backend/post/showFormData'] = 'blog/backend/post/showFormData';
-
-// $route['post/saveFormData'] = 'blog/backend/post/saveFormData';
-// $route['post/deletePost'] = 'blog/backend/Post/deletePost';
-// $route['blog/backend/post/deletePost'] = 'post/deletePost';
-
-
 
 
 

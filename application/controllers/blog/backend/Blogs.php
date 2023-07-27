@@ -8,7 +8,6 @@ public function __construct() {
 }
 
 
-
 public function deletepost() {
     $post_id = $this->input->post('post_id');
 
@@ -102,7 +101,6 @@ public function update($id) {
 }
 
 }
-
 
 
 public function index($table_name="")

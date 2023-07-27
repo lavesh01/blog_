@@ -27,15 +27,22 @@ class Menu_model extends CI_Model {
     }
 
     public function save_branch($data)
-    {    
-        $order = $data['order'];
+    {   
+        $str_newmenuUIid =  $data['uid'];
+        $originalOrderStr = $data['order'];
         unset($data['order']);
-
+        unset($data['id']);
+        unset($data['uid']);
+        unset($data['ci_csrf_token']);
+        
         if ($this->db->insert('bf_menu1', $data)) {
+            $menu_id = $this->db->insert_id();
+        
+            $order = str_replace($str_newmenuUIid, $menu_id, $originalOrderStr);
             $this->update_branch_order($order);
-            return 'success';
+            return $menu_id;
         } else {
-            return 'error';
+            return "error"; //$this->db->error() ;
         }
     }
 
@@ -44,6 +51,14 @@ class Menu_model extends CI_Model {
         $this->db->where('id', $id);
         // $this->db->delete('bf_menu1');
         $this->db->update('bf_menu1', array('is_delete' => 1));
+        
+        $num_affected_rows = $this->db->affected_rows();
+
+        if ($num_affected_rows > 0) {
+            return 'success';
+        } else {
+            return 'error';
+        }
     }
 
     public function update_branch($data)
@@ -52,10 +67,18 @@ class Menu_model extends CI_Model {
         unset($data['id']);
         $order = $data['order'];
         unset($data['order']);
-
+    
         $this->db->where('id', $branch_id);
         $this->db->update('bf_menu1', $data);
-        $this->update_branch_order($order);
+
+        $num_affected_rows = $this->db->affected_rows();
+
+        if ($num_affected_rows > 0) {
+            $this->update_branch_order($order);
+            return true; 
+        } else {
+            return false; 
+        } 
     }
 
     private function update_branch_order($order){
@@ -63,64 +86,11 @@ class Menu_model extends CI_Model {
         $ordering = 0;
 
         foreach ($array_order as $key => $value) { 
+            $ordering++;
             $this->db->set('order',$ordering);   
             $this->db->where('id', $value);
             $this->db->update('bf_menu1');
-            $ordering++;
         }
     }
 
-
-
-
-
-
-    
-    
-    // public function getMenus() {
-    //     $this->db->select('*');
-    //     $this->db->from('bf_menu1');
-    //     $query = $this->db->get();
-    //     return $query->result();
-    // }
-
-    // public function deleteMenu($menuId) {
-    //     $this->db->where('m_id', $menuId);
-    //     $this->db->delete('bf_menu1');
-    // }
-    
-    
-    // public function addMenu($menuName,$menuUrl,$menuType) {
-    //     $data = array(
-    //         'm_name' => $menuName,
-    //         'm_url' => $menuUrl ,
-    //         'm_type' => $menuType
-    //     );
-    //     $this->db->insert('bf_menu1', $data);
-        
-    //     $this->db->where('m_id', $this->db->insert_id());
-    //     $query = $this->db->get('bf_menu1');
-    //     return $query->row();
-    // }
-
-    // public function addMenuItem($menuId, $menuItemName)
-    // {
-    //     $data = array(
-    //         'm_id' => $menuId,
-    //         'm_item_name' => $menuItemName
-    //     );
-    //     $this->db->insert('bf_menu_item', $data);
-    // }
-
-    // public function getMenuItemById($menuId)
-    // {
-    //     $this->db->where('m_id', $menuId);
-    //     $query = $this->db->get('bf_menu_item');
-
-    //     if ($query->num_rows() > 0) {
-    //         return $query->row();
-    //     }
-    //     return null;
-    // }
-  
 }

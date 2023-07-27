@@ -1,5 +1,4 @@
 <style>
-/* Hide the input fields with IDs branch-id-input, branch-parent-id-input, and branch-level-input */
 #branch-id-input,
 #branch-parent-id-input,
 #branch-level-input {
@@ -54,8 +53,6 @@
                         </div>
 
                         <button id="edit-branch" class="btn btn-primary">Edit</button>
-                        <button id="save-branch" class="btn btn-primary">Save</button>
-
                     </div>
                 </div>
             </div>
@@ -72,6 +69,7 @@ $(document).ready(function() {
     $('#pages').select2({
         placeholder: 'Search your page',
         allowClear: true,
+        minimumResultsForSearch: 4
     });
 });
 </script>
