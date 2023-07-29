@@ -5,16 +5,17 @@ class Post extends Admin_Controller   {
 
 public function __construct() {
        parent::__construct();
+       $this->load->model('blog/Post_model');
 }
 
 public function index($table_name="")
 {
-    $tags = array('Technology');
+    $tags = array('Sample tag');
     $data['tags'] = $tags;
 
     $data["title"] =  "Post";
     $data["js"] =  [                
-        "https://rawgit.com/artf/grapesjs-preset-webpage/master/dist/grapesjs-preset-webpage.min.js",
+        site_url()."resources/themes/".$this->theme_selected_template."/assets/grapesjs/dist/grapes.min.js",
         "https://cdn.jsdelivr.net/npm/grapesjs-preset-webpage@1.0.3/dist/index.min.js",
         "https://cdn.jsdelivr.net/npm/grapesjs-blocks-basic@1.0.2/dist/index.min.js",
         "https://cdn.jsdelivr.net/npm/grapesjs-plugin-forms@2.0.6/dist/index.min.js",
@@ -24,19 +25,16 @@ public function index($table_name="")
         "https://cdn.jsdelivr.net/npm/grapesjs-typed@2.0.1/dist/index.min.js",
         "https://cdn.jsdelivr.net/npm/grapesjs-tooltip@0.1.8/dist/index.min.js",
         "https://cdn.jsdelivr.net/npm/grapesjs-tabs@1.0.6/dist/grapesjs-tabs.min.js",
-        site_url()."resources/themes/".$this->theme_selected_template."/assets/grapesjs/dist/grapes.min.js",
         
         site_url()."resources/themes/".$this->theme_selected_template."/assets/custom/js/blog/post.js",
     ];
 
     $data["css"] = [ 
-        "https://rawgit.com/artf/grapesjs-preset-webpage/master/dist/grapesjs-preset-webpage.min.css",
         site_url()."resources/themes/".$this->theme_selected_template."/assets/grapesjs/dist/css/grapes.min.css",
 
         site_url()."resources/themes/".$this->theme_selected_template."/assets/custom/css/blog/blog.css",
     ];
 
-    $this->load->model('blog/Post_model');
     $categories = $this->Post_model->get_categories();
     $subcategories = $this->Post_model->get_subcategories();
 
@@ -44,8 +42,30 @@ public function index($table_name="")
     $data['subcategories'] = $subcategories;
 
 
-    $this->load_view("blog/blogpage", $data, 'operation/sidebar/sidebar');
-      
+    $this->load_view("blog/blogpage", $data, 'operation/sidebar/sidebar'); 
+}
+
+public function save_post(){
+    $data = $this->input->post();
+
+    $input_data = $this->input->input_stream();
+    if (
+        !isset($input_data['post_title']) || empty($input_data['post_title']) ||
+        !isset($input_data['slug'])
+    ) {
+        echo $this->ajax__response_data_preperation('Error', 'Missing data in the request', 'error');
+        die();
+    }
+
+    $result = $this->Post_model->save_post($data);
+
+    if ($result == "error") {
+        echo $this->ajax__response_data_preperation('Error', 'Failed to create new Post', 'error', $result );
+    } else {
+        $input_data['post_id'] = $result; 
+        echo $this->ajax__response_data_preperation('Saved', 'Post created successfully', 'success', $input_data);
+
+    }
 }
 
 
@@ -168,6 +188,7 @@ public function saveCategory()
         echo json_encode($response);
     }
 }
+
 public function getSubcategories()
 {
     $this->load->model('blog/Post_model');
@@ -208,53 +229,17 @@ public function saveSubcategory()
 
 
 public function deletepost() {
-    $post_id = $this->input->post('post_id');
+    $post_id = $this->input->post('id');
 
     $this->load->model('blog/Post_model');
-    $rows_affected = $this->Post_model->delete_post($post_id);
+    $result = $this->Post_model->delete_post($post_id);
 
-    if ($rows_affected > 0) {
-        $response = array('status' => 'success', 'message' => 'Post deleted successfully');
+    if ($result == "success") {
+        echo $this->ajax__response_data_preperation('Deleted', 'Post data deleted successfully', 'success');
+
     } else {
-        $response = array('status' => 'error', 'message' => 'Failed to delete post');
+        echo $this->ajax__response_data_preperation('Error', 'Failed to delete branch data', 'error');
     }
-
-    echo json_encode($response);
 }
-
-public function addBugs($table_name="")
-{
- 
-   $input = $this->input->post();
-   if(isset($input["title"]) && isset($input["description"]) && !empty($input["title"]) && !empty($input["description"]) )
-   {
-        
-      $data =  array('title' =>$input["title"], 'url' =>$input["url"],'Summary'=>$input["description"], "customer_id" => $this->customer_id,"created_by" => $this->user_id);
-      $this->db->insert('bugs',$data);
-      echo $this->ajax__response_data_preperation("Successfully Added","","success");
-      $email_config = $this->email_config();
-      $subject = "Bug Added - ". $input["title"];
-       $dataemail = array(
-        'blog_title'   =>$subject ,
-        'blog_heading' => $input["description"]
-        );
-       $email_message = $this->parser->parse('themes/email-templates/settings', $dataemail, true);
-       $this->send_email($email_config, $this->config->item('support_email'),$subject,$email_message);
-   }
-   else
-   {
-        echo $this->ajax__response_data_preperation("Not Added","Parameter are Missing","error");
-   }
-}
-
-    public function ajax_getall($value='')
-    {
-       
-        $this->db->select('bugs.id as # , title,summary, users.username as created_by,bugs.created_on, bugs.status, bugs.eta')->from('bugs');
-        $query = $this->db->join('users', 'bugs.created_by = users.id');
-        echo $this->ajax__response_data_preperation("","asas","success",$this->datatable_data($query,"" ,$value,"title"));
-        die;
-
-    }
 
 }

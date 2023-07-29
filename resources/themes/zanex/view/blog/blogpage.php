@@ -154,12 +154,19 @@
 
 
                                                             <div class="row">
-                                                                <label class="form-label mb-4">Post Content
-                                                                    :</label>
+                                                                <label class="form-label mb-4">Post Content : </label>
+
+                                                                <div class="col-md-12"
+                                                                    style="width: auto; height: 100vh;overflow: scroll;padding: 0;">
+                                                                    <div id="gjs">
+                                                                        <h2 style="padding: 25px">Hello World</h2>
+                                                                        <p>This is a sample text ... </p>
+                                                                    </div>
+                                                                </div>
 
 
-
-                                                                <div class="mb-4">
+                                                                <!-- CHOOSE TINY MCE EDITOR OR GRAPESJS  -->
+                                                                <!-- <div class="mb-4">
 
                                                                     <div class="col-md-9 d-flex mb-5">
                                                                         <div class="custom-controls-stacked">
@@ -199,7 +206,9 @@
                                                                     </div>
 
 
-                                                                </div>
+                                                                </div> -->
+
+
                                                             </div>
 
 
@@ -598,8 +607,6 @@
                             </div>
 
 
-
-
                             <!-- Status -->
                             <div class="row mb-4">
                                 <label class="col-md-4 form-label">Status</label>
@@ -685,8 +692,7 @@
 
                             <div class="card-footer">
                                 <button type="submit" class="btn btn-primary"> Post </button>
-                                <!-- <a href="javascript:void(0)" class="btn btn-primary">Post</a> -->
-                                <a href="javascript:void(0)" class="btn btn-default float-end">Discard</a>
+                                <!-- <a href="javascript:void(0)" class="btn btn-default float-end">Discard</a> -->
                             </div>
 
                         </div>

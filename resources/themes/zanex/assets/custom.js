@@ -624,14 +624,16 @@ function removeJSFileWithAttribute(attribute, value) {
   }
 }
 addHeadScript = function(js,name) {
+  $.holdReady(true);
     var head = document.getElementsByTagName("head")[0],
     script = document.createElement('script');
     script.type = 'text/javascript'
     script.src = js 
-    script.setAttribute("head", name)
+    script.setAttribute("body", name)
     script.setAttribute("async", "async")
     script.setAttribute("defer", "defer")
     head.appendChild(script);
+    $.holdReady(false);
 };
 
 addHeadCss = function(css,name ) {

@@ -31,7 +31,7 @@ $(document).ready(function () {
 
         const order = menuOrder();
 
-        const url = 'http://localhost/blogCd/blog/backend/menus/update_branch_onSort';
+        const url = site_url + 'blog/backend/menus/update_branch_onSort';
         const data = { id: id, parent_id: parent, level: level, order: order };
         console.log(data);
         $.ajax({
@@ -84,7 +84,7 @@ $(document).ready(function () {
         const $branch = $(event.target).closest('li');
         const branchData = $branch.data();
         
-        const url = 'http://localhost/blogCd/blog/backend/menus/remove_branch';
+        const url = site_url + 'blog/backend/menus/remove_branch';
         const data = { id : branchData.id };
         $.ajax({
             url: url,
@@ -113,7 +113,7 @@ $(document).ready(function () {
         const branchData = $branch.data();
 
         $.ajax({
-            url: 'http://localhost/blogCd/blog/backend/menus/get_menu_items',
+            url: site_url + 'blog/backend/menus/get_menu_items',
             method: 'POST',
             data: { id: branchData.id }, 
             success: function (response) {
@@ -179,7 +179,7 @@ function editBranchDetails() {
     const slug = $('#slug').val(); 
     const order = menuOrder();
 
-    const url = 'http://localhost/blogCd/blog/backend/menus/update_branch';
+    const url = site_url + 'blog/backend/menus/update_branch';
     const data = { id, parent_id, level, title ,order, type, selected_type, slug};
     console.log(data);
     $.ajax({

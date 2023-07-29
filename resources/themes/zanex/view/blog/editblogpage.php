@@ -1,8 +1,7 @@
-
 <?php
 // Retrieve the post data from the $post variable passed from the controller
 if ($post) {
-    echo '<h2>Title: ' . $post->post_title . '</h2>';
+    echo '<div class="card"><div class="card-body"><h3>Title: ' . $post->post_title .'</h3></div></div>';
 } else {
     echo '<h1>Blog post not found!</h1>';
 }
@@ -30,7 +29,7 @@ if ($post) {
             </div>
         </div>
 
-        <form id="post-form" method="put" action="<?php echo site_url('blog/backend/blogs/update'); ?>">
+        <form id="post-form" method="put">
 
             <div class="row">
                 <div class="col-xl-8">
@@ -52,6 +51,35 @@ if ($post) {
                                                     </div>
                                                     <div class="card-body">
                                                         <div class="form horizontal">
+
+
+                                                            <div class="row mb-4">
+                                                                <h3 class="col-md-3 form-label">Post Type: </h3>
+                                                                <div class="col-md-9 d-flex">
+                                                                    <div class="custom-controls-stacked">
+                                                                        <div class="d-flex">
+                                                                            <label
+                                                                                class="col-md-6 d-flex custom-control custom-radio">
+                                                                                <input type="radio"
+                                                                                    class="custom-control-input"
+                                                                                    name="post_type" value="0"
+                                                                                    <?php if ($post->post_type == 0) echo 'checked'; ?>>
+                                                                                <span
+                                                                                    class="custom-control-label">Blog</span>
+                                                                            </label>
+                                                                            <label
+                                                                                class="col-md-6 d-flex custom-control custom-radio">
+                                                                                <input type="radio"
+                                                                                    class="custom-control-input"
+                                                                                    name="post_type" value="1"
+                                                                                    <?php if ($post->post_type == 1) echo 'checked'; ?>>
+                                                                                <span
+                                                                                    class="custom-control-label">Pages</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
 
                                                             <div class="row mb-4">
                                                                 <label for="inputName" class="col-md-3 form-label">
@@ -79,23 +107,15 @@ if ($post) {
                                                                     :</label>
                                                                 <div class="mb-4">
 
-                                                                    <div id="selectedEditor"
+                                                                    <div
                                                                         style="width: auto; height: 100vh;overflow: scroll;">
-
-                                                                        <!-- <textarea class="content" name="content" rows="10"
-                                                                        cols="60"
-                                                                        id="content"><?php echo $post->post_content; ?></textarea> -->
-
-
-                                                                        <!-- <textarea
-                                                                        id="tinymce"><?php echo $post->post_content; ?></textarea> -->
-
 
                                                                         <div id="gjs">
                                                                             <div style="padding: 25px">
                                                                                 <?php echo $post->post_content; ?>
                                                                             </div>
                                                                         </div>
+
                                                                     </div>
 
                                                                 </div>
@@ -360,31 +380,7 @@ if ($post) {
                                                     <div class="card-title">Additional Info.</div>
                                                 </div>
                                                 <div class="card-body">
-
-                                                    <div class="row mb-4">
-                                                        <label class="col-md-3 form-label">created date :</label>
-                                                        <div class="col-md-9">
-                                                            <input type="text" id="created_date" class="form-control">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mb-4">
-                                                        <label class="col-md-3 form-label">created by :</label>
-                                                        <div class="col-md-9">
-                                                            <input type="text" id="created_by" class="form-control">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mb-4">
-                                                        <label class="col-md-3 form-label">modified date :</label>
-                                                        <div class="col-md-9">
-                                                            <input type="text" id="modified_date" class="form-control">
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mb-4">
-                                                        <label class="col-md-3 form-label">modified by :</label>
-                                                        <div class="col-md-9">
-                                                            <input type="text" id="modified_by" class="form-control">
-                                                        </div>
-                                                    </div>
+                                                    <p>Settings</p>
 
                                                 </div>
 
@@ -417,7 +413,7 @@ if ($post) {
                             <div class="row mb-4">
                                 <label class="col-md-12 form-label">Category</label>
                                 <div class="col-md-12">
-                                    <select id="category" name="country" class="form-control form-select select2"
+                                    <select id="category" name="category" class="form-control form-select select2"
                                         data-bs-placeholder="Select Category">
                                         <option value="0" data-category-id="0">Uncategorised</option>
                                         <?php foreach ($categories as $category): ?>
@@ -449,7 +445,8 @@ if ($post) {
                             <div class="row mb-4">
                                 <label class="col-md-12 form-label">Sub Categories</label>
                                 <div class="col-md-12">
-                                    <select id="sub_category" name="country" class="form-control form-select select2"
+                                    <select id="sub_category" name="sub_category"
+                                        class="form-control form-select select2"
                                         data-bs-placeholder="Select Sub Category">
                                         <option value="0">--Select--</option>
                                         <?php foreach ($subcategories as $subcategory): ?>
@@ -515,19 +512,19 @@ if ($post) {
                             <div class="row mb-4">
                                 <label class="col-md-4 form-label">Status</label>
                                 <div class="col-md-8">
-                                    <select id="status" name="country" class="form-control form-select select2"
+                                    <select id="status" name="status" class="form-control form-select select2"
                                         data-bs-placeholder="Select Status">
-                                        <option value="0" <?php if ($post->status == 0) echo 'selected'; ?>>Draft
+                                        <?php foreach ($status_type as $status) : ?>
+                                        <option value="<?php echo $status->id; ?>"
+                                            <?php if ($status->id == $post->status) echo 'selected'; ?>>
+                                            <?php echo $status->status_type; ?>
                                         </option>
-                                        <option value="1" <?php if ($post->status == 1) echo 'selected'; ?>>Published
-                                        </option>
-                                        <option value="2" <?php if ($post->status == 2) echo 'selected'; ?>>Archived
-                                        </option>
-                                        <option value="3" <?php if ($post->status == 3) echo 'selected'; ?>>Trash
-                                        </option>
+                                        <?php endforeach; ?>
                                     </select>
                                 </div>
                             </div>
+
+
 
                             <!-- Featured Blogs  -->
                             <div class="form-group">
@@ -611,320 +608,3 @@ if ($post) {
 </div>
 </div>
 </div>
-
-
-
-
-<script>
-$(document).ready(function() {
-
-    var grapes_editor = grapesjs.init({
-        container: '#gjs',
-        fromElement: true,
-        height: '100%',
-        showOffsets: 1,
-        noticeOnUnload: 0,
-        storageManager: {
-            type: 'local',
-            autosave: true,
-            autoload: true,
-            stepsBeforeSave: 1,
-            options: {
-                local: {
-                    key: 'gjsProject',
-                },
-            }
-        },
-
-        plugins: ['grapesjs-preset-webpage', "gjs-blocks-basic", 'grapesjs-plugin-forms',
-            'grapesjs-custom-code', 'grapesjs-component-countdown', 'grapesjs-navbar',
-            'grapesjs-typed', 'grapesjs-tooltip', 'grapesjs-tabs'
-        ],
-        pluginsOpts: {
-            'grapesjs-preset-webpage': {},
-            "gjs-blocks-basic": {},
-            'grapes.js-plugin-forms': {},
-            'grapesjs-custom-code': {},
-            'grapesjs-component-countdown': {},
-            'grapesjs-navbar': {},
-            'grapesjs-typed': {},
-            'grapesjs-tooltip': {},
-            'grapesjs-tabs': {},
-        },
-
-    });
-
-    // Use the API
-    const blockManager = grapes_editor.Blocks;
-
-    blockManager.add('h1-block', {
-        label: 'Heading',
-        content: '<h1>Put your title here</h1>',
-        category: 'Basic',
-        attributes: {
-            title: 'Insert h1 block'
-        }
-    });
-
-
-
-    // tinymce.init({
-    //     selector: 'textarea#tinymce',
-    //     plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
-    //     toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
-    //     tinycomments_mode: 'embedded',
-    //     tinycomments_author: 'Author name',
-    //     mergetags_list: [{
-    //             value: 'First.Name',
-    //             title: 'First Name'
-    //         },
-    //         {
-    //             value: 'Email',
-    //             title: 'Email'
-    //         },
-    //     ]
-    // });
-
-
-
-    const fileInput = document.getElementById('featured_image');
-    const selectedFile = document.getElementById('selected_file');
-
-    fileInput.addEventListener('change', function() {
-        selectedFile.textContent = fileInput.files[0] ? fileInput.files[0].name : '';
-    });
-
-
-    $('#add-tag-btn').click(function(e) {
-        e.preventDefault();
-        var tagInput = $('#tag-input-field');
-        var tagValue = tagInput.val().trim();
-
-        if (tagValue !== '') {
-            var tagSpan = $('<span class="tag"></span>').text(tagValue);
-            var deleteLink = $(
-                '<a href="javascript:void(0)" class="tag-addon delete-tag"><i class="fe fe-x"></i></a>'
-            );
-
-            deleteLink.click(function() {
-                $(this).parent('.tag').remove();
-            });
-
-            tagSpan.append(deleteLink);
-            $('#tags').append(tagSpan);
-
-            tagInput.val('');
-        }
-    });
-
-    $(document).on('click', '.delete-tag', function() {
-        $(this).parent('.tag').remove();
-    });
-
-
-    $('#add-category-btn').click(function(e) {
-        e.preventDefault();
-        var categoryName = $('#new-category-input').val();
-
-        $.ajax({
-            url: '<?php echo site_url("blog/backend/post/saveCategory"); ?>',
-            type: 'POST',
-            data: {
-                category_name: categoryName
-            },
-            success: function(response) {
-
-                var startIndex = response.indexOf('{');
-                var endIndex = response.lastIndexOf('}');
-                var jsonString = response.substring(startIndex, endIndex + 1);
-
-                var data = JSON.parse(jsonString);
-
-                console.log(data);
-
-                console.log(data.id);
-                console.log(data.category_name);
-
-                var selectDropdown = $('#category');
-                var newOption = $('<option></option>')
-                    .attr('value', data.id)
-                    .attr('data-category-id', data.id)
-                    .text(data.category_name);
-
-                selectDropdown.append(newOption);
-                selectDropdown.val(data.id);
-
-            },
-            error: function(xhr, status, error) {
-                console.log(error);
-            }
-        });
-
-        $('#new-category-input').val('');
-    });
-
-    $('#add-sub-category-btn').click(function(e) {
-        e.preventDefault();
-        var subCategoryName = $('#new-sub-category-input').val();
-
-        $.ajax({
-            url: '<?php echo site_url("blog/backend/post/saveSubCategory"); ?>',
-            type: 'POST',
-            data: {
-                subcategory_name: subCategoryName
-            },
-            success: function(response) {
-                var startIndex = response.indexOf('{');
-                var endIndex = response.lastIndexOf('}');
-                var jsonString = response.substring(startIndex, endIndex + 1);
-
-                var data = JSON.parse(jsonString);
-
-                console.log(data);
-
-                console.log(data.id);
-                console.log(data.subcategory_name);
-
-                var selectDropdown = $('#sub_category');
-                var newOption = $('<option></option>')
-                    .attr('value', data.id)
-                    .text(data.subcategory_name);
-
-                selectDropdown.append(newOption);
-                selectDropdown.val(data.id);
-            },
-            error: function(xhr, status, error) {
-                console.log(error);
-            }
-        });
-
-        $('#new-sub-category-input').val('');
-    });
-
-
-
-    $('#update-btn').click(function(e) {
-        var $form = $('#post-form');
-        var $submitButton = $form.find('button[type="submit"]');
-        e.preventDefault();
-        var id = $(this).data('post-id');
-        var url = 'http://localhost/blogCd/blog/backend/blogs/update/' + id;
-
-        var post_title = $('#title').val();
-        var slug = $('#slug').val();
-
-        // var content = tinymce.activeEditor.getContent();
-        var content = content = grapes_editor.getHtml();
-
-        // var editorValue = $('input[name="editor"]:checked').val();
-        // console.log(editorValue);
-
-        // var content;
-        // if (editorValue === '1') {
-        //     content = tinymce.activeEditor.getContent();
-        // } else if (editorValue === '0') {
-
-        //     console.log(grapes_editor.getHtml());
-        //     console.log(grapes_editor.getCss());
-
-        //     content = grapes_editor.getHtml();
-
-        // }
-        // console.log(content);
-
-        var metaTitle = $('#meta_title').val();
-        var metaDescription = $('#meta_description').val();
-        var metaKeywords = $('#meta_keywords').val();
-        var canonicalTagsValue = $('input[name="canonical_tags"]:checked').val();
-        var robotsTagIndex = $('select[name="index"]').val();
-        var robotsTagFollow = $('select[name="follow"]').val();
-        var authorTag = $('#author_tag').val();
-
-        var ogUrl = $('#og-url-input').val();
-        var ogType = $('#og-type-input').val();
-        var ogTitle = $('#og-title-input').val();
-        var ogDescription = $('#og-description-input').val();
-        var ogImage = $('#og-image-input').val();
-        var twitterSite = $('#twitter-site-input').val();
-        var twitterTitle = $('#twitter-title-input').val();
-        var twitterDescription = $('#twitter-description-input').val();
-        var twitterImage = $('#twitter-image-input').val();
-
-        var subCategory = $('#sub_category').val();
-        var category = $('#category').val();
-
-        var tags = [];
-        $('.tag').each(function() {
-            var tag = $(this).text().trim();
-            tags.push(tag);
-        });
-
-        var status = $('#status').val();
-        var featured = $('#featured').prop('checked') ? 1 : 0;
-        var featuredImage = $('#featured_image').val();
-        var featuredImageTitle = $('#featured_image_title').val();
-        var featuredImageAltTag = $('#featured_image_alt_tag').val();
-        var featuredImageDescription = $('#featured_image_description').val();
-        var featuredImageCaption = $('#featured_image_caption').val();
-
-
-        var postData = {
-            id: id,
-            post_title: post_title,
-            slug: slug,
-            post_content: content,
-            meta_title: metaTitle,
-            meta_description: metaDescription,
-            meta_keywords: metaKeywords,
-            meta_canonical: canonicalTagsValue,
-            robots_tag_index: robotsTagIndex,
-            robots_tag_follow: robotsTagFollow,
-            author_tag: authorTag,
-
-            og_url: ogUrl,
-            og_type: ogType,
-            og_title: ogTitle,
-            og_description: ogDescription,
-            og_image: ogImage,
-            twitter_site: twitterSite,
-            twitter_title: twitterTitle,
-            twitter_description: twitterDescription,
-            twitter_image: twitterImage,
-
-            category: category,
-            sub_category: subCategory,
-            tags: tags,
-            status: status,
-            featured: featured,
-            featured_image: featuredImage,
-            featured_image_title: featuredImageTitle,
-            featured_image_alt_tag: featuredImageAltTag,
-            featured_image_description: featuredImageDescription,
-            featured_image_caption: featuredImageCaption
-        };
-
-        $submitButton.prop('disabled', true).text('Submitting...');
-
-        $.ajax({
-            url: url,
-            type: 'PUT',
-            data: postData,
-            success: function(response) {
-                console.log(response);
-                if (response.title == "Updated") {
-                    alert("Post Updated Successfully!");
-                } else {
-                    alert("Error : Required fields missing.");
-                }
-            },
-            error: function(xhr, status, error) {
-                console.error(error);
-            },
-            complete: function() {
-                $submitButton.prop('disabled', false).text('Update');
-            }
-        });
-        console.log(postData);
-    });
-});
-</script>

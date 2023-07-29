@@ -1,8 +1,9 @@
-<div class="row row-sm">
+<!-- <div class="row row-sm">
     <div class="col-lg-12">
         <div class="card">
-            <div class="card-header">
+            <div class="card-header d-flex justify-content-between">
                 <h3 class="card-title">Your all blogs saved in the database</h3>
+                <button class="btn btn-primary" id="create-post"> Create new Post </button>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -30,25 +31,7 @@
                                 <td><?php echo $data->created_on; ?></td>
                                 <td>
                                     <?php
-                                        $statusText = '';
-                                        switch ($data->status) {
-                                            case 0:
-                                                $statusText = 'Draft';
-                                                break;
-                                            case 1:
-                                                $statusText = 'Published';
-                                                break;
-                                            case 2:
-                                                $statusText = 'Archived';
-                                                break;
-                                            case 3:
-                                                $statusText = 'Trash';
-                                                break;
-                                            default:
-                                                $statusText = 'Unknown';
-                                                break;
-                                        }
-                                        echo $statusText;
+                                        echo $data->status_type;
                                     ?>
                                 </td>
                                 <td> <button class="btn btn-primary edit-post" data-post-id="<?php echo $data->id; ?>">
@@ -64,36 +47,71 @@
             </div>
         </div>
     </div>
+</div> -->
+
+
+<!-- <div class="hidden modal fade" id="createPostModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content modal-content-demo">
+            <div class="modal-header">
+                <h4 class="modal-title">Create new Post</h4>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal"><span
+                        aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-3">
+
+                    <label class="form-label col-md-3"> Title:</label>
+                    <div class="col-md-9">
+                        <input id="post_title" class="form-control"></input>
+                    </div>
+
+                </div>
+
+                <div class="row mb-3">
+                    <label class="form-label col-md-3"> Slug:</label>
+                    <div class="col-md-9">
+                        <input id="slug" class="form-control" disabled></input>
+                    </div>
+                </div>
+
+
+                <div class="modal-footer">
+                    <button class="btn btn-primary" id="confirm-create-post">Create</button>
+                    <button class="btn btn-danger" data-bs-dismiss="modal">Discard</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="row">
+
+    <div class="col-md-12 col-lg-12 ">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-content collapse show">
+                        <div class="card-header-tab">
+                            <div class="card-header">
+                                <i class="header-icon lnr-list icon-gradient bg-happy-itmeo"> </i>
+                                Blogs
+                            </div>
+
+                        </div>
+                        <div class="card-body  p-2">
+                            <div class="table-responsive">
+                                <div id="div_common_dataTable">
+                                    <table id="blogs_dataTable"
+                                        class="table table-hover table-striped  sourced-data dataTable">
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-
-
-<script>
-$(document).ready(function() {
-    $('.edit-post').click(function() {
-        var postId = $(this).data('post-id');
-        console.log(postId);
-
-        window.location.href = 'http://localhost/blogCd/blog/backend/blogs/edit/' + postId;
-    });
-
-    $('.delete-post').click(function() {
-        var postId = $(this).data('post-id');
-
-        $.ajax({
-            url: '<?php echo site_url("blog/backend/post/deletePost"); ?>',
-            type: 'POST',
-            data: {
-                post_id: postId
-            },
-            success: function(response) {
-                console.log(response);
-                $('#post-' + postId).remove();
-            },
-            error: function(xhr, status, error) {
-                console.error(xhr.responseText);
-            }
-        });
-    });
-});
-</script>

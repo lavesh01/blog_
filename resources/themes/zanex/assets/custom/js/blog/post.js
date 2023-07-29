@@ -1,205 +1,16 @@
 
 
 $(document).ready(function() {
-
-    var grapes_editor = grapesjs.init({
-        container: '#gjs',
-        fromElement: true,
-        height: '100%',
-        showOffsets: 1,
-        noticeOnUnload: 0,
-          storageManager: {
-            type: 'local', 
-            autosave: true, 
-            autoload: true, 
-            stepsBeforeSave: 1, 
-            options: {
-              local: { 
-                key: 'gjsProject', 
-              },
-            }
-          },
-        
-        plugins: ['grapesjs-preset-webpage',"gjs-blocks-basic",'grapesjs-plugin-forms','grapesjs-custom-code','grapesjs-component-countdown','grapesjs-navbar','grapesjs-typed','grapesjs-tooltip','grapesjs-tabs'],
-            pluginsOpts: {
-            'grapesjs-preset-webpage': {},
-            "gjs-blocks-basic": {},
-            'grapes.js-plugin-forms':{},
-            'grapesjs-custom-code': {},
-            'grapesjs-component-countdown': {},
-            'grapesjs-navbar': {},
-            'grapesjs-typed': {},
-            'grapesjs-tooltip': {},
-            'grapesjs-tabs': {},
-        },
-        
-      });
-      console.log(grapes_editor.getHtml());
-
-      // Use the API
-        const blockManager = grapes_editor.Blocks;
-
-        blockManager.add('h1-block', {
-        label: 'Heading',
-        content: '<h1>Put your title here</h1>',
-        category: 'Basic',
-        attributes: {
-            title: 'Insert h1 block'
-        }
-        });
-
-      
-
-    tinymce.init({
-        selector: 'textarea#tinymce',
-        plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
-        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
-        tinycomments_mode: 'embedded',
-        tinycomments_author: 'Author name',
-        mergetags_list: [{
-                value: 'First.Name',
-                title: 'First Name'
-            },
-            {
-                value: 'Email',
-                title: 'Email'
-            },
-        ]
-    });
-    
-
-    $('#gjs').hide();
-
-    $('input[name="editor"]').on('click', function() {
-        if ($(this).val() === '1') {
-            $('.tox-tinymce').show();
-            console.log("tinymce show");
-            $('#gjs').hide();
-        } else if ($(this).val() === '0') {
-            $('.tox-tinymce').hide();
-            console.log("tinymce hide");
-            $('#gjs').show();
-        }
-    });
-
-    $('#add-category-btn').click(function(e) {
-        e.preventDefault();
-        var categoryName = $('#new-category-input').val();
-
-
-        $.ajax({
-            url: "http://localhost/blogCd/blog/backend/post/saveCategory",
-            type: 'POST',
-            data: {
-                category_name: categoryName
-            },
-            success: function(response) {
-
-                var startIndex = response.indexOf('{');
-                var endIndex = response.lastIndexOf('}');
-                var jsonString = response.substring(startIndex, endIndex + 1);
-
-                var data = JSON.parse(jsonString);
-
-                console.log(data);
-
-                console.log(data.id);
-                console.log(data.category_name);
-
-                var selectDropdown = $('#category');
-                var newOption = $('<option></option>')
-                    .attr('value', data.id)
-                    .attr('data-category-id', data.id)
-                    .text(data.category_name);
-
-                selectDropdown.append(newOption);
-                selectDropdown.val(data.id);
-
-
-            },
-            error: function(xhr, status, error) {
-                console.log(error);
-            }
-        });
-
-        $('#new-category-input').val('');
-    });
-
-    $('#add-sub-category-btn').click(function(e) {
-        e.preventDefault();
-        var subCategoryName = $('#new-sub-category-input').val();
-
-        $.ajax({
-            url: 'http://localhost/blogCd/blog/backend/post/saveSubCategory',
-            type: 'POST',
-            data: {
-                subcategory_name: subCategoryName
-            },
-            success: function(response) {
-                var startIndex = response.indexOf('{');
-                var endIndex = response.lastIndexOf('}');
-                var jsonString = response.substring(startIndex, endIndex + 1);
-
-                var data = JSON.parse(jsonString);
-
-                console.log(data);
-
-                console.log(data.id);
-                console.log(data.subcategory_name);
-
-                var selectDropdown = $('#sub_category');
-                var newOption = $('<option></option>')
-                    .attr('value', data.id)
-                    .text(data.subcategory_name);
-
-                selectDropdown.append(newOption);
-                selectDropdown.val(data.id);
-            },
-            error: function(xhr, status, error) {
-                console.log(error);
-            }
-        });
-
-        $('#new-sub-category-input').val('');
-    });
-
-    $('#add-tag-btn').click(function(e) {
-        e.preventDefault();
-        var tagInput = $('#tag-input-field');
-        var tagValue = tagInput.val().trim();
-
-        if (tagValue !== '') {
-            var tagSpan = $('<span class="tag"></span>').text(tagValue);
-            var deleteLink = $(
-                '<a href="javascript:void(0)" class="tag-addon delete-tag"><i class="fe fe-x"></i></a>'
-            );
-
-            deleteLink.click(function() {
-                $(this).parent('.tag').remove();
-            });
-
-            tagSpan.append(deleteLink);
-            $('#tags').append(tagSpan);
-
-            tagInput.val('');
-        }
-    });
-
-    $(document).on('click', '.delete-tag', function() {
-        $(this).parent('.tag').remove();
-    });
-
-
     var $form = $('#post-form');
 
     var $submitButton = $form.find('button[type="submit"]');
     var $requiredInputs = $form.find(':input[required]');
 
     var rules = {
-        // post_type: 'Please select the post type',
-        post_title: 'Please enter a title.',
-        slug: 'Please enter a slug.',
-        post_content: 'Please enter the post content.',
+        post_type: 'required',
+        post_title: 'required',
+        slug: 'required',
+        post_content: 'required',
         meta_title: 'required',
         meta_description: 'required',
         meta_keywords: 'required',
@@ -222,7 +33,7 @@ $(document).ready(function() {
     };
 
     var messages = {
-        // post_type: 'Pleace select a post_type',
+        post_type: 'Pleace select a post_type',
         post_title: 'Please enter a title.',
         slug: 'Please enter a slug.',
         post_content: 'Please enter the post content.',
@@ -257,22 +68,20 @@ $(document).ready(function() {
             var post_type = $('input[name="post_type"]:checked').val();
             var title = $('#post_title').val();
             var slug = $('#slug').val();
+            var content = grapes_editor.getHtml();
 
-            var editorValue = $('input[name="editor"]:checked').val();
-            console.log(editorValue);
-
-            var content;
-            if (editorValue === '1') {
-                content = tinymce.activeEditor.getContent();
-            } else if (editorValue === '0') {
-                
-                    console.log(grapes_editor.getHtml());
-                    console.log(grapes_editor.getCss());
-                    
-                content = grapes_editor.getHtml();
-  
-            }
-            console.log(content);
+            // // CHECK SELECTED EDITOR AND TAKE IT'S VALUE
+            // var editorValue = $('input[name="editor"]:checked').val();
+            // console.log(editorValue);
+            // var content;
+            // if (editorValue === '1') {
+            //     content = tinymce.activeEditor.getContent();
+            // } else if (editorValue === '0') {
+            //         console.log(grapes_editor.getHtml());
+            //         console.log(grapes_editor.getCss());    
+            //     content = grapes_editor.getHtml();
+            // }
+            // console.log(content);
 
             var metaTitle = $('#meta_title').val();
             var metaDescription = $('#meta_description').val();
@@ -340,12 +149,13 @@ $(document).ready(function() {
                 featured_image_description: featuredImageDescription,
                 featured_image_caption: featuredImageCaption
             };
-            console.log(formData);
+            // console.log(formData);
+            
 
             $submitButton.prop('disabled', true).text('Submitting...');
 
             $.ajax({
-                url: "http://localhost/blogCd/blog/backend/post/saveFormData",
+                url: site_url + `blog/backend/post/saveFormData${id}`,
                 type: 'POST',
                 data: formData,
                 dataType: 'json',
@@ -373,7 +183,7 @@ $(document).ready(function() {
         var postId = $(this).data('post-id');
 
         $.ajax({
-            url: 'http://localhost/blogCd/blog/backend/post/deletePost',
+            url: site_url + 'blog/backend/post/deletePost',
             type: 'POST',
             data: {
                 post_id: postId
@@ -389,6 +199,193 @@ $(document).ready(function() {
     });
 
 
+    $('#add-category-btn').click(function(e) {
+        e.preventDefault();
+        var categoryName = $('#new-category-input').val();
+
+
+        $.ajax({
+            url: site_url + "blog/backend/post/saveCategory",
+            type: 'POST',
+            data: {
+                category_name: categoryName
+            },
+            success: function(response) {
+
+                var startIndex = response.indexOf('{');
+                var endIndex = response.lastIndexOf('}');
+                var jsonString = response.substring(startIndex, endIndex + 1);
+
+                var data = JSON.parse(jsonString);
+
+                console.log(data);
+
+                console.log(data.id);
+                console.log(data.category_name);
+
+                var selectDropdown = $('#category');
+                var newOption = $('<option></option>')
+                    .attr('value', data.id)
+                    .attr('data-category-id', data.id)
+                    .text(data.category_name);
+
+                selectDropdown.append(newOption);
+                selectDropdown.val(data.id);
+
+
+            },
+            error: function(xhr, status, error) {
+                console.log(error);
+            }
+        });
+
+        $('#new-category-input').val('');
+    });
+
+    $('#add-sub-category-btn').click(function(e) {
+        e.preventDefault();
+        var subCategoryName = $('#new-sub-category-input').val();
+
+        $.ajax({
+            url: site_url + 'blog/backend/post/saveSubCategory',
+            type: 'POST',
+            data: {
+                subcategory_name: subCategoryName
+            },
+            success: function(response) {
+                var startIndex = response.indexOf('{');
+                var endIndex = response.lastIndexOf('}');
+                var jsonString = response.substring(startIndex, endIndex + 1);
+
+                var data = JSON.parse(jsonString);
+
+                console.log(data);
+
+                console.log(data.id);
+                console.log(data.subcategory_name);
+
+                var selectDropdown = $('#sub_category');
+                var newOption = $('<option></option>')
+                    .attr('value', data.id)
+                    .text(data.subcategory_name);
+
+                selectDropdown.append(newOption);
+                selectDropdown.val(data.id);
+            },
+            error: function(xhr, status, error) {
+                console.log(error);
+            }
+        });
+
+        $('#new-sub-category-input').val('');
+    });
+
+    $('#add-tag-btn').click(function(e) {
+        e.preventDefault();
+        var tagInput = $('#tag-input-field');
+        var tagValue = tagInput.val().trim();
+
+        if (tagValue !== '') {
+            var tagSpan = $('<span class="tag"></span>').text(tagValue);
+            var deleteLink = $(
+                '<a href="javascript:void(0)" class="tag-addon delete-tag"><i class="fe fe-x"></i></a>'
+            );
+
+            deleteLink.click(function() {
+                $(this).parent('.tag').remove();
+            });
+
+            tagSpan.append(deleteLink);
+            $('#tags').append(tagSpan);
+
+            tagInput.val('');
+        }
+    });
+
+    $(document).on('click', '.delete-tag', function() {
+        $(this).parent('.tag').remove();
+    });
+
+
+    var grapes_editor = grapesjs.init({
+        container: '#gjs',
+        fromElement: true,
+        height: '100%',
+        showOffsets: 1,
+        noticeOnUnload: 0,
+        storageManager: false,
+        //   storageManager: {
+        //     type: 'local', 
+        //     autosave: true, 
+        //     autoload: true, 
+        //     stepsBeforeSave: 1, 
+        //     options: {
+        //       local: { 
+        //         key: 'gjsProject', 
+        //       },
+        //     }
+        //   },
+        
+        plugins: ['grapesjs-preset-webpage',"gjs-blocks-basic",'grapesjs-plugin-forms','grapesjs-custom-code','grapesjs-component-countdown','grapesjs-navbar','grapesjs-typed','grapesjs-tooltip','grapesjs-tabs'],
+            pluginsOpts: {
+            'grapesjs-preset-webpage': {},
+            "gjs-blocks-basic": {},
+            'grapes.js-plugin-forms':{},
+            'grapesjs-custom-code': {},
+            'grapesjs-component-countdown': {},
+            'grapesjs-navbar': {},
+            'grapesjs-typed': {},
+            'grapesjs-tooltip': {},
+            'grapesjs-tabs': {},
+        },
+        
+      });
+
+      // Use the API
+    const blockManager = grapes_editor.Blocks;
+    blockManager.add('h1-block', {
+    label: 'Heading',
+    content: '<h1>Put your title here</h1>',
+    category: 'Basic',
+    attributes: {
+        title: 'Insert h1 block'
+    }
+    });
+
+
+    
+    // tinymce.init({
+    //     selector: 'textarea#tinymce',
+    //     plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+    //     toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+    //     tinycomments_mode: 'embedded',
+    //     tinycomments_author: 'Author name',
+    //     mergetags_list: [{
+    //             value: 'First.Name',
+    //             title: 'First Name'
+    //         },
+    //         {
+    //             value: 'Email',
+    //             title: 'Email'
+    //         },
+    //     ]
+    // });
+
+    // $('#gjs').hide();
+
+    // $('input[name="editor"]').on('click', function() {
+    //     if ($(this).val() === '1') {
+    //         $('.tox-tinymce').show();
+    //         console.log("tinymce show");
+    //         $('#gjs').hide();
+    //     } else if ($(this).val() === '0') {
+    //         $('.tox-tinymce').hide();
+    //         console.log("tinymce hide");
+    //         $('#gjs').show();
+    //     }
+    // });
+
+
 });
 
 
@@ -399,3 +396,53 @@ $(document).ready(function() {
 
 
 
+
+
+
+
+
+
+
+
+// // Step 1: Enable storageManager with type: 'none'
+// var grapes_editor = grapesjs.init({
+//     container: '#gjs',
+//     // Other options...
+//     storageManager: { type: 'none' },
+//     plugins: [
+//       'grapesjs-preset-webpage',
+//       'gjs-blocks-basic',
+//       'grapesjs-plugin-forms',
+//       'grapesjs-custom-code',
+//       'grapesjs-component-countdown',
+//       'grapesjs-navbar',
+//       'grapesjs-typed',
+//       'grapesjs-tooltip',
+//       'grapesjs-tabs'
+//     ],
+//     // Other plugin options...
+//   });
+  
+//   // Step 2: Define your custom autosave function
+//   function autosaveToDatabase(html, css) {
+//     // Use AJAX to send the HTML and CSS to the server
+//     // Replace 'YOUR_SAVE_URL' with the actual URL to save data to the server
+//     $.ajax({
+//       method: 'POST',
+//       url: 'YOUR_SAVE_URL',
+//       data: { html: html, css: css },
+//       success: function (response) {
+//         console.log('Autosave successful!');
+//       },
+//       error: function (xhr, status, error) {
+//         console.error('Autosave failed:', error);
+//       }
+//     });
+//   }
+  
+//   // Step 3 and 4: Listen for the 'storage:store' event and call the autosave function
+//   grapes_editor.on('storage:store', function (e) {
+//     const { html, css } = e; // Get the HTML and CSS content
+//     autosaveToDatabase(html, css); // Call your custom autosave function
+//   });
+  

@@ -119,7 +119,7 @@ public function index($table_name="")
     $data["js"] =  [
             "https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js",
             site_url()."resources/themes/".$this->theme_selected_template."/assets/sortable-list-tree/js/treeSortable.js",
-            site_url()."resources/themes/".$this->theme_selected_template."/assets/sortable-list-tree/js/script.js"];
+            site_url()."resources/themes/".$this->theme_selected_template."/assets/custom/js/blog/menus.js"];
 
     $data["css"] = [ 
         "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css",
